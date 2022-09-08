@@ -1,0 +1,8 @@
+{
+  "public": true,
+  "cleanUrls": true,
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  }
+}
