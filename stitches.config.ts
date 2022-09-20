@@ -1,6 +1,6 @@
 import { createStitches, globalCss } from "@stitches/react";
 
-export const { getCssText } = createStitches({});
+export const { getCssText, styled } = createStitches({});
 
 /* INFO: Reset some default browser-provided CSS styling. */
 /* For reference, check the following resources: */
@@ -22,6 +22,7 @@ export const resetCSS = globalCss({
   /* Add accessible line-height & improved text rendering */
   body: {
     lineHeight: 1.5,
+    backgroundColor: "#111A20",
   },
   /* Improved media details. */
   "img, picture, video, canvas, svg": {
