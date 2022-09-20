@@ -1,6 +1,20 @@
 import { createStitches, globalCss } from "@stitches/react";
 
-export const { getCssText, styled } = createStitches({});
+export const { getCssText, styled } = createStitches({
+  theme: {
+    colors: {
+      blue10: "#111A20",
+      blue20: "#1C2C35",
+      blue30: "#234B4A",
+      blue40: "#416883",
+      blue50: "#5E8CA7",
+      text10: "#ECF8FF",
+      text20: "#C9E2F0",
+      glow10: "#B0FBBC",
+      glow20: "#82F9A1",
+    },
+  },
+});
 
 /* INFO: Reset some default browser-provided CSS styling. */
 /* For reference, check the following resources: */
@@ -22,7 +36,7 @@ export const resetCSS = globalCss({
   /* Add accessible line-height & improved text rendering */
   body: {
     lineHeight: 1.5,
-    backgroundColor: "#111A20",
+    backgroundColor: "$blue10",
   },
   /* Improved media details. */
   "img, picture, video, canvas, svg": {
