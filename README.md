@@ -38,3 +38,5 @@ Deploy it to the cloud with
 ## Learning Resources
 
 - [Learn to use Stitches.js](https://youtu.be/HbFtzqSnpVo)
+- [Stitches: A Modern, Server-Rendered CSS-in-JS Library](https://blog.logrocket.com/stitches-server-rendered-css-in-js)
+- [Wrap Up Your CSS With Stitches](https://www.javascript.christmas/2020/15)
