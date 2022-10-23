@@ -40,3 +40,4 @@ Deploy it to the cloud with
 - [Learn to use Stitches.js](https://youtu.be/HbFtzqSnpVo)
 - [Stitches: A Modern, Server-Rendered CSS-in-JS Library](https://blog.logrocket.com/stitches-server-rendered-css-in-js)
 - [Wrap Up Your CSS With Stitches](https://www.javascript.christmas/2020/15)
+- [What I Learned at Work This Week: Stitches](https://mike-diaz006.medium.com/what-i-learned-at-work-this-week-stitches-e4bd44bfd47b)
