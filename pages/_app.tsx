@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 
 // import { resetCSS } from "../stitches.config";
-import "../styles/globals.scss";
+import "../styles/main.scss";
 
 function RootApp({ Component, pageProps }: AppProps) {
     // resetCSS();
