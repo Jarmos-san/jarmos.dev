@@ -7,10 +7,19 @@ const Container = styled("div", {
 
 /* TODO: Add some "drop shadow" to the component as suggested in the template. */
 const Heading = styled(Container, {
-    // backgroundImage: "linear-gradient($glow10, $glow20)",
-    // backgroundClip: "text",
-    // "-webkit-text-fill-color": "transparent",
+    background: "linear-gradient(180deg, $glow10 0%, $glow20 100%)",
+    "-webkit-background-clip": "text",
+    "-webkit-text-fill-color": "transparent",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+    textShadow: "0px 0px 76px rgba(188, 251, 195, 0.3)",
     justifyContent: "center",
+
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "48px",
+    lineHeight: "142%",
 });
 
 function HomePage() {
