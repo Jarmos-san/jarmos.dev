@@ -7,11 +7,11 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
-    "@nextui-org/react": "^1.0.0-beta.10",
     "@stitches/react": "1.2.8",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
