@@ -1,36 +1,8 @@
+// TODO: Figure a way out to self-host this font later on.
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+// INFO: Variables for the colour pallete & much more
 @import "variables";
+
+// INFO: Reset the default browser-provided stylesheet for better control.
 @import "reset";
-
-body {
-  background-color: $blue10;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  // background-color: yellow;
-  flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  h1 {
-    background: linear-gradient(180deg, $glow10 0%, $glow20 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.3);
-  }
-
-  p {
-    font-family: "Poppins";
-    line-height: 180%;
-    color: #ecf8ff;
-    font-size: 18px;
-    font-weight: 400;
-
-    a {
-      color: pink;
-      text-underline-offset: 3px;
-    }
-  }
-}
