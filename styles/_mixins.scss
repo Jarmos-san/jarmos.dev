@@ -1,0 +1,38 @@
+// INFO: Breakpoints for various devices like mobile, laptops & desktop screens.
+@mixin respond($breakpoint) {
+  // Base breakpoint for mobile devices & small screens.
+  @if ($breakpoint == base) {
+    @media (min-width: 320px) and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  // "Small" breakpoint for tablet & large mobile screens.
+  @if ($breakpoint == small) {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  // "medium" breakpoint for laptop screens.
+  @if ($breakpoint == medium) {
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  // "large" breakpoint for large desktop screens.
+  @if ($breakpoint == large) {
+    @media (min-width: 1441px) {
+      @content;
+    }
+  }
+}
+
+// INFO: Style properties for the subheading.
+@mixin subheading($font-size, $font-weight) {
+  line-height: 180%;
+  color: #ecf8ff;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
