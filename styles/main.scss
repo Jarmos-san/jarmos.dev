@@ -6,3 +6,12 @@
 
 // INFO: Reset the default browser-provided stylesheet for better control.
 @import "reset";
+
+// INFO: Partial file containing many mixins to be used across the project.
+@import "mixins";
+
+// Base container to wrap the rest of the components inside.
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
