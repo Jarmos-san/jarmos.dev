@@ -2,11 +2,12 @@ import styles from "./header.module.scss";
 
 function Header() {
     return (
-        <header className={styles.headerClass}>
-            <h1>
+        <header>
+            <h1 className={styles.heading}>
                 This is Somraj Saha, a Full-Stack Software Engineer & Technical Writer.
             </h1>
-            <p>
+
+            <p className={styles.subheading}>
                 I specialize in rapidly prototyping web applications & related software.
                 During my free time I share my knowledge & experience with the rest of
                 the world. You can find my FOSS contributions on my{" "}
