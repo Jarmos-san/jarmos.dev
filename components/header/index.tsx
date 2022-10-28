@@ -2,9 +2,9 @@ import styles from "./header.module.scss";
 
 function Header() {
     return (
-        <header>
+        <header className={styles.container}>
             <h1 className={styles.heading}>
-                This is Somraj Saha, a Full-Stack Software Engineer & Technical Writer.
+                This is Somraj, a Full-Stack Software Engineer & Technical Writer.
             </h1>
 
             <p className={styles.subheading}>
@@ -12,6 +12,7 @@ function Header() {
                 During my free time I share my knowledge & experience with the rest of
                 the world. You can find my FOSS contributions on my{" "}
                 <a
+                    className={styles.github}
                     href="https://github.com/Jarmos-san"
                     target="_blank"
                     rel="noreferrer"
@@ -19,11 +20,17 @@ function Header() {
                     GitHub
                 </a>{" "}
                 profile & my social media presence on{" "}
-                <a href="https://twitter.com/Jarmosan" target="_blank" rel="noreferrer">
+                <a
+                    className={styles.twitter}
+                    href="https://twitter.com/Jarmosan"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     Twitter
                 </a>{" "}
                 as well{" "}
                 <a
+                    className={styles.linkedin}
                     href="https://www.linkedin.com/in/jarmos"
                     target="_blank"
                     rel="noreferrer"

@@ -2,43 +2,92 @@
 @import "../../styles/variables";
 
 // INFO: A bunch of mixins for handling breakpoints & much more.
-@import "mixins";
+@import "breakpoints";
+
+// TODO: Move these variables to the "variables" partial file.
+$github: #797b7d;
+$linkedin: #3eb0ed;
+$twitter: #336fe8;
+
+// INFO: Mixin to add some percentage padding on the x-axis.
+@mixin padding-x($percent) {
+  padding: 0px $percent 0px $percent;
+}
+
+// TODO: Move this mixin to its seperate file.
+// INFO: Mixing to add some percetage padding on the y-axis.
+@mixin padding-y($percent) {
+  padding: $percent 0px $percent 0px;
+}
+
+// TODO: Convert this into a seperate reusable mixin later on.
+// INFO: Base container to wrap the other components inside.
+.container {
+  max-width: 100vw;
+
+  @include breakpoint(base) {
+    @include padding-x(7%);
+  }
+
+  @include breakpoint(small) {
+    @include padding-x(10%);
+  }
+
+  @include breakpoint(medium) {
+    @include padding-x(18%);
+  }
+
+  @include breakpoint(large) {
+    @include padding-x(20%);
+  }
+}
 
 .heading {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142%;
   background: linear-gradient(180deg, $glow10 0%, $glow20 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 41px;
 
-  p {
-    // INFO: Base font-size the breakpoints will inherit from.
-    font-size: 18px;
+  @include breakpoint(base) {
+    font-size: 1.9rem;
+  }
 
-    a {
-      color: pink;
-      text-underline-offset: 3px;
-    }
+  @include breakpoint(medium) {
+    font-size: 2.5rem;
+  }
+}
 
-    // Properties for small mobile screens.
-    @include respond(base) {
-      @include subheading(0.95em, 400);
-    }
+.subheading {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  color: $text10;
 
-    // Properties for tablets & large mobile screens.
-    @include respond(small) {
-      @include subheading(0.95em, 400);
-    }
+  @include breakpoint(base) {
+    font-size: 1.05rem;
+  }
 
-    // Property for laptop screens.
-    @include respond(medium) {
-      @include subheading(1.15em, 400);
-    }
+  @include breakpoint(medium) {
+    font-size: 1.125rem;
+  }
 
-    // TODO: Experiment & see what does it look like irl.
-    // Property for desktop screens.
-    @include respond(large) {
-      @include subheading(1.5em, 400);
-    }
+  .github {
+    color: $github;
+    text-underline-offset: 4px;
+  }
+
+  .twitter {
+    color: $twitter;
+    text-underline-offset: 4px;
+  }
+
+  .linkedin {
+    color: $linkedin;
+    text-underline-offset: 4px;
   }
 }
