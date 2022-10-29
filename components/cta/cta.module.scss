@@ -1,15 +1,49 @@
+@import "../../styles/mixins";
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+
 .container {
-  background-color: yellow;
+  @include container-props;
+
+  @include breakpoint(base) {
+    height: 300px;
+  }
+
+  background-color: $blue20;
+  text-align: center;
 }
 
 .heading {
-  background-color: red;
+  font-style: normal;
+  font-weight: 700;
+  color: $glow10;
+
+  @include breakpoint(base) {
+    font-size: 1.75rem;
+  }
 }
 
 .subheading {
-  background-color: gray;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: $text10;
+  line-height: 27px;
 }
 
 .contactBtn {
-  background-color: blue;
+  padding: 5px 12px 5px 12px;
+  margin-top: 20px;
+  background-color: $glow30;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  color: $blue10;
+
+  // TODO: Uncomment the following lines afer adding an icon to the button.
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // gap: 9px;
 }

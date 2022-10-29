@@ -10,7 +10,10 @@ function CtaSection() {
                 you&apos;re working on and find a way to work together.
             </p>
 
-            <button className={styles.contactBtn}>Contact</button>
+            {/* TODO: Add a "contact" page & link to it. */}
+            <button className={styles.contactBtn} type="button">
+                Contact
+            </button>
         </div>
     );
 }
