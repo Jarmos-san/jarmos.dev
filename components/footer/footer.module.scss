@@ -1,0 +1,21 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  color: $text30;
+
+  a {
+    color: #8c8888;
+    text-underline-offset: 3px;
+  }
+}
