@@ -1,4 +1,5 @@
 import styles from "./cta.module.scss";
+import { RiChatPollFill } from "react-icons/ri";
 
 function CtaSection() {
     return (
@@ -12,7 +13,8 @@ function CtaSection() {
 
             {/* TODO: Add a "contact" page & link to it. */}
             <button className={styles.contactBtn} type="button">
-                Contact
+                <RiChatPollFill title="chat button" size={22} />
+                Chat
             </button>
         </div>
     );
