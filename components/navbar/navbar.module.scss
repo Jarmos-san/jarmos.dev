@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+
+// FIXME: Figure out how to inherit these properties.
+// %navlink-styles {
+//   text-decoration: none;
+//   color: $text10;
+// }
+
+.navbar {
+  // background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+
+    a {
+      // FIXME: Can't inherit for whatever, check how to do it properly later on.
+      // @extend navlink-styles !optional;
+      text-decoration: none;
+      color: $text10;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    a {
+      text-decoration: none;
+      color: $text10;
+    }
+  }
+}
