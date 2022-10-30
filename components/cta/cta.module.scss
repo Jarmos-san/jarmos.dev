@@ -8,72 +8,73 @@
   background-color: $blue20;
   text-align: center;
   height: 300px;
-}
 
-// Style properties for the heading of the call-to-action.
-.heading {
-  font-style: normal;
-  font-weight: 700;
-  color: $glow10;
+  // Style properties for the heading of the call-to-action.
+  .heading {
+    font-style: normal;
+    font-weight: 700;
+    color: $glow10;
 
-  @include breakpoint(base) {
-    font-size: 1.75rem;
+    @include breakpoint(base) {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoint(small) {
+      font-size: 2.25rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 2.75rem;
+    }
   }
 
-  @include breakpoint(small) {
-    font-size: 2.25rem;
+  // Style properties for the contents of the subheading.
+  .subheading {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 16px;
+    color: $text10;
+    line-height: 27px;
+
+    @include breakpoint(base) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint(small) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 1.3rem;
+    }
   }
 
-  @include breakpoint(medium) {
-    font-size: 2.75rem;
+  // Style properties for the "chat" button.
+  .contactBtn {
+    margin-top: 20px;
+    background-color: $glow30;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 20px;
+    color: $blue10;
+
+    @include breakpoint(base) {
+      padding: 3px 12px;
+    }
+
+    @include breakpoint(small) {
+      padding: 6px 20px;
+    }
+
+    @include breakpoint(medium) {
+      padding: 8px 28px;
+    }
+
+    // Style properties for the contents of the "chat" button.
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
   }
-}
-
-// Style properties for the contents of the subheading.
-.subheading {
-  margin-top: 20px;
-  font-style: normal;
-  font-weight: 500;
-  // font-size: 16px;
-  color: $text10;
-  line-height: 27px;
-
-  @include breakpoint(base) {
-    font-size: 1rem;
-  }
-
-  @include breakpoint(small) {
-    font-size: 1.25rem;
-  }
-
-  @include breakpoint(medium) {
-    font-size: 1.3rem;
-  }
-}
-
-// Style properties for the "chat" button.
-.contactBtn {
-  margin-top: 20px;
-  background-color: $glow30;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 20px;
-  color: $blue10;
-
-  @include breakpoint(base) {
-    padding: 3px 12px;
-  }
-
-  @include breakpoint(small) {
-    padding: 6px 20px;
-  }
-
-  @include breakpoint(medium) {
-    padding: 8px 28px;
-  }
-
-  // Style properties for the contents of the "chat" button.
-  display: flex;
-  align-items: center;
-  gap: 9px;
 }
