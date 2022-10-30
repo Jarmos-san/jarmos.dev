@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 function Footer() {
     return (
-        <div className={styles.container}>
+        <footer className={styles.container}>
             <small>
                 &copy; Somraj Saha 2018-
                 {new Date().getFullYear()}
@@ -56,7 +56,7 @@ function Footer() {
                     <AiFillMail color="#a5a6b0" size={25} title="email" />
                 </a>
             </div>
-        </div>
+        </footer>
     );
 }
 
