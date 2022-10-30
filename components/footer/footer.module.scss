@@ -2,20 +2,40 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
+// Container for the footer section.
 .container {
   padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  gap: 9px;
 
   font-style: normal;
   font-weight: 500;
   line-height: 180%;
   color: $text30;
 
+  // Specific style property for the links in the footer section.
   a {
     color: #8c8888;
     text-underline-offset: 3px;
+  }
+
+  // Style properties for all the social icons.
+  .socials {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    // Style properties for each of the individual social icon.
+    a {
+      background-color: $blue60;
+      padding: 8px;
+      border-radius: 50%;
+    }
   }
 }
