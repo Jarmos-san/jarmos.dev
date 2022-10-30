@@ -7,11 +7,6 @@
 // INFO: Import a bunch of mixins.
 @import "mixins";
 
-// TODO: Move these variables to the "variables" partial file.
-$github: #797b7d;
-$linkedin: #3eb0ed;
-$twitter: #336fe8;
-
 // INFO: Base container to wrap the other components inside.
 .container {
   @include container-props;
@@ -22,10 +17,10 @@ $twitter: #336fe8;
   font-weight: 700;
   line-height: 142%;
   background: linear-gradient(180deg, $glow10 0%, $glow20 100%);
-  background-clip: text;
   text-shadow: 0px 0px 76px rgba(188, 251, 195, 0.3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 41px;
 
   @include breakpoint(base) {
@@ -49,20 +44,5 @@ $twitter: #336fe8;
 
   @include breakpoint(medium) {
     font-size: 1.125rem;
-  }
-
-  .github {
-    color: $github;
-    text-underline-offset: 4px;
-  }
-
-  .twitter {
-    color: $twitter;
-    text-underline-offset: 4px;
-  }
-
-  .linkedin {
-    color: $linkedin;
-    text-underline-offset: 4px;
   }
 }
