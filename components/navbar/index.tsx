@@ -20,13 +20,19 @@ function Navbar() {
             <div className={styles.navLinks}>
                 <ul>
                     <li>
-                        <Link href="/">Home</Link>
+                        <Link href="/" passHref>
+                            Home
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/about">About</Link>
+                        <Link href="/about" passHref>
+                            About
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/projects">Projects</Link>
+                        <Link href="/projects" passHref>
+                            Projects
+                        </Link>
                     </li>
                 </ul>
             </div>
