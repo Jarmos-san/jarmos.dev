@@ -8,36 +8,16 @@ function Header() {
             </h1>
 
             <p className={styles.subheading}>
-                I specialize in rapidly prototyping web applications & related software.
-                During my free time I share my knowledge & experience with the rest of
-                the world. You can find my FOSS contributions on my{" "}
-                <a
-                    className={styles.github}
-                    href="https://github.com/Jarmos-san"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    GitHub
-                </a>{" "}
-                profile & my social media presence on{" "}
-                <a
-                    className={styles.twitter}
-                    href="https://twitter.com/Jarmosan"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Twitter
-                </a>{" "}
-                as well{" "}
-                <a
-                    className={styles.linkedin}
-                    href="https://www.linkedin.com/in/jarmos"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    LinkedIn
-                </a>
-                .
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet
+                odio a nulla eleifend molestie. Nam non posuere nibh, ac dignissim
+                dolor. Nullam viverra ac massa vel euismod. Praesent vestibulum velit a
+                risus pellentesque, sed finibus lorem vulputate. Nulla vel eleifend mi.
+                Praesent consectetur vel odio non rutrum. Proin dictum orci est, eget
+                lobortis felis tristique at. Aenean quis erat orci. Curabitur nec quam
+                mattis ante rhoncus fermentum sit amet at urna. Sed velit purus,
+                pharetra sed massa ac, suscipit pellentesque erat. In hendrerit, velit
+                eget maximus viverra, tortor diam consequat dui, vitae auctor elit
+                lectus nec libero. Nam nec ultrices felis.
             </p>
         </header>
     );
