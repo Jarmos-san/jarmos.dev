@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import styles from "./navbar.module.scss";
+import { BiMenuAltRight } from "react-icons/bi";
 
 function Navbar() {
     return (
@@ -11,6 +12,10 @@ function Navbar() {
                     <a>Somraj Saha</a>
                 </Link>
             </div>
+
+            <button className={styles.menuIcon} type="button">
+                <BiMenuAltRight size={28} color="#fff" />
+            </button>
 
             <div className={styles.navLinks}>
                 <ul>

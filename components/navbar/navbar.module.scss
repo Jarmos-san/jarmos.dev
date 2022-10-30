@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/breakpoints";
 
 // FIXME: Figure out how to inherit these properties.
 // %navlink-styles {
@@ -7,15 +8,19 @@
 // }
 
 .navbar {
-  // background-color: yellow;
+  background-color: $blue10;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  // FIXME: Doesn't appear to be doing anything for now.
+  // backdrop-filter: blur(0.8);
   display: flex;
   justify-content: space-between;
   padding: 20px 15%;
+  position: sticky;
+  top: 0px;
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
     font-size: 18px;
     line-height: 27px;
     font-weight: 700;
@@ -25,6 +30,25 @@
       // @extend navlink-styles !optional;
       text-decoration: none;
       color: $text10;
+    }
+  }
+
+  .menuIcon {
+    background-color: $blue10;
+    border-style: none;
+    // FIXME: Figure a way out to make it dynamically responsive.
+    margin-left: 119px;
+
+    @include breakpoint(small) {
+      display: none;
+    }
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+
+    @include breakpoint(large) {
+      display: none;
     }
   }
 
@@ -38,6 +62,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+
+    @include breakpoint(base) {
+      display: none;
+    }
 
     a {
       text-decoration: none;
