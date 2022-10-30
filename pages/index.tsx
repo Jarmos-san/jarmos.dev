@@ -4,12 +4,14 @@ import Header from "../components/header";
 
 function HomePage() {
     return (
-        <div className="container">
+        <>
             <title>Somraj Saha</title>
-            <Header />
-            <CtaSection />
-            <Footer />
-        </div>
+            <div className="container">
+                <Header />
+                <CtaSection />
+                <Footer />
+            </div>
+        </>
     );
 }
 
