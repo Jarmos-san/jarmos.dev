@@ -29,11 +29,6 @@ function Navbar() {
                             About
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/projects" passHref>
-                            Projects
-                        </Link>
-                    </li>
                 </ul>
             </div>
         </nav>
