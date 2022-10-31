@@ -13,7 +13,7 @@ function CtaSection() {
                 you&apos;re working on and find a way to work together.
             </p>
 
-            <Link href="/about" passHref>
+            <Link href="/about#contact" passHref>
                 <a className={styles.contactBtn}>
                     <RiChatPollFill title="chat button" size={22} />
                     Chat
