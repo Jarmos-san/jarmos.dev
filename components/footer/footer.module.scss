@@ -16,6 +16,9 @@
   font-weight: 500;
   line-height: 180%;
   color: $text30;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   // Specific style property for the links in the footer section.
   a {
