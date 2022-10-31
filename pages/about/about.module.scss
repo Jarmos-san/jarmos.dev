@@ -1,3 +1,39 @@
+@import "../../styles/breakpoints";
+@import "../../styles/variables";
+
 .container {
-  background-color: yellow;
+  @include breakpoint(base) {
+    padding: 40px 10%;
+  }
+
+  @include breakpoint(small) {
+    padding: 40px 12%;
+  }
+
+  @include breakpoint(medium) {
+    padding: 60px 20%;
+  }
+
+  h1 {
+    margin: 40px auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 142%;
+    color: $text20;
+  }
+
+  h2 {
+    margin: 40px auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 142%;
+    color: $text10;
+  }
+
+  p {
+    color: $text30;
+    margin: 20px auto;
+  }
 }
