@@ -5,10 +5,8 @@ function HomePage() {
     return (
         <>
             <title>Somraj Saha</title>
-            <div className="container">
-                <Header />
-                <CtaSection />
-            </div>
+            <Header />
+            <CtaSection />
         </>
     );
 }
