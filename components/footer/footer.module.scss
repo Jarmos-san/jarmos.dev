@@ -3,10 +3,8 @@
 @import "../../styles/mixins";
 
 // Container for the footer section.
-.container {
-  padding-bottom: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
+.footer {
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,9 +14,10 @@
   font-weight: 500;
   line-height: 180%;
   color: $text30;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  // FIXME: Something is messed up with this
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
 
   // Specific style property for the links in the footer section.
   a {

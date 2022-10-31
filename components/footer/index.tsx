@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 function Footer() {
     return (
-        <footer className={styles.container}>
+        <footer className={styles.footer}>
             <small>
                 &copy; Somraj Saha 2018-
                 {new Date().getFullYear()}
