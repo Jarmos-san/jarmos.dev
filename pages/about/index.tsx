@@ -7,81 +7,172 @@ function AboutPage() {
             <main className={styles.container}>
                 <article>
                     <h1>About Somraj Saha</h1>
+
                     <p>Hi There!</p>
+
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                        luctus metus at lectus luctus interdum. Nam finibus urna posuere
-                        neque malesuada ultrices. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Aliquam faucibus sem ut tellus tempus luctus.
-                        Suspendisse ultricies pharetra ligula, at vehicula lacus aliquam
-                        dictum. Vestibulum ante ipsum primis in faucibus orci luctus et
-                        ultrices posuere cubilia curae; Nullam luctus lacus eu auctor
-                        consectetur. Pellentesque efficitur aliquet purus. Fusce bibendum
-                        sodales nisi sed consequat. Praesent egestas sed ante a lobortis.
+                        I&lsquo;m Somraj Saha, a Full-Stack Software Engineer & Technical
+                        Writer. I head the Machine Learning (ML) Engineering team at{" "}
+                        <a
+                            href="https://www.augwir.com"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Augwir
+                        </a>{" "}
+                        right now. And the website you are on, is where I share my knowledge
+                        & experience as a self-taught programmer.
                     </p>
                     <p>
-                        Phasellus et nunc quam. Morbi vehicula, nunc eget tempus volutpat,
-                        dolor mauris ultrices turpis, ac scelerisque nunc quam in ex. Donec
-                        lacinia ligula vitae urna laoreet accumsan. Morbi eget vulputate
-                        risus. Donec convallis at ante ultricies vehicula. Vivamus mauris
-                        nisl, iaculis eu aliquam vitae, viverra et nibh. Maecenas sagittis
-                        dui ut nibh dictum, at aliquam nisl iaculis. Nulla ut velit non sem
-                        elementum laoreet nec volutpat neque. Maecenas ut quam eget elit
-                        efficitur dapibus vestibulum ac urna. Praesent lacus risus, viverra
-                        eu porttitor eget, hendrerit sed dolor. Sed placerat, sapien
-                        sagittis accumsan luctus, velit diam mattis libero, sed accumsan
-                        odio dui eget nisi.
+                        I&lsquo;ve over{" "}
+                        {Number(new Date().getFullYear()) - Number(new Date(2016))} years of
+                        programming experience & working with clients from various
+                        backgrounds. So, if you own a business & need an experienced helping
+                        hand, feel free to reach out to me with your queries! And I am sure
+                        we work out some solution for any particular business problem you
+                        are trying to resolve.
                     </p>
-                    <p>
-                        Sed pharetra et nulla sit amet consectetur. Nam eleifend mollis nunc
-                        ut cursus. Nulla facilisi. Donec dignissim, arcu sed auctor
-                        sollicitudin, mauris orci facilisis mi, in elementum ante libero sit
-                        amet erat. Sed egestas volutpat gravida. Phasellus semper
-                        consectetur dolor quis efficitur. Aenean faucibus ut ante non
-                        facilisis. Duis sagittis gravida turpis, vel placerat turpis dapibus
-                        scelerisque. Donec posuere cursus efficitur. Nulla facilisi.
-                        Curabitur id efficitur quam. Suspendisse vitae nibh nec turpis
-                        laoreet consequat et eu est. Nullam at aliquet felis, a auctor
-                        tellus. Praesent euismod tortor congue felis convallis ultrices.
-                    </p>
+
                     <h2>About My Tool Belt</h2>
+
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                        luctus metus at lectus luctus interdum. Nam finibus urna posuere
-                        neque malesuada ultrices. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Aliquam faucibus sem ut tellus tempus luctus.
-                        Suspendisse ultricies pharetra ligula, at vehicula lacus aliquam
-                        dictum. Vestibulum ante ipsum primis in faucibus orci luctus et
-                        ultrices posuere cubilia curae; Nullam luctus lacus eu auctor
-                        consectetur. Pellentesque efficitur aliquet purus. Fusce bibendum
-                        sodales nisi sed consequat. Praesent egestas sed ante a lobortis.
+                        Over the years I have had ample opportunities to work with countless
+                        technologies. And while I enjoy working with some, there are others
+                        which feels like a chore to deal with. Regardless, here is a list of
+                        all the tools & services I have at my disposal when developing
+                        software.
                     </p>
+
+                    <h3>Programming Languages</h3>
+
+                    <ol>
+                        <li>
+                            <u>
+                                <strong>Python</strong>
+                            </u>{" "}
+                            for scripting & backend development like building REST APIs.
+                        </li>
+                        <li>
+                            <u>
+                                <strong>TypeScript</strong>
+                            </u>{" "}
+                            for working on React.js-based projects.
+                        </li>
+                        <li>
+                            <u>
+                                <strong>Lua</strong>
+                            </u>{" "}
+                            for scripting Neovim & other small-scale embedded projects.
+                        </li>
+                        <li>
+                            <u>
+                                <strong>Golang</strong>
+                            </u>{" "}
+                            for when a project needs to be compiled & be fast to execute.
+                        </li>
+                    </ol>
+
+                    <h3>Frameworks & Libraries</h3>
+
+                    <ol>
+                        <li>
+                            <u>
+                                <strong>Next.js</strong>
+                            </u>{" "}
+                            the React.js-based framework for building well-optimised
+                            Server-Side Rendered (SSR) & Client-Side Rendered (CSR) websites.
+                        </li>
+
+                        <li>
+                            <u>
+                                <strong>FastAPI</strong>
+                            </u>{" "}
+                            the asynchronous & super-fast Python framework for building REST
+                            APIs.
+                        </li>
+
+                        <li>
+                            <u>
+                                <strong>TailwindCSS</strong>
+                            </u>{" "}
+                            for styling frontend projects because aligning divs with vanilla
+                            CSS is a painful task.
+                        </li>
+
+                        <li>
+                            <u>
+                                <strong>Chakra-UI</strong>
+                            </u>{" "}
+                            which is a read-to-use React Component library meant for
+                            situations where speedy development is of utmost importance.
+                        </li>
+
+                        <li>
+                            <u>
+                                <strong>SASS</strong>
+                            </u>{" "}
+                            which is a CSS pre-processor & superscript to be used when writing
+                            CSS can potentially become a chore.
+                        </li>
+                    </ol>
+
+                    <h3>Other Development Tools</h3>
+
                     <p>
-                        Phasellus et nunc quam. Morbi vehicula, nunc eget tempus volutpat,
-                        dolor mauris ultrices turpis, ac scelerisque nunc quam in ex. Donec
-                        lacinia ligula vitae urna laoreet accumsan. Morbi eget vulputate
-                        risus. Donec convallis at ante ultricies vehicula. Vivamus mauris
-                        nisl, iaculis eu aliquam vitae, viverra et nibh. Maecenas sagittis
-                        dui ut nibh dictum, at aliquam nisl iaculis. Nulla ut velit non sem
-                        elementum laoreet nec volutpat neque. Maecenas ut quam eget elit
-                        efficitur dapibus vestibulum ac urna. Praesent lacus risus, viverra
-                        eu porttitor eget, hendrerit sed dolor. Sed placerat, sapien
-                        sagittis accumsan luctus, velit diam mattis libero, sed accumsan
-                        odio dui eget nisi.
+                        Software Developers are never complete without their preferred
+                        tools. And apart from the few mentioned above, there are other
+                        non-development tools which are equally important to complete
+                        day-to-day tasks as well. Hence, following are the few tools I
+                        employ on a regular basis:
                     </p>
-                    <p>
-                        Sed pharetra et nulla sit amet consectetur. Nam eleifend mollis nunc
-                        ut cursus. Nulla facilisi. Donec dignissim, arcu sed auctor
-                        sollicitudin, mauris orci facilisis mi, in elementum ante libero sit
-                        amet erat. Sed egestas volutpat gravida. Phasellus semper
-                        consectetur dolor quis efficitur. Aenean faucibus ut ante non
-                        facilisis. Duis sagittis gravida turpis, vel placerat turpis dapibus
-                        scelerisque. Donec posuere cursus efficitur. Nulla facilisi.
-                        Curabitur id efficitur quam. Suspendisse vitae nibh nec turpis
-                        laoreet consequat et eu est. Nullam at aliquet felis, a auctor
-                        tellus. Praesent euismod tortor congue felis convallis ultrices.
-                    </p>
+
+                    <ol>
+                        <li>
+                            <a
+                                href="https://ubuntu.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Ubuntu
+                            </a>{" "}
+                            the Linux-based OS & my primary choice of an Operating System when
+                            developing software.
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://code.visualstudio.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Visual Studio Code (VSCode)
+                            </a>{" "}
+                            for the preferred Integrated-Development Environment (IDE) needs.
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://neovim.io"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Neovim
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://www.docker.com"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                            >
+                                Docker
+                            </a>
+                        </li>
+                    </ol>
+
                     <h2 id="contact">How to Contact Me</h2>
+
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
                         nisl at sem venenatis ultrices. Suspendisse sem urna, pharetra eu

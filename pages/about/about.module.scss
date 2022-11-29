@@ -32,8 +32,26 @@
     color: $text10;
   }
 
+  h3 {
+    margin: 40px auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 142%;
+    color: $text30;
+  }
+
+  a {
+    color: $glow30;
+  }
+
   p {
     color: $text30;
     margin: 20px auto;
+  }
+
+  li {
+    color: $text30;
+    // line-height: 250%;
   }
 }
