@@ -47,27 +47,43 @@ function AboutPage() {
 
                     <ol>
                         <li>
-                            <u>
-                                <strong>Python</strong>
-                            </u>{" "}
+                            <a
+                                href="https://www.python.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Python
+                            </a>{" "}
                             for scripting & backend development like building REST APIs.
                         </li>
                         <li>
-                            <u>
-                                <strong>TypeScript</strong>
-                            </u>{" "}
+                            <a
+                                href="https://www.typescriptlang.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                TypeScript
+                            </a>{" "}
                             for working on React.js-based projects.
                         </li>
                         <li>
-                            <u>
-                                <strong>Lua</strong>
-                            </u>{" "}
+                            <a
+                                href="https://www.lua.org"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Lua
+                            </a>{" "}
                             for scripting Neovim & other small-scale embedded projects.
                         </li>
                         <li>
-                            <u>
-                                <strong>Golang</strong>
-                            </u>{" "}
+                            <a
+                                href="https://go.dev"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Golang
+                            </a>{" "}
                             for when a project needs to be compiled & be fast to execute.
                         </li>
                     </ol>
@@ -76,41 +92,61 @@ function AboutPage() {
 
                     <ol>
                         <li>
-                            <u>
-                                <strong>Next.js</strong>
-                            </u>{" "}
+                            <a
+                                href="https://nextjs.org"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                            >
+                                Next.js
+                            </a>{" "}
                             the React.js-based framework for building well-optimised
                             Server-Side Rendered (SSR) & Client-Side Rendered (CSR) websites.
                         </li>
 
                         <li>
-                            <u>
-                                <strong>FastAPI</strong>
-                            </u>{" "}
+                            <a
+                                href="https://fastapi.tiangolo.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                FastAPI
+                            </a>{" "}
                             the asynchronous & super-fast Python framework for building REST
                             APIs.
                         </li>
 
                         <li>
-                            <u>
-                                <strong>TailwindCSS</strong>
-                            </u>{" "}
+                            <a
+                                href="https://tailwindcss.org"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                TailwindCSS
+                            </a>{" "}
                             for styling frontend projects because aligning divs with vanilla
                             CSS is a painful task.
                         </li>
 
                         <li>
-                            <u>
-                                <strong>Chakra-UI</strong>
-                            </u>{" "}
+                            <a
+                                href="https://chakra-ui.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Chakra-UI
+                            </a>{" "}
                             which is a read-to-use React Component library meant for
                             situations where speedy development is of utmost importance.
                         </li>
 
                         <li>
-                            <u>
-                                <strong>SASS</strong>
-                            </u>{" "}
+                            <a
+                                href="https://sass-lang.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                SASS
+                            </a>{" "}
                             which is a CSS pre-processor & superscript to be used when writing
                             CSS can potentially become a chore.
                         </li>
@@ -157,7 +193,8 @@ function AboutPage() {
                                 target="_blank"
                             >
                                 Neovim
-                            </a>
+                            </a>{" "}
+                            as my primary &quot;daily driver&quot; to write code.
                         </li>
 
                         <li>
@@ -167,26 +204,11 @@ function AboutPage() {
                                 target="_blank"
                             >
                                 Docker
-                            </a>
+                            </a>{" "}
+                            for deploying my software to the cloud and/or containerising local
+                            development environments.
                         </li>
                     </ol>
-
-                    <h2 id="contact">How to Contact Me</h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-                        nisl at sem venenatis ultrices. Suspendisse sem urna, pharetra eu
-                        dignissim rutrum, efficitur ut ante. Integer pretium hendrerit
-                        sapien, eu gravida est pellentesque in. Sed luctus scelerisque lorem
-                        sit amet mattis. Phasellus ultrices vestibulum tempor. Donec a
-                        scelerisque urna. Aliquam ornare id quam sit amet sodales.
-                        Suspendisse imperdiet condimentum suscipit. Nullam auctor vehicula
-                        quam at dictum. Integer in eleifend ex. Donec et eros nec ex rutrum
-                        luctus. Praesent molestie neque libero, quis venenatis metus
-                        bibendum quis. Morbi dapibus quis nunc eu interdum. Proin semper
-                        sapien quis magna condimentum, quis eleifend est efficitur. Aenean
-                        sagittis ipsum nec turpis suscipit, sit amet dapibus tortor luctus.
-                    </p>
                 </article>
             </main>
         </>
