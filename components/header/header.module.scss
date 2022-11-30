@@ -45,4 +45,9 @@
   @include breakpoint(medium) {
     font-size: 1.125rem;
   }
+
+  a {
+    color: $glow30;
+    text-decoration: none;
+  }
 }
