@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+@import "breakpoints";
+
+@import "mixins";
+
+.container {
+  @include container-props;
+
+  background-color: yellow;
+}
