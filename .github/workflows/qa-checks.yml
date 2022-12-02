@@ -1,0 +1,23 @@
+name: Code Quality Checks
+
+on:
+  push:
+
+jobs:
+  code-quality-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3.1.0
+
+      - name: Setup Node.js in the Runtime
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 18
+
+      - name: Install the Dependencies
+        run: npm ci
+
+      - name: Run Code Quality Checks
+        run: echo "Hello World!"
