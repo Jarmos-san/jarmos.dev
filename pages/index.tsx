@@ -1,16 +1,22 @@
+import Head from "next/head";
+
 import CtaSection from "../components/cta";
 import Header from "../components/header";
-
-// import ProjectsSection from "../components/projects";
+import ProjectsSection from "../components/projects";
 
 function HomePage() {
     return (
-        <>
-            {/* <title>Somraj Saha</title> */}
+        <main>
+            <Head>
+                <title>Somraj Saha</title>
+            </Head>
+
             <Header />
-            {/* <ProjectsSection /> */}
+
+            <ProjectsSection />
+
             <CtaSection />
-        </>
+        </main>
     );
 }
 
