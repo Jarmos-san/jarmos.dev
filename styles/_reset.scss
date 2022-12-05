@@ -9,6 +9,20 @@
 
 * {
   margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: $blue20 $glow30;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $blue20;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $blue30;
 }
 
 html,
