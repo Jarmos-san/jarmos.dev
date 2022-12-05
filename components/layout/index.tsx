@@ -6,7 +6,7 @@ function Layout({ children }: PropsWithChildren) {
     return (
         <>
             <Navbar />
-            <div>{children}</div>
+            {children}
             <Footer />
         </>
     );
