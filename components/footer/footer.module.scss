@@ -35,8 +35,12 @@
     // Style properties for each of the individual social icon.
     a {
       background-color: $blue60;
-      padding: 8px;
+      padding: 10px;
       border-radius: 50%;
+
+      &:hover {
+        background-color: black;
+      }
     }
   }
 }

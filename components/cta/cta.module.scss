@@ -76,5 +76,9 @@
     align-items: center;
     gap: 9px;
     text-decoration: none;
+
+    &:hover {
+      background-color: $glow10;
+    }
   }
 }
