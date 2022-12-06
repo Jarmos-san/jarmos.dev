@@ -44,12 +44,12 @@
   }
 }
 
-@mixin projectCardStyles {
+@mixin projectCardStyles($color) {
   background-color: $blue20;
   border-radius: 5px;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border-left: 3px solid $color;
 }
