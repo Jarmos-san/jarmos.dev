@@ -5,7 +5,81 @@
 @import "mixins";
 
 .container {
-  @include container-props;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: $text10;
 
-  background-color: yellow;
+  @include breakpoint(base) {
+    padding: 0 7%;
+  }
+
+  @include breakpoint(small) {
+    padding: 0 10%;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0 18%;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 20%;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 20px;
+
+    @include breakpoint(base) {
+      grid-template-rows: repeat(1fr);
+    }
+
+    @include breakpoint(small) {
+      grid-template-rows: repeat(1fr);
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    a {
+      color: $text10;
+      text-decoration: none;
+      text-align: center;
+      border: 1px #7cc9ff solid;
+      border-radius: 8px;
+      padding: 5px;
+      margin-right: 50%;
+      width: auto;
+    }
+
+    .projectCardOne {
+      @include projectCardStyles;
+
+      @include breakpoint(medium) {
+        grid-column: 1 / 3;
+      }
+
+      // TODO: Move this property to a mixin.
+      border-left: 3px solid red;
+    }
+
+    .projectCardTwo {
+      @include projectCardStyles;
+
+      // TODO: Move this property to a mixin.
+      border-left: 3px solid yellowgreen;
+    }
+
+    .projectCardThree {
+      @include projectCardStyles;
+
+      // TODO: Move this property to a mixin.
+      border-left: 3px solid purple;
+    }
+  }
 }

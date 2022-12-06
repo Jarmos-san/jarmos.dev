@@ -43,3 +43,13 @@
     @include padding-x(20%);
   }
 }
+
+@mixin projectCardStyles {
+  background-color: $blue20;
+  border-radius: 5px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
