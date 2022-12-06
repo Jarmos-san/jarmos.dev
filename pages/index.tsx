@@ -3,7 +3,7 @@ import Head from "next/head";
 import CtaSection from "../components/cta";
 import Header from "../components/header";
 
-// import ProjectsSection from "../components/projects";
+import ProjectsSection from "../components/projects";
 
 function HomePage() {
     return (
@@ -14,7 +14,7 @@ function HomePage() {
 
             <Header />
 
-            {/* <ProjectsSection /> */}
+            <ProjectsSection />
 
             <CtaSection />
         </main>
