@@ -9,10 +9,10 @@ function ProjectsSection() {
                 <div className={styles.projectCardOne}>
                     <h3>Jefer</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed
-                        vehicula justo. Donec facilisis dapibus orci, ac porttitor nulla
-                        luctus sit amet. Ut quis eros dapibus, vulputate magna ut, rutrum
-                        sem.
+                        A simple, minimal & intuitive &ldquo;dotfiles&ldquo; manager written
+                        in Python. This project was created for a true cross-platform
+                        experience while managing dotfiles & giving more decision-making
+                        power to the user instead.
                     </p>
                     <a
                         href="https://github.com/Jarmos-san/jefer"
@@ -26,10 +26,9 @@ function ProjectsSection() {
                 <div className={styles.projectCardTwo}>
                     <h3>Jarmos.dev</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed
-                        vehicula justo. Donec facilisis dapibus orci, ac porttitor nulla
-                        luctus sit amet. Ut quis eros dapibus, vulputate magna ut, rutrum
-                        sem.
+                        A open-source personal website & blog created using Next.js & SASS.
+                        This project is the final iteration of the countless previous
+                        experimentations I performed to create an ideal personal website.
                     </p>
                     <a
                         href="https://github.com/Jarmos-san/personal-website"
@@ -43,10 +42,9 @@ function ProjectsSection() {
                 <div className={styles.projectCardThree}>
                     <h3>devsindia.in</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed
-                        vehicula justo. Donec facilisis dapibus orci, ac porttitor nulla
-                        luctus sit amet. Ut quis eros dapibus, vulputate magna ut, rutrum
-                        sem.
+                        The official landing page for the r/developersIndia Reddit
+                        community. The project was created using Next.js, SASS & TypeScript.
+                        This project was created in hopes to gather more organic traffic.
                     </p>
                     <a
                         href="https://github.com/developersIndia/website"
