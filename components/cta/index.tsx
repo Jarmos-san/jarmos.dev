@@ -9,8 +9,9 @@ function CtaSection() {
             <h2 className={styles.heading}>What are you working on?</h2>
 
             <p className={styles.subheading}>
-                Let&apos;s have a conversation! I would love to hear about what
-                you&apos;re working on and find a way to work together.
+                Do you have a business idea or perhaps a solution to a specific problem
+                to solve? Then feel free to reach out to me & I am sure we can figure
+                out some ways to work/collaborate together on that opporunity.
             </p>
 
             <Link href="/about#contact" passHref>

@@ -11,14 +11,14 @@ function AboutPage() {
                     <p>Hi There!</p>
 
                     <p>
-                        I&lsquo;m Somraj Saha, a Full-Stack Software Engineer & Technical
+                        I&lsquo;m Senior Somraj Saha, a Software Engineer & Technical
                         Writer. I head the Machine Learning (ML) Engineering team at{" "}
                         <a
                             href="https://www.augwir.com"
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            Augwir
+                            Augwir Technologies
                         </a>{" "}
                         right now. And the website you are on, is where I share my knowledge
                         & experience as a self-taught programmer.
@@ -28,8 +28,8 @@ function AboutPage() {
                         {Number(new Date().getFullYear()) - Number(new Date(2016))} years of
                         programming experience & working with clients from various
                         backgrounds. So, if you own a business & need an experienced helping
-                        hand, feel free to reach out to me with your queries! And I am sure
-                        we work out some solution for any particular business problem you
+                        hand, feel free to reach out to me with your queries! I am sure we
+                        can work out some solution for the particular business problem you
                         are trying to resolve.
                     </p>
 
@@ -54,7 +54,9 @@ function AboutPage() {
                             >
                                 Python
                             </a>{" "}
-                            for scripting & backend development like building REST APIs.
+                            for small-scale scripting & system automation needs. I also use
+                            Python in the backend for developing REST APIs & among other stuff
+                            like creating CLI scripts.
                         </li>
                         <li>
                             <a
@@ -64,7 +66,10 @@ function AboutPage() {
                             >
                                 TypeScript
                             </a>{" "}
-                            for working on React.js-based projects.
+                            for moments when working on React.js-based projects because I
+                            enjoy working in a statically-typed programming language. And no,
+                            I don&apos;t use TypeScript because of &quot;my hate for
+                            JavaScript&quot;.
                         </li>
                         <li>
                             <a
@@ -74,18 +79,22 @@ function AboutPage() {
                             >
                                 Lua
                             </a>{" "}
-                            for scripting Neovim & other small-scale embedded projects.
+                            for scripting & configuring Neovim. Unfortunately I am yet to come
+                            across other areas of application where I can make full use of my
+                            Lua programming skills.
                         </li>
-                        <li>
-                            <a
-                                href="https://go.dev"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
-                                Golang
-                            </a>{" "}
-                            for when a project needs to be compiled & be fast to execute.
-                        </li>
+                        {/* TODO: Uncomment the following section after learning Golang properly. */}
+                        {/* <li> */}
+                        {/*     <a */}
+                        {/*         href="https://go.dev" */}
+                        {/*         rel="noopener noreferrer" */}
+                        {/*         target="_blank" */}
+                        {/*     > */}
+                        {/*         Golang */}
+                        {/*     </a>{" "} */}
+                        {/*     for when a project needs a compiled runtime binary for whatever */}
+                        {/*     reason like fast execution times & so on. */}
+                        {/* </li> */}
                     </ol>
 
                     <h3>Frameworks & Libraries</h3>
@@ -99,8 +108,10 @@ function AboutPage() {
                             >
                                 Next.js
                             </a>{" "}
-                            the React.js-based framework for building well-optimised
-                            Server-Side Rendered (SSR) & Client-Side Rendered (CSR) websites.
+                            is a React.js-based framework & I use it for building
+                            well-optimised Server-Side Rendered (SSR) & Client-Side Rendered
+                            (CSR) websites. A quick heads up for you, the website you are on,
+                            was built using Next.js as well!
                         </li>
 
                         <li>
@@ -111,8 +122,10 @@ function AboutPage() {
                             >
                                 FastAPI
                             </a>{" "}
-                            the asynchronous & super-fast Python framework for building REST
-                            APIs.
+                            is a Python framework for developing & building REST APIs. This
+                            framework is my go-to framework for backend projects because of
+                            its speed, static-typings & autocomplete support which
+                            alternatives like Django Rest Framework lacks.
                         </li>
 
                         <li>
@@ -123,8 +136,10 @@ function AboutPage() {
                             >
                                 TailwindCSS
                             </a>{" "}
-                            for styling frontend projects because aligning divs with vanilla
-                            CSS is a painful task.
+                            is a CSS framework for those who does not like the monotonic
+                            aesthetics of other CSS frameworks like Bootstrap & so on. I use
+                            it often for when I need to develop a simple website quickly &
+                            without the overhead of &ldquo;CSS anxiety&ldquo;.
                         </li>
 
                         <li>
@@ -135,8 +150,10 @@ function AboutPage() {
                             >
                                 Chakra-UI
                             </a>{" "}
-                            which is a read-to-use React Component library meant for
-                            situations where speedy development is of utmost importance.
+                            is a ready-to-use React Component library & I use it when I need
+                            to build a web project real quick! This library is best suited for
+                            usage when the project need not require a lot of aesthetic
+                            customisation.
                         </li>
 
                         <li>
@@ -147,8 +164,9 @@ function AboutPage() {
                             >
                                 SASS
                             </a>{" "}
-                            which is a CSS pre-processor & superscript to be used when writing
-                            CSS can potentially become a chore.
+                            is a CSS preprocesser & it has &ldquo;first-class support&ldquo;
+                            with Next.js through CSS Modules. Hence, making life much easier
+                            by allowing me to write more modular, clean & dry CSS code.
                         </li>
                     </ol>
 
@@ -156,10 +174,10 @@ function AboutPage() {
 
                     <p>
                         Software Developers are never complete without their preferred
-                        tools. And apart from the few mentioned above, there are other
-                        non-development tools which are equally important to complete
+                        tools. Apart from the few ones mentioned above, there are other
+                        non-development tools which are equally important to complete our
                         day-to-day tasks as well. Hence, following are the few tools I
-                        employ on a regular basis:
+                        employ on a regular basis when writing code:
                     </p>
 
                     <ol>
@@ -172,7 +190,18 @@ function AboutPage() {
                                 Ubuntu
                             </a>{" "}
                             the Linux-based OS & my primary choice of an Operating System when
-                            developing software.
+                            developing software. I am reconsidering using a more configurable
+                            distro like{" "}
+                            <a
+                                href="https://endeavouros.com"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                EndeavourOS
+                            </a>{" "}
+                            in the future though. So, if you have used it before or using it
+                            at the moment? Then feel free to share a review or two about it
+                            with me.
                         </li>
 
                         <li>
@@ -183,7 +212,19 @@ function AboutPage() {
                             >
                                 Visual Studio Code (VSCode)
                             </a>{" "}
-                            for the preferred Integrated-Development Environment (IDE) needs.
+                            is a configurable Text Editor from Microsoft & I use it with a ton
+                            of plugins for writing code. This particular Text Editor has
+                            incredible support for plugins (
+                            <i>some maintained by Microsoft themselves</i>) which makes other,
+                            more resource-intensive IDEs like{" "}
+                            <a
+                                href="https://www.jetbrains.com/pycharm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                PyCharm
+                            </a>{" "}
+                            unattractive.
                         </li>
 
                         <li>
@@ -194,7 +235,17 @@ function AboutPage() {
                             >
                                 Neovim
                             </a>{" "}
-                            as my primary &quot;daily driver&quot; to write code.
+                            is the one & only preferred (<i>more like favourite</i>) Text
+                            Editor I use to write code. Its a &ldquo;<i>better</i>&ldquo; fork
+                            of{" "}
+                            <a
+                                href="https://vim.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Vim
+                            </a>{" "}
+                            & I use it primarily because of its of Lua scripting support.
                         </li>
 
                         <li>
@@ -205,8 +256,9 @@ function AboutPage() {
                             >
                                 Docker
                             </a>{" "}
-                            for deploying my software to the cloud and/or containerising local
-                            development environments.
+                            is the <i>de facto</i> containerisation tool for deploying or
+                            developing projects. And I try to use it for all of my projects
+                            whenever possible!
                         </li>
                     </ol>
                 </article>
