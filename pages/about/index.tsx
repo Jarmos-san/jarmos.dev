@@ -1,9 +1,14 @@
+import Head from "next/head";
+
 import styles from "./about.module.scss";
 
 function AboutPage() {
     return (
         <>
-            <title>Somraj Saha | About Me</title>
+            <Head>
+                <title>Somraj Saha | About Me</title>
+            </Head>
+
             <main className={styles.container}>
                 <article>
                     <h1>About Somraj Saha</h1>
