@@ -21,4 +21,4 @@ jobs:
         run: npm ci
 
       - name: Run Code Quality Checks
-        run: echo "Hello World!"
+        run: npm run lint
