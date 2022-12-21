@@ -29,6 +29,9 @@ jobs:
       - name: Run Code Quality Checks
         run: npm run lint
 
+      - name: Run Prettier to Check for Formatting Issues
+        run: npm run format
+
   deploy-production:
     runs-on: ubuntu-latest
 
