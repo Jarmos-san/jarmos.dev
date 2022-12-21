@@ -1,4 +1,6 @@
 .next
-.github
+.vercel
 
 node_modules
+
+**/.github/**/*.yml
