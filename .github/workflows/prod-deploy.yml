@@ -3,6 +3,7 @@ name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  PRODUCTION_URL: https://jarmos.vercel.app
 
 on:
   push:
@@ -11,6 +12,8 @@ on:
 
 jobs:
   code-quality-checks:
+    name: Code QA Checks
+
     runs-on: ubuntu-latest
 
     steps:
@@ -33,13 +36,15 @@ jobs:
         run: npm run format
 
   deploy-production:
+    name: Production Deployment
+
     runs-on: ubuntu-latest
 
     needs: code-quality-checks
 
     environment:
       name: Production
-      url: https://jarmos.vercel.app
+      url: $PRODUCTION_URL
 
     steps:
       - name: Checkout Repository

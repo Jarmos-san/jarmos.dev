@@ -12,6 +12,8 @@ on:
 
 jobs:
   code-quality-checks:
+    name: Code QA Checks
+
     runs-on: ubuntu-latest
 
     steps:
@@ -34,6 +36,8 @@ jobs:
         run: npm run format
 
   deploy-preview:
+    name: Preview Deployment
+
     runs-on: ubuntu-latest
 
     environment: Preview
