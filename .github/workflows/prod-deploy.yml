@@ -13,6 +13,8 @@ jobs:
   deploy-production:
     runs-on: ubuntu-latest
 
+    environment: Production
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
