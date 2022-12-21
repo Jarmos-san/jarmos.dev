@@ -2,23 +2,22 @@ import Head from "next/head";
 
 import CtaSection from "../components/cta";
 import Header from "../components/header";
-
 import ProjectsSection from "../components/projects";
 
 function HomePage() {
-    return (
-        <main>
-            <Head>
-                <title>Somraj Saha</title>
-            </Head>
+  return (
+    <main>
+      <Head>
+        <title>Somraj Saha</title>
+      </Head>
 
-            <Header />
+      <Header />
 
-            <ProjectsSection />
+      <ProjectsSection />
 
-            <CtaSection />
-        </main>
-    );
+      <CtaSection />
+    </main>
+  );
 }
 
 export default HomePage;
