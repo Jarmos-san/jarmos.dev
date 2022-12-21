@@ -1,12 +1,11 @@
 # 👨‍💻 Jarmos.dev
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Jarmos-san/personal-website/prod-deploy.yml?branch=main&label=CI%2FCD&logo=GitHub%20Actions&style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Jarmos-san/personal-website/prod-deploy.yml?branch=main&label=CI%2FCD&logo=github&style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Jarmos-san/personal-website?label=Repo%20Size&logo=github&style=flat-square)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/Jarmos-san?color=%23EA4AAA&label=Support%20the%20Project&logo=github%20sponsors&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Jarmos-san/personal-website?label=License&logo=github&style=flat-square)
 ![Website](https://img.shields.io/website?down_color=Red&down_message=Offline&label=Website&logo=Vercel&style=flat-square&up_message=Online&url=https%3A%2F%2Fjarmos.vercel.app)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Jarmos-san/personal-website?label=Commit%20Frequency&logo=github&style=flat-square)
-![Maintenance](https://img.shields.io/maintenance/yes/2018?color=blue&label=Maintenance%20Status&logo=github&style=flat-square)
 ![Twitter Follow](https://img.shields.io/twitter/follow/Jarmosan?style=social)
 
 This repository hosts the source code for my personal website - [jarmos.dev][1].
