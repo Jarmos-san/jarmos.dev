@@ -3,7 +3,6 @@ name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  PRODUCTION_URL: "https://jarmos.vercel.app"
 
 on:
   push:
@@ -44,7 +43,8 @@ jobs:
 
     environment:
       name: Production
-      url: ${{ fromJSON(env.PRODUCTION_URL) }}
+      # TODO: Configure this URL to be evaluated dynamically or from a global variable.
+      url: https://jarmos.vercel.app
 
     steps:
       - name: Checkout Repository
