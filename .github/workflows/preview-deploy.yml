@@ -11,6 +11,25 @@ on:
       - "dependabot/**"
 
 jobs:
+  code-quality-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js in the Runtime
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install the Dependencies
+        run: npm ci
+
+      - name: Run Code Quality Checks
+        run: npm run lint
+
   deploy-preview:
     runs-on: ubuntu-latest
 
