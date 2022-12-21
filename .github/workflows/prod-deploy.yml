@@ -44,7 +44,7 @@ jobs:
 
     environment:
       name: Production
-      url: $PRODUCTION_URL
+      url: ${{ fromJSON(env.PRODUCTION_URL) }}
 
     steps:
       - name: Checkout Repository
