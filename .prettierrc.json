@@ -1,13 +1,11 @@
 {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "bracketSameLine": false,
-    "proseWrap": "always",
-    "importOrder": [
-        "^(next/(.*)$)|(next$)$",
-        "<THIRD_PARTY_MODULES>"
-    ],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSameLine": false,
+  "proseWrap": "always",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^(next/(.*)$)|(next$)$", "<THIRD_PARTY_MODULES>"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
