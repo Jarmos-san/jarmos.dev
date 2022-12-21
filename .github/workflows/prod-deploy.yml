@@ -13,7 +13,9 @@ jobs:
   deploy-production:
     runs-on: ubuntu-latest
 
-    environment: Production
+    environment:
+      name: Production
+      url: https://jarmos.vercel.app
 
     steps:
       - name: Checkout Repository
