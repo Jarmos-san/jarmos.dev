@@ -40,6 +40,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    outputs:
+      deployment-url: ${{ steps.deployment_url.outputs.DEPLOYMENT_URL }}
+
     environment:
       name: Preview
       url: ${{ steps.deployment_url.outputs.DEPLOYMENT_URL }}
@@ -60,3 +63,20 @@ jobs:
       - name: Deploy Project Artifacts to Vercel
         id: deployment_url
         run: DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}) >> $GITHUB_OUTPUT
+
+  lighthouse-report:
+    name: Lighthouse Check
+
+    runs-on: ubuntu-latest
+
+    needs: deploy-preview
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Audit the Preview Deployment URL With Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: ${{ needs.deploy-preview.outputs.DEPLOYMENT_URL }}
+          temporaryPublicStorage: true
