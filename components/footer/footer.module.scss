@@ -3,21 +3,20 @@
 @import "../../styles/mixins";
 
 // Container for the footer section.
-.footer {
-  padding: 30px;
+.footerContainer {
+  padding: 25px 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 9px;
-  font-style: normal;
   font-weight: 500;
   line-height: 180%;
   color: $text30;
-  // FIXME: Something is messed up with this
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
 
   // Specific style property for the links in the footer section.
   a {
@@ -27,7 +26,6 @@
 
   // Style properties for all the social icons.
   .socials {
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     gap: 20px;

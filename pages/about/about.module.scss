@@ -2,6 +2,8 @@
 @import "../../styles/variables";
 
 .container {
+  margin-bottom: 250px;
+
   @include breakpoint(base) {
     padding: 40px 10%;
   }
