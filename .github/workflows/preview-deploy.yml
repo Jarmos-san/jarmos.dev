@@ -42,7 +42,7 @@ jobs:
 
     environment:
       name: Preview
-      url: ${{ steps.deployment_url.outputs.url_output }}
+      url: ${{ steps.deployment_url.outputs.DEPLOYMENT_URL }}
 
     steps:
       - name: Checkout Repository
