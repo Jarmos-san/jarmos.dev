@@ -10,11 +10,8 @@ function HomePage() {
       <Head>
         <title>Somraj Saha</title>
       </Head>
-
       <Header />
-
       <ProjectsSection />
-
       <CtaSection />
     </main>
   );
