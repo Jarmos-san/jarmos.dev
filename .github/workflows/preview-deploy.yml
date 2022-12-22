@@ -40,7 +40,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    environment: Preview
+    environment:
+      name: Preview
+      url: ${{ steps.deployment_url.outputs.url_output }}
 
     steps:
       - name: Checkout Repository
@@ -56,4 +58,5 @@ jobs:
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        id: deployment_url
+        run: DEPLOYMENT_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}) >> $GITHUB_OUTPUT
