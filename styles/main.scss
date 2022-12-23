@@ -1,11 +1,12 @@
-// TODO: Figure a way out to self-host this font later on.
+// TODO: Use the official @next/font library to self-host it instead. See the references below:
+// https://nextjs.org/docs/api-reference/next/font
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-// INFO: Variables for the colour pallete & much more
+// INFO: Variables for the colour pallette & more.
 @import "variables";
 
 // INFO: Reset the default browser-provided stylesheet for better control.
 @import "reset";
 
-// INFO: Partial file containing many mixins to be used across the project.
+// INFO: Partial file containing mixins for the various breakpoints.
 @import "breakpoints";

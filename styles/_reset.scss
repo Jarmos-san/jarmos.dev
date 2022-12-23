@@ -1,58 +1,73 @@
 @import "variables";
 
-// styling resets for better control
+// INFO: Styling resets for better design control.
+
+// INFO: Use borders for accounting the border & padding sizes. For more information on this
+// regards, see this resource: https://css-tricks.com/box-sizing
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+// INFO: Remove any inherent margins & set the scrollbar aesthetics properly.
 * {
   margin: 0;
   scrollbar-width: thin;
   scrollbar-color: $blue20 $glow30;
 }
 
+// INFO: Set the scrollbar width on Apple's Safari browser.
 *::-webkit-scrollbar {
   width: 10px;
 }
 
+// INFO: Set the background colour of the scrollbar for Safari.
 *::-webkit-scrollbar-track {
-  background: $blue20;
+  background-color: $blue20;
 }
 
+// INFO: Set the scrollbar thumb colour for Safari browser.
 *::-webkit-scrollbar-thumb {
   background-color: $blue30;
 }
 
+// INFO: Not exactly what is it for but is necessary for the footer to push itself to the
+// bottom of the website.
 html {
   position: relative;
   min-height: 100%;
 }
 
+// INFO: Set some default properties like no margin & font styles for the entire website.
 body {
   margin: 0;
   line-height: 1.5;
   background-color: $blue10;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
+// INFO: Configure the images to take up the entirety of its container.
 img,
 picture,
 video,
-canvas,
-svg {
+svg,
+canvas {
   display: block;
   max-width: 100%;
 }
 
+// INFO: Configure user-input elements to inherit the parent font.
 input,
-button,
 textarea,
+button,
 select {
   font: inherit;
 }
 
+// INFO: Enable word wrap whenever a long word/phrase reaches the end of the screen.
 p,
 h1,
 h2,
@@ -63,6 +78,8 @@ h6 {
   overflow-wrap: break-word;
 }
 
+// INFO: Not pretty what it does but read the documentation at:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/isolation
 #root,
 #__next {
   isolation: isolate;
