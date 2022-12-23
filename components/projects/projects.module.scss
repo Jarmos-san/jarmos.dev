@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/breakpoints";
+@import "../../styles/placeholders";
 
 @mixin projectCard($color) {
   background-color: $blue20;
@@ -12,26 +13,9 @@
 }
 
 .projectsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  @extend %layoutContainer;
+
   color: $text10;
-
-  @include breakpoint(base) {
-    padding: 0 7%;
-  }
-
-  @include breakpoint(small) {
-    padding: 0 10%;
-  }
-
-  @include breakpoint(medium) {
-    padding: 0 18%;
-  }
-
-  @include breakpoint(large) {
-    padding: 0 20%;
-  }
 
   .wrapper {
     display: grid;

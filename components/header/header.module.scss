@@ -1,29 +1,12 @@
 @import "../../styles/breakpoints";
 @import "../../styles/variables";
+@import "../../styles/placeholders";
 
 .headerContainer {
-  // background-color: yellow;
-  display: flex;
-  flex-direction: column;
+  @extend %layoutContainer;
+
   text-align: left;
   align-items: flex-start;
-  gap: 35px;
-
-  @include breakpoint(base) {
-    padding: 0 7%;
-  }
-
-  @include breakpoint(small) {
-    padding: 0 10%;
-  }
-
-  @include breakpoint(medium) {
-    padding: 0 18%;
-  }
-
-  @include breakpoint(large) {
-    padding: 0 20%;
-  }
 
   .heading {
     font-style: normal;
