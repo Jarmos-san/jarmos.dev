@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoints";
+
+.ctaContainer {
+  background-color: $blue20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  gap: 35px;
+
+  @include breakpoint(base) {
+    padding: 20px;
+  }
+
+  @include breakpoint(small) {
+    padding: 40px;
+  }
+
+  @include breakpoint(medium) {
+    padding: 200px;
+  }
+
+  .ctaHeader {
+    font-style: normal;
+    font-weight: 700;
+    color: $glow10;
+
+    @include breakpoint(base) {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoint(small) {
+      font-size: 2.25rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 2.75rem;
+    }
+  }
+
+  .ctaSubheader {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: $text10;
+    line-height: 27px;
+
+    @include breakpoint(base) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint(small) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 1.3rem;
+    }
+  }
+}
