@@ -12,15 +12,19 @@
   gap: 35px;
 
   @include breakpoint(base) {
-    padding: 20px;
+    padding: 0 7%;
   }
 
   @include breakpoint(small) {
-    padding: 40px;
+    padding: 0 10%;
   }
 
   @include breakpoint(medium) {
-    padding: 200px;
+    padding: 0 18%;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 20%;
   }
 
   .ctaHeader {
