@@ -1,0 +1,23 @@
+@import "breakpoints";
+
+%layoutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include breakpoint(base) {
+    padding: 0 7%;
+  }
+
+  @include breakpoint(small) {
+    padding: 0 10%;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0 18%;
+  }
+
+  @include breakpoint(large) {
+    padding: 0 20%;
+  }
+}
