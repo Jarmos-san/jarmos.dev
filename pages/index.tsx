@@ -1,7 +1,13 @@
+import CtaSection from "../components/cta";
+import HeaderSection from "../components/header";
+import ProjectSection from "../components/projects";
+
 function HomePage() {
     return (
         <>
-            <h1>Hello World!</h1>
+            <HeaderSection />
+            <ProjectSection />
+            <CtaSection />
         </>
     );
 }
