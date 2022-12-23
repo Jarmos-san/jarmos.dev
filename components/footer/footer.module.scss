@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.footerContainer {
+  position: absolute;
+  padding: 25px 30px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  color: $text30;
+
+  a {
+    color: #8c8888;
+    text-underline-offset: 3px;
+  }
+
+  .socialIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    a {
+      background-color: $blue60;
+      padding: 10px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
