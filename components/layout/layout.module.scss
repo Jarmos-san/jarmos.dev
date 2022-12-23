@@ -1,0 +1,9 @@
+.container {
+  // NOTE: This bottom margin is necessary to push the footer component downwards & prevent
+  // it from overlapping. Its a weird hack, I'm aware of it but there's no other way around.
+  margin: 100px 0 290px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
