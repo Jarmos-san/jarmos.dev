@@ -48,4 +48,33 @@
       font-size: 1.3rem;
     }
   }
+
+  .contactBtn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    // border: 1px solid red;
+    border-radius: 6px;
+    background-color: $glow30;
+    font-weight: 700;
+    font-size: 20px;
+    color: $blue20;
+    text-decoration: none;
+
+    @include breakpoint(base) {
+      padding: 3px 12px;
+    }
+
+    @include breakpoint(small) {
+      padding: 6px 20px;
+    }
+
+    @include breakpoint(medium) {
+      padding: 8px 28px;
+    }
+
+    &:hover {
+      background-color: $glow10;
+    }
+  }
 }

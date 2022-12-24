@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 import styles from "./cta.module.scss";
+import { RiChatPollFill } from "react-icons/ri";
 
 function CtaSection() {
     return (
@@ -11,6 +14,11 @@ function CtaSection() {
                 figure our some ways to work or collaborate together on that
                 opportunity.
             </p>
+
+            <Link href="/about" className={styles.contactBtn}>
+                <RiChatPollFill title="Chat" size={22} />
+                Chat
+            </Link>
         </section>
     );
 }
