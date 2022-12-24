@@ -9,7 +9,18 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 400px;
+
+  @include breakpoint(base) {
+    height: 520px;
+  }
+
+  @include breakpoint(small) {
+    height: 500px;
+  }
+
+  @include breakpoint(medium) {
+    height: 400px;
+  }
 
   .ctaHeader {
     font-style: normal;
