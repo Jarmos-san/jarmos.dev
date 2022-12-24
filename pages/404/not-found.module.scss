@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.errorMessage {
+  color: $text30;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
