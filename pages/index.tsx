@@ -5,16 +5,16 @@ import HeaderSection from "../components/header";
 import ProjectSection from "../components/projects";
 
 function HomePage() {
-    return (
-        <>
-            <Head>
-                <title>Somraj Saha</title>
-            </Head>
-            <HeaderSection />
-            <ProjectSection />
-            <CtaSection />
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>Somraj Saha</title>
+      </Head>
+      <HeaderSection />
+      <ProjectSection />
+      <CtaSection />
+    </>
+  );
 }
 
 export default HomePage;
