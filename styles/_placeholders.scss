@@ -1,3 +1,4 @@
+@import "variables";
 @import "breakpoints";
 
 %layoutContainer {
@@ -19,5 +20,44 @@
 
   @include breakpoint(large) {
     padding: 0 20%;
+  }
+}
+
+%proseStyles {
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 142%;
+    color: $text20;
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 142%;
+    color: $text10;
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 142%;
+    color: $text20;
+  }
+
+  a {
+    color: $glow30;
+  }
+
+  p {
+    color: $text30;
+  }
+
+  li {
+    color: $text30;
+    line-height: 150%;
   }
 }
