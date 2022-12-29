@@ -17,7 +17,7 @@ function HomePage() {
         />
         <meta
           property="og:image"
-          content="https://jarmos.vercel.app/assets/logo-1200-630.jpeg"
+          content="https://jarmos.vercel.app/assets/logo-1200-630.png"
         />
         <meta
           property="og:image:alt"
@@ -35,7 +35,7 @@ function HomePage() {
         />
         <meta
           name="twitter:image"
-          content="https://jarmos.vercel.app/assets/profile.jpeg"
+          content="https://jarmos.vercel.app/assets/profile.png"
         />
         <meta
           property="twitter:image:alt"
