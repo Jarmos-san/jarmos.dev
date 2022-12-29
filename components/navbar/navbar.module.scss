@@ -29,14 +29,9 @@
   }
 
   .logo {
-    a {
-      text-decoration: none;
-      color: $text10;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 27px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .menuIcon {
