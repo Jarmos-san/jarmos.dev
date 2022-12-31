@@ -32,6 +32,6 @@
   },
   "lint-staged": {
     "*.tsx": "next lint",
-    "*.tsx,ts,js,json": "prettier --write"
+    "*.{tsx,ts,js,json,scss}": "prettier --write"
   }
 }
