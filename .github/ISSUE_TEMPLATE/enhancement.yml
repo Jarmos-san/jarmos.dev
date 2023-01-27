@@ -1,0 +1,36 @@
+name: Enhancements
+description: Enhance the Website with a Feature or Two
+title: "[ENHANCEMENT]: "
+labels: ["enhancement"]
+assignees:
+  - "Jarmos-san"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        "Thanks for contributing to the community project!"
+
+  - type: textarea
+    id: feature-request
+    attributes:
+      label: Feature details?
+      description: |
+        Tell u in detail about the feature you would like to see implemented?
+      placeholder: |
+        Explain in detail about the feature you would like to see implemented.
+        Do include code snippets & examples if required!
+      value: "Enhance the capabilities with these features"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: |
+        By submitting this issue, you agree to follow our [Code of
+        Conduct](https://github.com/developersIndia/.github/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

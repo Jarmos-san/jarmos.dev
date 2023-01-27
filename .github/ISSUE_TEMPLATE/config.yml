@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions & Questions
+    url: https://github.com/Jarmos-san/personal-website/discussions
+    about: Please ask and answer questions here.
+
+  - name: Issues & Bug Reports
+    url: https://github.com/Jarmos-san/personal-website/issues
+    about: Please report security vulnerabilities here.
