@@ -29,6 +29,11 @@ function RootDocument() {
           name="google-site-verification"
           content="AiaidznSitBntpVbXH-dJgi83ziDyqN2LBaK6HX1NK0"
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "392941b3f13c4678bb21cdb0fadafe91"}'
+        ></script>
       </Head>
       <body>
         <Main />
