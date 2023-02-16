@@ -11,7 +11,7 @@ function Footer() {
         <Image
           src="./assets/logo-og.svg"
           alt="website's logo"
-          width={50}
+          width={100}
           height={100}
         />
 
@@ -24,7 +24,22 @@ function Footer() {
       <hr />
 
       <section className={styles.footerSubsection}>
-        <small>&copy; Somraj Saha 2018-{new Date().getFullYear()}</small>
+        <small>
+          Website Designed by{" "}
+          <a href="https://www.warner.codes" target="_blank" rel="noreferrer">
+            Ryan Warner
+          </a>{" "}
+          | Developed &{" "}
+          <a
+            href="https://github.com/Jarmos-san/jarmos.dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Sourced{" "}
+          </a>
+          by Somraj Saha 2018-
+          {new Date().getFullYear()}
+        </small>
 
         <small className={styles.footerLinks}>
           <Link href="/terms-and-conditions">Terms of Usage</Link>
