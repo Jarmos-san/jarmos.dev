@@ -37,7 +37,7 @@ function Footer() {
           >
             Open Sourced{" "}
           </a>
-          by Somraj Saha 2018-
+          by Somraj Saha &copy; 2018-
           {new Date().getFullYear()}
         </small>
 
