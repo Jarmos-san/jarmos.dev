@@ -1,39 +1,55 @@
 @import "../../styles/variables";
+@import "../../styles/breakpoints";
 
 .footerContainer {
-  position: absolute;
-  padding: 25px 30px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 9px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 180%;
   color: $text30;
+  margin-bottom: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 
-  a {
-    color: #8c8888;
-    text-underline-offset: 3px;
+  @include breakpoint(base) {
+    padding: 0px 7%;
+    font-size: 1rem;
   }
 
-  .socialIcons {
+  @include breakpoint(small) {
+    padding: 0px 10%;
+    font-size: 1.25rem;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0px 18%;
+    font-size: 1.4rem;
+  }
+
+  .footerSubsection {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
 
-    a {
-      background-color: $blue60;
-      padding: 10px;
-      border-radius: 50%;
+  a {
+    color: $text10;
+    text-decoration: none;
 
-      &:hover {
-        background-color: black;
-      }
+    &:hover {
+      color: $glow10;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
+  }
+
+  .footerLinks {
+    display: flex;
+    gap: 45px;
+  }
+
+  hr {
+    border: none;
+    border-top: 3px double $blue30;
+    margin: 30px 0;
   }
 }

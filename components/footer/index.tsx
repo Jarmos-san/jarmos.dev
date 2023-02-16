@@ -1,73 +1,69 @@
+import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./footer.module.scss";
-import { AiFillMail } from "react-icons/ai";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import styles from "../footer/footer.module.scss";
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <small>&copy; Somraj Saha 2018-{new Date().getFullYear()}</small>
+      <section className={styles.footerSubsection}>
+        <Image
+          src="./assets/logo-og.svg"
+          alt="website's logo"
+          width={50}
+          height={100}
+        />
 
-      <small>
-        Website designed by{" "}
-        <a
-          href="https://www.warner.codes"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          Ryan Warner
-        </a>{" "}
-        &amp; is made{" "}
-        <a
-          href="https://github.com/Jarmos-san/personal-website"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          open-source
-        </a>{" "}
-        with ❤️
-      </small>
+        <span className={styles.footerLinks}>
+          <Link href="/">Home</Link>
+          <Link href="/about">About Me</Link>
+        </span>
+      </section>
 
-      <small>
-        <Link href="/privacy-policy">Privacy Policy</Link> &middot;{" "}
-        <Link href="/terms-and-conditions">Terms & Conditions</Link> &middot;{" "}
-        <Link href="/license">License & Distribution Rights</Link>
-      </small>
+      <hr />
 
-      <div className={styles.socialIcons}>
-        <a
-          href="https://github.com/Jarmos-san"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          <BsGithub color="#a5a6b0" size={25} title="github" />
-        </a>
+      <section className={styles.footerSubsection}>
+        <small>&copy; Somraj Saha 2018-{new Date().getFullYear()}</small>
 
-        <a
-          href="https://www.linkedin.com/in/jarmos"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          <BsLinkedin color="#a5a6b0" size={25} title="linkedin" />
-        </a>
+        <small className={styles.footerLinks}>
+          <Link href="/terms-and-conditions">Terms of Usage</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/license">Licensing & Distribution Rights</Link>
+        </small>
 
-        <a
-          href="https://twitter.com/Jarmosan"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          <BsTwitter color="#a5a6b0" size={25} title="twitter" />
-        </a>
-
-        <a
-          href="mailto:somraj.mle@gmail.com"
-          target="_blank"
-          rel="nooopener noreferrer"
-        >
-          <AiFillMail color="#a5a6b0" size={25} title="email" />
-        </a>
-      </div>
+        <span className={styles.footerLinks}>
+          <a
+            href="https://twitter.com/Jarmosan"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiTwitter
+              size={28}
+              color="#83f9a2"
+              title="Somraj Saha on Twitter"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jarmos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiLinkedin
+              size={28}
+              color="#83f9a2"
+              title="Somraj Saha on LinkedIn"
+            />
+          </a>
+          <a
+            href="https://github.com/Jarmos-san"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiGithub size={28} color="#83f9a2" title="Somraj Saha on GitHub" />
+          </a>
+        </span>
+      </section>
     </footer>
   );
 }
