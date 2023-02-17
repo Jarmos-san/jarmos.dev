@@ -15,7 +15,8 @@ type socialLinkTypes = {
 export const navLinks: linkTypes[] = [
   { label: "Home", href: "/" },
   { label: "About Me", href: "/about" },
-  { label: "Portfolio", href: "/portfolio" },
+  // TODO: Uncomment this after designing a proper portfolio page.
+  // { label: "Portfolio", href: "/portfolio" },
 ];
 
 export const legalLinks: linkTypes[] = [
