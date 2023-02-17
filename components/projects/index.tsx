@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 import styles from "./projects.module.scss";
 
 function ProjectSection() {
   return (
     <section className={styles.projectsContainer}>
-      <h2>Projects</h2>
+      <h2>Portfolio</h2>
 
       <div className={styles.wrapper}>
         <div className={styles.cardOne}>
@@ -17,13 +19,7 @@ function ProjectSection() {
             alternatives.
           </p>
 
-          <a
-            href="https://github.com/Jarmos-san/jefer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more...
-          </a>
+          <Link href="/portfolio#jefer">Read more...</Link>
         </div>
 
         <div className={styles.cardTwo}>
@@ -36,13 +32,7 @@ function ProjectSection() {
             website.
           </p>
 
-          <a
-            href="https://github.com/Jarmos-san/personal-website"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more...
-          </a>
+          <Link href="/portfolio#jarmos-website">Read more...</Link>
         </div>
 
         <div className={styles.cardThree}>
@@ -55,13 +45,7 @@ function ProjectSection() {
             traffic.
           </p>
 
-          <a
-            href="https://github.com/developersIndia/website"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more...
-          </a>
+          <Link href="/portfolio#devsindia">Read more...</Link>
         </div>
       </div>
     </section>
