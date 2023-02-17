@@ -18,6 +18,7 @@ function Footer() {
         <span className={styles.footerLinks}>
           <Link href="/">Home</Link>
           <Link href="/about">About Me</Link>
+          <Link href="/portfolio">Portfolio</Link>
         </span>
       </section>
 
