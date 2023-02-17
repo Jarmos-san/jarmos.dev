@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { legalLinks, navLinks } from "../../constants/navlinks";
 import styles from "../footer/footer.module.scss";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
@@ -16,8 +17,11 @@ function Footer() {
         />
 
         <span className={styles.footerLinks}>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Me</Link>
+          {navLinks.map((navLink) => (
+            <Link key={navLink.label} href={navLink.href}>
+              {navLink.label}
+            </Link>
+          ))}
         </span>
       </section>
 
@@ -42,12 +46,15 @@ function Footer() {
         </small>
 
         <small className={styles.footerLinks}>
-          <Link href="/terms-and-conditions">Terms of Usage</Link>
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/license">Licensing & Distribution Rights</Link>
+          {legalLinks.map((legalLink) => (
+            <Link key={legalLink.label} href={legalLink.href}>
+              {legalLink.label}
+            </Link>
+          ))}
         </small>
 
         <span className={styles.footerLinks}>
+          {/* TODO: Refactor these links as well. */}
           <a
             href="https://twitter.com/Jarmosan"
             target="_blank"
