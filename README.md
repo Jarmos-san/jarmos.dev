@@ -55,7 +55,7 @@ Once done, fork this repository & then run the following commands:
 1. Clone the repository.
 
    ```console
-   git clone git@github.com:<YOUR-USERNAME>/personal-website.git && cd personal-website
+   git clone git@github.com:<YOUR-USERNAME>/jarmos.dev.git && cd personal-website
    ```
 
 2. Install all the necessary dependencies.
