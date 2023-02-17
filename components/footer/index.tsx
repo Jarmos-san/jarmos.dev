@@ -17,9 +17,6 @@ function Footer() {
         />
 
         <span className={styles.footerLinks}>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Me</Link>
-          <Link href="/portfolio">Portfolio</Link>
           {navLinks.map((navLink) => (
             <Link key={navLink.label} href={navLink.href}>
               {navLink.label}

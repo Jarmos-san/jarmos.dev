@@ -1,19 +1,18 @@
 import Link from "next/link";
 
+import { navLinks } from "../../constants/navlinks";
 import styles from "./mobile-menu.module.scss";
 
 function MobileMenu() {
   return (
     <div className={styles.mobileMenu}>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-      </ul>
+      {navLinks.map((navItem) => (
+        <ul key={navItem.label}>
+          <li>
+            <Link href={navItem.href}>{navItem.label}</Link>
+          </li>
+        </ul>
+      ))}
     </div>
   );
 }
