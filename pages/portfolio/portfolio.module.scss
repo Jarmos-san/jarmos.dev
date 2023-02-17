@@ -1,0 +1,7 @@
+@import "../../styles/placeholders";
+@import "../../styles/variables";
+
+.container {
+  @extend %layoutContainer;
+  @extend %proseStyles;
+}
