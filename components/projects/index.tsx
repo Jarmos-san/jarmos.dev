@@ -19,7 +19,7 @@ function ProjectSection() {
             alternatives.
           </p>
 
-          <Link href="/portfolio#jefer">Read more...</Link>
+          <Link href="/portfolio/jefer">Read more...</Link>
         </div>
 
         <div className={styles.cardTwo}>
@@ -32,7 +32,7 @@ function ProjectSection() {
             website.
           </p>
 
-          <Link href="/portfolio#jarmos-website">Read more...</Link>
+          <Link href="/portfolio/personal-website">Read more...</Link>
         </div>
 
         <div className={styles.cardThree}>
@@ -45,7 +45,7 @@ function ProjectSection() {
             traffic.
           </p>
 
-          <Link href="/portfolio#devsindia">Read more...</Link>
+          <Link href="/portfolio/devsindia-in">Read more...</Link>
         </div>
       </div>
     </section>
