@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { navLinks } from "../../constants/navlinks";
 import MobileMenu from "../mobile-menu";
 import styles from "./navbar.module.scss";
 import { useState } from "react";
@@ -36,17 +37,13 @@ function Navbar() {
           )}
         </button>
 
-        <div className={styles.navLinks}>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-          </ul>
-        </div>
+        <span className={styles.navLinks}>
+          {navLinks.map((navItem) => (
+            <Link key={navItem.label} href={navItem.href}>
+              {navItem.label}
+            </Link>
+          ))}
+        </span>
       </nav>
 
       {isMenuOpen ? <MobileMenu /> : ""}

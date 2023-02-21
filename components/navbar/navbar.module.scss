@@ -50,31 +50,27 @@
   }
 
   .navLinks {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 50px;
-
-      a {
-        text-decoration: none;
-        color: $text10;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-
-        &:hover {
-          color: $glow10;
-          text-decoration: underline;
-          text-underline-offset: 3px;
-        }
-      }
-    }
+    display: flex;
+    gap: 50px;
+    color: $text10;
 
     @include breakpoint(base) {
       display: none;
+    }
+
+    a {
+      color: $text10;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 24px;
+
+      &:hover {
+        color: $glow20;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
     }
   }
 }

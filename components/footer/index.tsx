@@ -10,7 +10,7 @@ function Footer() {
     <footer className={styles.footerContainer}>
       <section className={styles.footerSubsection}>
         <Image
-          src="./assets/logo-og.svg"
+          src="/assets/logo-og.svg"
           alt="website's logo"
           width={100}
           height={100}
