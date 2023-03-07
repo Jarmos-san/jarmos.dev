@@ -1,48 +1,90 @@
+import Seo from "../../components/seo";
+import styles from "./portfolio.module.scss";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { remark } from "remark";
+import html from "remark-html";
 
-type ParamsType = {
+type ParamTypes = {
   params: {
     slug: string;
   };
 };
 
-function PortfolioProject({ data, content }) {
-  <h1>{data.title}</h1>;
+type PropTypes = {
+  frontmatter: {
+    title: string;
+    description: string;
+    metaSummary?: string | null;
+    coverImage?: {
+      href: string;
+      alt: string;
+    };
+    slug: string;
+  };
+  content: string;
+};
+
+const portfolioDir = path.join(process.cwd(), "_portfolio");
+
+function PortfolioPage({ frontmatter, content }: PropTypes) {
+  return (
+    <>
+      <Seo
+        title={frontmatter.title}
+        href={`/portfolio/${frontmatter.slug}`}
+        description={frontmatter.description}
+        imageHref=""
+        imageAlt=""
+      />
+      <article className={styles.container}>
+        <div
+          dangerouslySetInnerHTML={{ __html: content }}
+          style={{ color: "#ffffff" }}
+        />
+      </article>
+    </>
+  );
 }
 
 export async function getStaticPaths() {
-  // List the Markdown files located in the "_portfolio" directory
-  const markdownFiles = fs.readdirSync(path.join(process.cwd(), "_portfolio"));
+  // Read the contents of the portfolio directory.
+  const files = fs.readdirSync(portfolioDir);
 
-  // Preprocess the Markdown filename to be used as proper URLs
-  const paths = markdownFiles.map((filename) => ({
+  // Prettify the URLs
+  const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(/.md$/, ""),
+      slug: filename.replace(".md", ""),
     },
   }));
 
-  // Return the list of URL paths & a 404 page if none exists
-  return { paths: paths, fallback: false };
+  // Return the prettiefied URLs & additionally return a 404 if no page exists
+  return {
+    paths: paths,
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({ params }: ParamsType) {
-  const filename = path.join(
-    path.join(process.cwd(), "_portfolio", `${params.slug}.md`)
-  );
+export async function getStaticProps({ params: { slug } }: ParamTypes) {
+  // Read the contents of the Markdown file into memory
+  const filename = fs.readFileSync(`${portfolioDir}/${slug}.md`, "utf-8");
 
-  const fileContents = fs.readFileSync(filename, "utf8");
-  const { data, content } = matter(fileContents);
+  // Parse the contents of the Markdown files
+  const { data: frontmatter, content } = matter(filename);
 
-  console.log(data);
+  // Convert the Markdown AST to HTML
+  const markdown = await remark().use(html).process(content);
+
+  // Convert the HTML content to be passed as props data for the component
+  const htmlContent = markdown.toString();
 
   return {
     props: {
-      data: data,
-      content: content,
+      frontmatter: frontmatter,
+      content: htmlContent,
     },
   };
 }
 
-export default PortfolioProject;
+export default PortfolioPage;
