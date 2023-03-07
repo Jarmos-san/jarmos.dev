@@ -1,9 +1,11 @@
 ---
-title: Jefer
-description: A simple dotfiles manager written in Rust.
+title: Jarmos
+description:
+  A personal website created using Next.js, TypeScript & other related amazing
+  tools!
 ---
 
-# Jefer: A Minimalist's Dotfiles Manager
+# Somraj Saha's Personal Website
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum ex
 efficitur purus blandit tristique. Donec lobortis dui id lacinia tempus. Morbi

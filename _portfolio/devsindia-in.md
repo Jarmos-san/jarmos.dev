@@ -1,9 +1,9 @@
 ---
-title: Jefer
-description: A simple dotfiles manager written in Rust.
+title: DevsIndia Community Website
+description: The community website for the r/developersIndia community.
 ---
 
-# Jefer: A Minimalist's Dotfiles Manager
+# r/developersIndia Community Website
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum ex
 efficitur purus blandit tristique. Donec lobortis dui id lacinia tempus. Morbi
@@ -25,6 +25,8 @@ In hac habitasse platea dictumst. Aenean eu ligula volutpat leo fringilla
 faucibus ac eget lacus. Integer eget ligula laoreet, finibus felis vel, mollis
 enim. Donec viverra scelerisque suscipit.
 
+## This is a Sample Second-Level Heading
+
 Aenean in massa urna. In eget augue sapien. Duis ullamcorper eros eu purus
 congue lobortis. Donec auctor interdum tortor sit amet porta. Cras ut ex
 laoreet, eleifend metus in, hendrerit mauris. Sed gravida, felis et mollis
@@ -36,6 +38,8 @@ varius nulla scelerisque vel. Sed eget purus est. Fusce est ex, porta a porta
 sit amet, commodo sit amet eros. Duis vitae eros justo. Mauris et aliquet
 mauris, eu tincidunt sem. Sed volutpat consequat sapien, eget luctus metus
 bibendum et.
+
+### And This is a Sample Third-Level Heading
 
 Sed faucibus justo sit amet fermentum laoreet. Nunc euismod imperdiet nulla et
 mollis. Nam sed ligula ornare erat tincidunt tempus a sit amet nisl. Praesent
