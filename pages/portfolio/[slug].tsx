@@ -47,13 +47,19 @@ function PortfolioPage({ frontmatter, content }: PropTypes) {
 }
 
 export async function getStaticPaths() {
-  // Read the contents of the portfolio directory.
-  const files = fs.readdirSync(PORTFOLIO_DIR);
+  // Get the list of Markdown files
+  const markdownFiles = fs
+    // Read the contents of the "portfolio" directory
+    .readdirSync(PORTFOLIO_DIR, { withFileTypes: true })
+    // Filter out only the files & nothing else
+    .filter((file) => file.isFile())
+    // Parse the Direct Objects for the file names
+    .map((file) => file.name);
 
   // Prettify the URLs
-  const paths = files.map((filename) => ({
+  const paths = markdownFiles.map((file) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: file.replace(".md", ""),
     },
   }));
 
