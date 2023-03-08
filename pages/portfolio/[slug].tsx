@@ -1,8 +1,8 @@
 import Seo from "../../components/seo";
+import { PORTFOLIO_DIR } from "../../constants";
 import styles from "./portfolio.module.scss";
 import fs from "fs";
 import matter from "gray-matter";
-import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
 
@@ -26,8 +26,6 @@ type PropTypes = {
   content: string;
 };
 
-const portfolioDir = path.join(process.cwd(), "_portfolio");
-
 function PortfolioPage({ frontmatter, content }: PropTypes) {
   return (
     <>
@@ -50,7 +48,7 @@ function PortfolioPage({ frontmatter, content }: PropTypes) {
 
 export async function getStaticPaths() {
   // Read the contents of the portfolio directory.
-  const files = fs.readdirSync(portfolioDir);
+  const files = fs.readdirSync(PORTFOLIO_DIR);
 
   // Prettify the URLs
   const paths = files.map((filename) => ({
@@ -68,7 +66,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }: ParamTypes) {
   // Read the contents of the Markdown file into memory
-  const filename = fs.readFileSync(`${portfolioDir}/${slug}.md`, "utf-8");
+  const filename = fs.readFileSync(`${PORTFOLIO_DIR}/${slug}.md`, "utf-8");
 
   // Parse the contents of the Markdown files
   const { data: frontmatter, content } = matter(filename);
