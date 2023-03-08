@@ -12,52 +12,44 @@ on:
 jobs:
   code-quality-checks:
     name: Code QA Checks
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
       - name: Setup Node.js in the Runtime
         uses: actions/setup-node@v3.6.0
         with:
           node-version: 18
           cache: "npm"
-
       - name: Install the Dependencies
         run: npm ci
-
       - name: Run Code Quality Checks
         run: npm run lint
-
       - name: Run Prettier to Check for Formatting Issues
         run: npm run format
 
   deploy-production:
     name: Production Deployment
-
     runs-on: ubuntu-latest
-
     needs: code-quality-checks
-
     environment:
       name: Production
       # TODO: Configure this URL to be evaluated dynamically or from a global variable.
       url: https://jarmos.vercel.app
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        with:
+          # The following two lines are necessary for the workflow to be able to access the
+          # private blog & portfolio repositories. For more information, refer to this article:
+          # https://samuelsson.dev/access-private-submodules-in-github-actions
+          ssh-key: ${{ secrets.SUBMODULE_ACCESS_KEY }}
+          submodules: "recursive"
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
-
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
