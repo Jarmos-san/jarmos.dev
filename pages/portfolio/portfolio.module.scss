@@ -4,4 +4,12 @@
 .container {
   @extend %layoutContainer;
   @extend %proseStyles;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 18px 0;
+  }
 }
