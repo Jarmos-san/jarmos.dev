@@ -3,7 +3,9 @@ import Link from "next/link";
 
 import { legalLinks, navLinks } from "../../constants/navlinks";
 import styles from "../footer/footer.module.scss";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FaGithub, FaKaggle, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+// import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 function Footer() {
   return (
@@ -60,7 +62,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <FiTwitter
+            <FaTwitter
               size={28}
               color="#83f9a2"
               title="Somraj Saha on Twitter"
@@ -71,7 +73,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <FiLinkedin
+            <FaLinkedin
               size={28}
               color="#83f9a2"
               title="Somraj Saha on LinkedIn"
@@ -82,7 +84,15 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <FiGithub size={28} color="#83f9a2" title="Somraj Saha on GitHub" />
+            <FaGithub size={28} color="#83f9a2" title="Somraj Saha on GitHub" />
+          </a>
+
+          <a
+            href="https://www.kaggle.com/jarmos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaKaggle size={28} color="#83f9a2" title="Somraj Saha on Kaggle" />
           </a>
         </span>
       </section>
