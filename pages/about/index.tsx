@@ -16,17 +16,12 @@ function AboutPage() {
         <h1>About Somraj Saha</h1>
         <p>Hi There!</p>
         <p>
-          I&lsquo;m Senior Somraj Saha, a Software Engineer and a Technical
-          Writer. I head the Machine Learning (ML) Engineering team at{" "}
-          <a
-            href="https://www.augwir.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Augwir Technologies
-          </a>{" "}
-          right now. The website you are on, is where I share my knowledge and
-          experience as a self-taught programmer.
+          I am an ML Engineering Consultant & I work with clients across the
+          globe to build/design their MVPs. I use some of the latest
+          developments of current Machine Learning techniques as well as other
+          related Software Engineering technologies to build the MVPs. The
+          website you are on, is where I share my knowledge and experience as a
+          self-taught programmer.
         </p>
         <p>
           I&lsquo;ve over{" "}
@@ -157,8 +152,23 @@ function AboutPage() {
             with Next.js through CSS Modules. Hence, making life much easier by
             allowing me to write more modular, clean & dry CSS code.
           </li>
+
+          <li>
+            <a
+              href="https://scikit-learn.org"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Scikit-Learn
+            </a>{" "}
+            is a comprehensive library providing Python API for some of the most
+            widely used ML algorithms. I use this library to build modern
+            ML-based software.
+          </li>
         </ol>
+
         <h3>Miscellaneous Development Tools I Need Daily</h3>
+
         <p>
           Software Developers are never complete without their preferred tools.
           Apart from the few ones mentioned above, there are other
