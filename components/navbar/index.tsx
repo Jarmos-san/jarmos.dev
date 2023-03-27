@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { navLinks } from "../../constants/navlinks";
-import MobileMenu from "../mobile-menu";
-import styles from "./navbar.module.scss";
 import { useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
+
+import { navLinks } from "../../constants/navlinks";
+import MobileMenu from "../mobile-menu";
+import styles from "./navbar.module.scss";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);

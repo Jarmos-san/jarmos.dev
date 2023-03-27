@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { legalLinks, navLinks } from "../../constants/navlinks";
-import styles from "../footer/footer.module.scss";
 import { FaGithub, FaKaggle, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-// import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { legalLinks, navLinks } from "../../constants/navlinks";
+import styles from "../footer/footer.module.scss";
 
 function Footer() {
   return (

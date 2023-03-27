@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import styles from "./cta.module.scss";
 import { RiChatPollFill } from "react-icons/ri";
+
+import styles from "./cta.module.scss";
 
 function CtaSection() {
   return (

@@ -1,7 +1,8 @@
+import { PropsWithChildren } from "react";
+
 import Footer from "../footer";
 import Navbar from "../navbar";
 import styles from "./layout.module.scss";
-import { PropsWithChildren } from "react";
 
 function Layout({ children }: PropsWithChildren) {
   return (
