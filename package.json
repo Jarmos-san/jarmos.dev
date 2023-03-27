@@ -54,6 +54,13 @@
     "importOrderSortSpecifiers": true
   },
   "eslintConfig": {
+    "rules": {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": true,
+      "memberSyntaxSortOrder": "multiple",
+      "allowSeperatedGroups": true
+    },
     "extends": [
       "next/core-web-vitals",
       "prettier"
