@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 type linkTypes = {
