@@ -37,6 +37,26 @@
     "*.tsx": "eslint --fix",
     "*.{tsx,ts,js,json,scss}": "prettier --write"
   },
-  "prettier": {},
-  "eslintConfig": {}
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "bracketSameLine": false,
+    "proseWrap": "always",
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ],
+    "importOrder": [
+      "^(next/(.*)$)|(next$)$",
+      "<THIRD_PARTY_MODULES>"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals",
+      "prettier"
+    ]
+  }
 }
