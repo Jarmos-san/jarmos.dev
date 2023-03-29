@@ -7,7 +7,8 @@ function HomePage() {
   return (
     <>
       <Seo
-        description="Somraj Saha, a self-taught Senior Software Engineer & Technical Writer."
+        description="Somraj Saha, a self-taught Senior Software Engineer &
+        Technical Writer."
         imageHref="/assets/logo-1200-630.png"
         imageAlt="Profile picture of the personal website."
       />
