@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";

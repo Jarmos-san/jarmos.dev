@@ -3,7 +3,7 @@
 // https://cheatcode.co/tutorials/how-to-generate-a-dynamic-sitemap-with-next-js
 import { GetServerSideProps } from "next";
 
-import { BASE_URL } from "../constants";
+import { BASE_URL } from "@constants/constants";
 
 // Utlity function to generate the XML data dynamically.
 function generateSiteMap() {
