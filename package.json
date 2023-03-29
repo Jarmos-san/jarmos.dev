@@ -46,8 +46,10 @@
       "@trivago/prettier-plugin-sort-imports"
     ],
     "importOrder": [
-      "^(react$)|(react-dom$)|(next/(.*)$)|(next$)$",
+      "^(react$)|(react-dom$)$",
+      "^(next/(.*)$)|(next$)$",
       "react-icons/[a-z]*",
+      "^@\\w",
       "^[./]"
     ],
     "importOrderSeparation": true,
