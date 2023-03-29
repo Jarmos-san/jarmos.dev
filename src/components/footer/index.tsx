@@ -3,7 +3,8 @@ import Link from "next/link";
 
 import { FaGithub, FaKaggle, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-import { legalLinks, navLinks } from "../../constants/navlinks";
+import { legalLinks, navLinks } from "@constants/navlinks";
+
 import styles from "../footer/footer.module.scss";
 
 function Footer() {

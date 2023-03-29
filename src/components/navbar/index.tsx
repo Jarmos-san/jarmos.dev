@@ -6,7 +6,8 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 
-import { navLinks } from "../../constants/navlinks";
+import { navLinks } from "@constants/navlinks";
+
 import MobileMenu from "../mobile-menu";
 import styles from "./navbar.module.scss";
 

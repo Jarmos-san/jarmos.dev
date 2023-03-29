@@ -1,7 +1,7 @@
-import CtaSection from "../components/cta";
-import HeaderSection from "../components/header";
-import ProjectSection from "../components/projects";
-import Seo from "../components/seo";
+import CtaSection from "@components/cta";
+import HeaderSection from "@components/header";
+import ProjectSection from "@components/projects";
+import Seo from "@components/seo";
 
 function HomePage() {
   return (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import Seo from "../../components/seo";
+import Seo from "@components/seo";
+
 import styles from "./terms.module.scss";
 
 function TermsAndConditionsPage() {

@@ -3,8 +3,9 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-import Seo from "../../components/seo";
-import { PORTFOLIO_DIR } from "../../constants";
+import Seo from "@components/seo";
+import { PORTFOLIO_DIR } from "@constants/constants";
+
 import styles from "./portfolio.module.scss";
 
 type ParamTypes = {

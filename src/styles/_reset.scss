@@ -2,8 +2,9 @@
 
 // INFO: Styling resets for better design control.
 
-// INFO: Use borders for accounting the border & padding sizes. For more information on this
-// regards, see this resource: https://css-tricks.com/box-sizing
+// INFO: Use borders for accounting the border & padding sizes. For more
+// information on this regards, see the following resource:
+// https://css-tricks.com/box-sizing
 *,
 *::before,
 *::after {
@@ -32,14 +33,15 @@
   background-color: $blue30;
 }
 
-// INFO: Not exactly what is it for but is necessary for the footer to push itself to the
-// bottom of the website.
+// INFO: Not exactly what is it for but is necessary for the footer to push
+// itself to the bottom of the website.
 html {
   position: relative;
   min-height: 100%;
 }
 
-// INFO: Set some default properties like no margin & font styles for the entire website.
+// INFO: Set some default properties like no margin & font styles for the
+// entire website.
 body {
   margin: 0;
   line-height: 1.5;
@@ -67,7 +69,8 @@ select {
   font: inherit;
 }
 
-// INFO: Enable word wrap whenever a long word/phrase reaches the end of the screen.
+// INFO: Enable word wrap whenever a long word/phrase reaches the end of the
+// screen.
 p,
 h1,
 h2,

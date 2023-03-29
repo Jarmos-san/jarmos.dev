@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import { navLinks } from "../../constants/navlinks";
+import { navLinks } from "@constants/navlinks";
+
 import styles from "./mobile-menu.module.scss";
 
 function MobileMenu() {

@@ -1,4 +1,5 @@
-import Seo from "../../components/seo";
+import Seo from "@components/seo";
+
 import styles from "./privacy.module.scss";
 
 function LicensePage() {
