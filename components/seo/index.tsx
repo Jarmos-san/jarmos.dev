@@ -15,6 +15,7 @@ function Seo({ title, href, description, imageHref, imageAlt }: SeoPropTypes) {
     <>
       <Head>
         <title>{title ? `${title} | Somraj Saha` : "Somraj Saha"}</title>
+        <meta name="description" content={description} />
         <meta
           property="og:url"
           content={href ? `${baseUrl}${href}` : `${baseUrl}`}
