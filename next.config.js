@@ -1,18 +1,7 @@
 /** @type {import('next').NextConfig} */
 const path = require("path");
 
-const contentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  style-src 'self';
-  font-src 'self' https://fonts.googleapis.com;
-`;
-
 const securityHeaders = [
-  {
-    key: "Content-Security-Policy",
-    value: contentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
-  },
   {
     key: "X-Frame-Options",
     value: "SAMEORIGIN",
