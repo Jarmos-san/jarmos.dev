@@ -27,6 +27,21 @@ function generateSiteMap() {
         <priority>1.00</priority>
       </url>
       <url>
+        <loc>https://${BASE_URL}/portfolio/jefer</loc>
+        <lastmod>2023-01-27T08:36:44+00:00</lastmod>
+        <priority>1.00</priority>
+      </url>
+      <url>
+        <loc>https://${BASE_URL}/portfolio/personal-website</loc>
+        <lastmod>2023-01-27T08:36:44+00:00</lastmod>
+        <priority>1.00</priority>
+      </url>
+      <url>
+        <loc>https://${BASE_URL}/portfolio/devsindia.in</loc>
+        <lastmod>2023-01-27T08:36:44+00:00</lastmod>
+        <priority>1.00</priority>
+      </url>
+      <url>
         <loc>https://${BASE_URL}/privacy-policy</loc>
         <lastmod>2023-01-27T08:36:44+00:00</lastmod>
         <priority>0.30</priority>
