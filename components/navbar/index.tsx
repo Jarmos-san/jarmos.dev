@@ -27,6 +27,7 @@ function Navbar() {
         </div>
 
         <button
+          name="Mobile Menu Button"
           type="button"
           className={styles.menuIcon}
           onClick={() => setMenuOpen(!isMenuOpen)}
