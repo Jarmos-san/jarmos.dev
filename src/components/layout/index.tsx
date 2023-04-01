@@ -1,14 +1,13 @@
 import { PropsWithChildren } from "react";
 
-import Footer from "../footer";
-import Navbar from "../navbar";
-import styles from "./layout.module.scss";
+import Footer from "@components/footer";
+import Navbar from "@components/navbar";
 
 function Layout({ children }: PropsWithChildren) {
   return (
     <>
       <Navbar />
-      <main className={styles.container}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

@@ -5,12 +5,10 @@ import { FaGithub, FaKaggle, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { legalLinks, navLinks } from "@constants/navlinks";
 
-import styles from "../footer/footer.module.scss";
-
 function Footer() {
   return (
-    <footer className={styles.footerContainer}>
-      <section className={styles.footerSubsection}>
+    <footer>
+      <section>
         <Image
           src="/assets/logo-og.svg"
           alt="website's logo"
@@ -18,7 +16,7 @@ function Footer() {
           height={100}
         />
 
-        <span className={styles.footerLinks}>
+        <span>
           {navLinks.map((navLink) => (
             <Link key={navLink.label} href={navLink.href}>
               {navLink.label}
@@ -29,7 +27,7 @@ function Footer() {
 
       <hr />
 
-      <section className={styles.footerSubsection}>
+      <section>
         <small>
           Website Designed by{" "}
           <a href="https://www.warner.codes" target="_blank" rel="noreferrer">
@@ -47,7 +45,7 @@ function Footer() {
           {new Date().getFullYear()}
         </small>
 
-        <small className={styles.footerLinks}>
+        <small>
           {legalLinks.map((legalLink) => (
             <Link key={legalLink.label} href={legalLink.href}>
               {legalLink.label}
@@ -55,7 +53,7 @@ function Footer() {
           ))}
         </small>
 
-        <span className={styles.footerLinks}>
+        <span>
           {/* TODO: Refactor these links as well. */}
           <a
             href="https://twitter.com/Jarmosan"

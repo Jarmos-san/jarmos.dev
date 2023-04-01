@@ -1,7 +1,5 @@
 import Seo from "@components/seo";
 
-import styles from "./about.module.scss";
-
 function AboutPage() {
   return (
     <>

@@ -6,18 +6,16 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 
+import MobileMenu from "@components/mobile-menu";
 import { navLinks } from "@constants/navlinks";
-
-import MobileMenu from "../mobile-menu";
-import styles from "./navbar.module.scss";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <nav className={styles.navbar}>
-        <div className={styles.logo}>
+      <nav>
+        <div>
           <Link href="/">
             <Image
               src="/assets/logo-og.svg"
@@ -31,7 +29,6 @@ function Navbar() {
         <button
           name="Mobile Menu Button"
           type="button"
-          className={styles.menuIcon}
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -41,7 +38,7 @@ function Navbar() {
           )}
         </button>
 
-        <span className={styles.navLinks}>
+        <span>
           {navLinks.map((navItem) => (
             <Link key={navItem.label} href={navItem.href}>
               {navItem.label}
