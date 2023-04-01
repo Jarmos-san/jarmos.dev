@@ -18,7 +18,7 @@ const securityHeaders = [
 
 const nextConfig = {
   images: {
-    domain: ["flowbite.com"],
+    domains: ["flowbite.com"],
   },
   swcMinify: true,
   eslint: {
