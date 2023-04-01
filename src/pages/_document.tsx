@@ -35,7 +35,7 @@ function RootDocument() {
           data-cf-beacon='{"token": "392941b3f13c4678bb21cdb0fadafe91"}'
         ></script>
       </Head>
-      <body>
+      <body className="bg-blue-10">
         <Main />
         <NextScript />
       </body>

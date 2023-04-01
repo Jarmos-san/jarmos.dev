@@ -1,45 +1,15 @@
-import { IconType } from "react-icons";
-
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-
-type linkTypes = {
+type navlinkTypes = {
   label: string;
   href: string;
 };
 
-type socialLinkTypes = {
-  title: string;
-  href: string;
-  icon: IconType;
-};
-
-export const navLinks: linkTypes[] = [
-  { label: "Home", href: "/" },
-  { label: "About Me", href: "/about" },
-  // TODO: Uncomment this after designing a proper portfolio page.
-  // { label: "Portfolio", href: "/portfolio" },
-];
-
-export const legalLinks: linkTypes[] = [
-  { label: "Terms of Usage", href: "/terms-and-conditions" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Licensing & Distribution Rights", href: "/license" },
-];
-
-export const socialLinks: socialLinkTypes[] = [
+export const navlinks: navlinkTypes[] = [
   {
-    title: "Somraj Saha on Twitter",
-    href: "https://twitter.com/Jarmosan",
-    icon: FiTwitter,
+    label: "Home",
+    href: "/",
   },
   {
-    title: "Somraj Saha on LinkedIn",
-    href: "https://www.linkedin.com/in/jarmos",
-    icon: FiLinkedin,
-  },
-  {
-    title: "Somraj Saha on GitHub",
-    href: "https://github.com/Jarmos-san",
-    icon: FiGithub,
+    label: "About Me",
+    href: "/about",
   },
 ];
