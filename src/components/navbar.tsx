@@ -11,10 +11,7 @@ import { navlinks } from "@constants/navlinks";
 
 function MobileMenu() {
   return (
-    <div
-      className="mx-4 rounded-lg bg-blue-30 p-4 text-center text-lg
-        font-bold md:hidden"
-    >
+    <div className="bg-blue-30 p-4 text-center text-lg font-bold md:hidden">
       <ul className="flex-col space-y-2">
         {navlinks.map((link) => (
           <li
@@ -49,8 +46,8 @@ function Navbar() {
   return (
     <>
       <nav
-        className="container mx-auto flex items-center justify-between px-4
-        py-2"
+        className="container mx-auto flex items-center justify-between
+          bg-blue-10 px-4 py-2"
       >
         <Link
           href="/"
