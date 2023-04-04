@@ -7,7 +7,7 @@ function LayoutComponent({ children }: PropsWithChildren) {
   return (
     <>
       <Navbar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );
