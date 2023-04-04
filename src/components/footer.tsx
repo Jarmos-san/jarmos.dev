@@ -7,7 +7,7 @@ import { navlinks } from "@constants/navlinks";
 
 function Footer() {
   return (
-    <footer className="fixed bottom-0 mb-8 w-full">
+    <footer className="bottom-0 w-full bg-blue-10 py-8">
       <section
         className="mb-6 flex flex-col items-center justify-center
           space-y-4"
