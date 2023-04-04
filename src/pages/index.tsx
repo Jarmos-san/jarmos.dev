@@ -1,9 +1,11 @@
-import Navbar from "@components/navbar";
+import CallToAction from "@components/cta";
+import Header from "@components/header";
 
 function HomePage() {
   return (
     <>
-      <Navbar />
+      <Header />
+      <CallToAction />
     </>
   );
 }
