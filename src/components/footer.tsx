@@ -8,7 +8,7 @@ import { navlinks } from "@constants/navlinks";
 function Footer() {
   return (
     <footer
-      className="container mx-auto my-8 flex flex-col items-center
+      className="container mx-auto my-10 flex flex-col items-center
       space-y-8"
     >
       <Image
