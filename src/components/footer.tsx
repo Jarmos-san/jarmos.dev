@@ -7,84 +7,73 @@ import { navlinks } from "@constants/navlinks";
 
 function Footer() {
   return (
-    <footer className="w-full bg-blue-10 py-8">
-      <section
-        className="mb-6 flex flex-col items-center justify-center
-          space-y-4"
-      >
-        <Image
-          src="/assets/logo-og.svg"
-          width={70}
-          height={70}
-          alt="website logo"
-        />
+    <footer
+      className="container mx-auto my-8 flex flex-col items-center
+      space-y-8"
+    >
+      <Image
+        src="/assets/logo-og.svg"
+        width={70}
+        height={70}
+        alt="website logo"
+      />
 
-        <span
-          className="flex space-x-5 text-white-30 underline
-            underline-offset-2"
+      <span className="space-x-6">
+        {navlinks.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className="text-white-10 underline-offset-4 hover:text-green-30
+              hover:underline"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </span>
+
+      <small className="text-white-30">
+        Website Designed by{" "}
+        <a
+          href="https://www.warner.codes"
+          target="_blank"
+          className="text-white-10 underline-offset-4 hover:text-green-30
+            hover:underline"
         >
-          {navlinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="hover:text-white-20"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </span>
-      </section>
+          Ryan Warner
+        </a>{" "}
+        | Developed by Somraj Saha with{" "}
+        <a
+          href="https://github.com/Jarmos-san/jarmos.dev"
+          target="_blank"
+          className="text-white-10 underline-offset-4 hover:text-green-30
+            hover:underline"
+        >
+          Open-Source
+        </a>{" "}
+        ❤️ &copy; 2018-
+        {new Date().getFullYear()}
+      </small>
 
-      <div className="mx-6 mb-4 border-b-2 border-blue-30"></div>
-
-      <section className="flex flex-col items-center justify-center space-y-6">
-        <small className="px-20 text-center text-white-30">
-          Website Designed by{" "}
-          <a
-            href="https://www.warner.codes"
-            target="_blank"
-            className="underline underline-offset-2 hover:text-white-20"
+      <small className="space-x-10">
+        {legaldocs.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className="text-white-10 underline-offset-2 hover:text-green-30
+              hover:underline"
           >
-            Ryan Warner
-          </a>{" "}
-          | Developed by Somraj Saha with{" "}
-          <a
-            href="https://github.com/Jarmos-san/jarmos.dev"
-            target="_blank"
-            className="underline underline-offset-2 hover:text-white-20"
-          >
-            Open-Source
-          </a>{" "}
-          ❤️ &copy; 2018-
-          {new Date().getFullYear()}
-        </small>
+            {link.label}
+          </Link>
+        ))}
+      </small>
 
-        <small className="space-x-10">
-          {legaldocs.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-white-30 underline underline-offset-2
-                hover:text-white-20"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </small>
-
-        <span className="flex space-x-6">
-          {footerIcons.map((icon) => (
-            <a
-              key={icon.href}
-              href={icon.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <icon.icon size={25} color="#B0FBBC" />
-            </a>
-          ))}
-        </span>
-      </section>
+      <span className="flex space-x-6">
+        {footerIcons.map((icon) => (
+          <a key={icon.href} href={icon.href} target="_blank" rel="noreferrer">
+            <icon.icon size={25} color="#B0FBBC" />
+          </a>
+        ))}
+      </span>
     </footer>
   );
 }
