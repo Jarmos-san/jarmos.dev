@@ -46,13 +46,13 @@ function Navbar() {
   return (
     <>
       <nav
-        className="flex items-center justify-between bg-blue-10 px-4
-          py-2 md:px-24"
+        className="container mx-auto flex items-center justify-between py-4
+        md:px-10 lg:px-32"
       >
         <Link
           href="/"
           className="rounded-lg focus:outline-none focus:ring-2
-            focus:ring-white-30"
+          focus:ring-white-30"
         >
           <Image
             src="/assets/logo-og.svg"
@@ -67,7 +67,7 @@ function Navbar() {
           aria-controls="navbar-hamburger"
           aria-expanded="false"
           className="sm:hidden md:rounded-lg md:p-2 md:hover:bg-blue-40
-            md:focus:outline-none md:focus:ring-2 md:focus:ring-white-30"
+          md:focus:outline-none md:focus:ring-2 md:focus:ring-white-30"
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <span className="sr-only">Open Main Menu</span>
@@ -78,14 +78,13 @@ function Navbar() {
           )}
         </button>
 
-        {/* TODO: Make the current page is colored green */}
-        <span className="hidden md:flex md:space-x-5 md:text-white-10">
+        <span className="hidden md:flex md:space-x-8">
           {navlinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="hover:underline-offset-5 underline
-              underline-offset-2 hover:text-white-30"
+              className="text-white-10 underline-offset-4 hover:text-green-30
+              hover:underline"
             >
               {link.label}
             </Link>
