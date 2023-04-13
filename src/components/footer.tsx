@@ -31,7 +31,7 @@ function Footer() {
         ))}
       </span>
 
-      <small className="text-white-30">
+      <small className="text-center text-white-30">
         Website Designed by{" "}
         <a
           href="https://www.warner.codes"
