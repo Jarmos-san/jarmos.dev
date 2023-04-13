@@ -1,6 +1,9 @@
 /**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
+ * @type {import('tailwindcss').Config}
  */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./node_modules/flowbite/**/*.js",
@@ -11,6 +14,9 @@ module.exports = {
   plugins: [require("flowbite/plugin")],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
+      },
       colors: {
         blue: {
           10: "#111A20",
