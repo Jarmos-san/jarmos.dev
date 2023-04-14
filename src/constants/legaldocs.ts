@@ -6,7 +6,7 @@ type legaldocTypes = {
 export const legaldocs: legaldocTypes[] = [
   {
     label: "Terms of Usage",
-    href: "/terms-of-usage",
+    href: "/terms-and-conditions",
   },
   {
     label: "Privacy Policy",
