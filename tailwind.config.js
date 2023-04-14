@@ -11,7 +11,7 @@ module.exports = {
     "./public/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
       fontFamily: {
