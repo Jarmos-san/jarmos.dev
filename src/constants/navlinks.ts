@@ -13,3 +13,5 @@ export const navlinks: navlinkTypes[] = [
     href: "/about",
   },
 ];
+
+export const baseUrl = "jarmos.vercel.app";
