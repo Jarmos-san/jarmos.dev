@@ -9,9 +9,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fontsource/poppins": "^4.5.10",
-    "flowbite": "^1.6.4",
-    "flowbite-react": "^0.4.2",
     "gray-matter": "^4.0.3",
     "next": "~13.2.4",
     "react": "18.2.0",
