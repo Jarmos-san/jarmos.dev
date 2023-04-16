@@ -8,15 +8,14 @@ function Header() {
         text-2xl font-bold leading-10 text-green-10 text-transparent md:text-3xl
         lg:text-5xl"
       >
-        I&apos;m Somraj, an Independent Software Engineer & a Writer.
+        I&apos;m Somraj, an Independent Software Engineer.
       </h1>
 
       <p className="text-white-10 lg:pr-32">
         I work as an Independent Software Engineer consulting for startups &amp;
         business owners to build custom end-to-end software. Whether your needs
         are for an in-house team or a B2B/B2C setting, I&apos;ll take care of it
-        without worries! My specialisation is in Machine Learning &amp; it&apos;
-        related fields of application.
+        without worries!
       </p>
 
       <p className="text-white-10 lg:pr-60">
