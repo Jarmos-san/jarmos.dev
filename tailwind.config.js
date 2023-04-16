@@ -8,7 +8,7 @@ module.exports = {
     "./public/**/*.html",
     "./pages/**/*.{ts,tsx}",
   ],
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
   theme: {
     extend: {
       colors: {
