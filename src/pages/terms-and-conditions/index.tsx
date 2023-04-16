@@ -11,7 +11,7 @@ function TermsAndConditionsPage() {
         title="Terms and Conditions"
         href="/terms-and-conditions"
         description="Terms & conditions of using Somraj Saha's personal website"
-        imageHref="/assets/logo-1200-630.png"
+        imageHref="/assets/logo-og.svg"
         imageAlt="Logo for Somraj Saha's personal website"
       />
 
