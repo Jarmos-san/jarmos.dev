@@ -1,6 +1,6 @@
-import { IconType } from "react-icons";
-
 import { FaGithub, FaKaggle, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+import { IconType } from "react-icons";
 
 type footerIconTypes = {
   href: string;

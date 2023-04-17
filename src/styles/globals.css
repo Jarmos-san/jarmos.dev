@@ -5,8 +5,8 @@
 @layer utilities {
   /* Some refined customisation for the scrollbar */
   :root {
-    --primary: #1C2C35;
-    --secondary: #243B4A;
+    --primary: #1c2c35;
+    --secondary: #243b4a;
   }
 
   /* Scrollbar customisation on Firefox */
