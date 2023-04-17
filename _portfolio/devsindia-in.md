@@ -1,3 +1,13 @@
+---
+title: r/devsIndia Community Website
+desc:
+  The community website for the r/devsIndia Reddit community built with
+  open-source love.
+coverImage:
+  href: ""
+  alt: ""
+---
+
 # r/developersIndia Community Website
 
 The [developersIndia][1] is an online community of Software Developers &
