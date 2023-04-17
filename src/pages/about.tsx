@@ -143,7 +143,6 @@ function AboutPage() {
             </a>
             .
           </li>
-
           <li>
             <a
               href="https://fastapi.tiangolo.com"
@@ -229,7 +228,6 @@ function AboutPage() {
               Radix
             </a>
           </li>
-
           <li>
             <a
               href="https://sass-lang.com"
@@ -289,7 +287,6 @@ function AboutPage() {
             it before or using it at the moment? Then feel free to share a
             review or two about it with me.
           </li>
-
           <li>
             <a
               href="https://code.visualstudio.com"
@@ -311,7 +308,6 @@ function AboutPage() {
             </a>{" "}
             unattractive in my eyes.
           </li>
-
           <li>
             <a
               href="https://neovim.io"
