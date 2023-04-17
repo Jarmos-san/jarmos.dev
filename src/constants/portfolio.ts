@@ -1,3 +1,5 @@
+import path from "path";
+
 type PortfolioTypes = {
   label: string;
   desc: string;
@@ -33,3 +35,5 @@ export const portfolio: PortfolioTypes[] = [
     href: "/personal-website",
   },
 ];
+
+export const portfolioDir = path.join(process.cwd(), "_portfolio");
