@@ -1,3 +1,14 @@
+---
+title: "Jefer: A Minimal Dotfiles Manager"
+description: |
+  Jefer is a tiny, simple & cross-platform too manage your dotfiles.
+  Its written in Rust so expect some super-fast performance from the tool.
+coverImage:
+  href: ""
+  alt: ""
+slug: jefer-minimalist-dotfiles-manager
+---
+
 # Jefer: Dotfiles Management for the Minimalist
 
 **NOTE**: Development on this project is still a work-in-progress.

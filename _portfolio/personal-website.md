@@ -1,3 +1,14 @@
+---
+title: Personal Website
+description: |
+  The personal website of Somraj Saha where he shares his knowledge
+  and experience as a self-taught Full-Stack Software Engineer.
+coverImage:
+  href: ""
+  alt: ""
+slug: personal-website
+---
+
 # Personal Blog
 
 The website you are on currently is my personal website where I share my

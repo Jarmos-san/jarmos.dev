@@ -6,6 +6,7 @@ desc:
 coverImage:
   href: ""
   alt: ""
+slug: devsindia-community-website
 ---
 
 # r/developersIndia Community Website
