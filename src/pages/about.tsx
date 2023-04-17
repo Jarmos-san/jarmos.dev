@@ -1,58 +1,18 @@
-import Head from "next/head";
+import Seo from "@components/seo";
 
 function AboutPage() {
   return (
     <>
-      <Head>
-        <title>About Me | Somraj Saha</title>
-        <meta
-          name="description"
-          content="This is about Somraj Saha who is a
-        Full-Stack Software Engineer and working as an Independent Software
-        Developer. He works with startup founders and business owners to bring
-        fresh ideas to production and serve paying customers."
-        />
-        <meta property="og:url" content="https://jarmos.vercel.app/about" />
-        <meta property="og:title" content="About Me | Somraj Saha" />
-        <meta
-          property="og:description"
-          content="This is about Somraj Saha who is a
-        Full-Stack Software Engineer and working as an Independent Software
-        Developer. He works with startup founders and business owners to bring
-        fresh ideas to production and serve paying customers."
-        />
-        <meta
-          property="og:image"
-          content="https://jarmos.vercel.app/assets/logo-og.svg"
-        />
-        <meta property="og:image:alt" content="Logo of the personal website" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="jarmos.vercel.app" />
-        <meta
-          property="twitter:url"
-          content="https://jarmos.vercel.app/about"
-        />
-        <meta name="twitter:title" content="About Me | Somraj Saha" />
-        <meta
-          name="twitter:description"
-          content="Somraj Saha is a Full-Stack Engineer working as an
-          Independent Software Developer for various startup founders &
-          business owners. He helps them to bring their idea to the market &
-          serve its customers the best way possible."
-        />
-        <meta
-          name="twitter:image"
-          content="https://jarmos.vercel.app/assets/logo-og.svg"
-        />
-        <meta
-          name="twitter:image:alt"
-          content="The logo of the personal website."
-        />
-        <meta name="twitter:site" content="@Jarmosan" />
-        <meta name="twitter:creator" content="@Jarmosan" />
-      </Head>
+      <Seo
+        title="About Me"
+        desc={`This is about Somraj Saha who is a Full-Stack Software Engineer
+        and working as an Independent Software Developer. He works with startup
+        founders and business owners to bring fresh ideas to production and
+        serve paying customers.`}
+        image="/assets/logo-1200-630.svg"
+        imageAlt="Logo of the personal website which Somraj Saha maintains"
+        url="/about"
+      />
       <article
         className="container prose mx-auto my-16 max-w-none px-10 text-white-30
         prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
