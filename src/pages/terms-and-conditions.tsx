@@ -72,7 +72,6 @@ function TermsAndConditionsPage() {
           agreeing to continue to receive further emails and solicitations from
           Somraj Saha.
         </p>
-
         <p>
           <strong>Opt-Out Procedure</strong>: We provide 3 easy ways to opt out
           of from future solicitations.

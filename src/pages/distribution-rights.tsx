@@ -18,7 +18,6 @@ function LicensePage() {
         prose-strong:text-white-20 md:px-12 lg:px-36 xl:px-56 2xl:px-96"
       >
         <h1>Licensing & Distribution Rights</h1>
-
         <p>
           The enitirety of the project you are seeing right now is made
           available for public usage under an open-source license. The contents
@@ -28,9 +27,7 @@ function LicensePage() {
           conditions (T&Cs). And this page of the website details the usage T&Cs
           for your reference.
         </p>
-
         <h2>Usage Rights of the Source Code</h2>
-
         <p>
           The{" "}
           <a
@@ -44,7 +41,6 @@ function LicensePage() {
           licensed under the open-source MIT License. As such you can check out
           the source code to:
         </p>
-
         <ol>
           <li>
             Fork the repository & modify the source code for your specific
@@ -57,7 +53,6 @@ function LicensePage() {
             provide due credits to the stakeholders).
           </li>
         </ol>
-
         <p>
           That said, you can read more about the licensing & usage T&Cs in the{" "}
           <a
@@ -69,9 +64,7 @@ function LicensePage() {
           </a>{" "}
           document.
         </p>
-
         <h2>Usage Rights of the Website Content</h2>
-
         <p>
           This website contains a lot of technical & literary content meant for
           educating the readers on certain topics related to Computer Science &
@@ -80,7 +73,6 @@ function LicensePage() {
           free to use, modify & distribute the content as long as you adhere to
           the T&Cs detailed in this section of the page.
         </p>
-
         <p>
           That said, the open-source license in question is the{" "}
           <a
