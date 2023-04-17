@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
-    "flowbite": "^1.6.4",
+    "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",
     "gray-matter": "^4.0.3",
     "next": "~13.3.0",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
+    "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.38.0",
