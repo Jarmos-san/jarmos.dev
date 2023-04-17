@@ -22,7 +22,7 @@ function ProjectSection() {
             <Link
               className="text-green-30 underline underline-offset-2
               hover:text-green-10"
-              href={content.href}
+              href={`/portfolio${content.href}`}
             >
               Read More...
             </Link>
