@@ -9,7 +9,7 @@ function LicensePage() {
         title="Licensing & Distribution Rights"
         href="/license"
         description="Distribution & licensing rights of using Somraj Saha' s personal website"
-        imageHref="/assets/logo-1200-630.png"
+        imageHref="/assets/logo-1200-630.svg"
         imageAlt="Logo for Somraj Saha's personal website."
       />
       <article className={styles.container}>

@@ -9,7 +9,7 @@ function LicensePage() {
         title="Privacy Policy"
         href="/privacy-policy"
         description="Privacy policy for using Somraj Saha's personal website"
-        imageHref="/assets/logo-og.svg"
+        imageHref="/assets/logo-1200-630.svg"
         imageAlt="Logo for personal website."
       />
 

@@ -9,7 +9,7 @@ function AboutPage() {
         title="About Me"
         href="/about"
         description="About Somraj Saha, a self-taught Senior Software Engineer & Technical Writer."
-        imageHref="/assets/logo-og.svg"
+        imageHref="/assets/logo-1200-630.svg"
         imageAlt="Personal website logo."
       />
 

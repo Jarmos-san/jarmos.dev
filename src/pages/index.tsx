@@ -9,7 +9,7 @@ function HomePage() {
       <Seo
         description="Somraj Saha, a self-taught Senior Software Engineer &
         Technical Writer."
-        imageHref="/assets/logo-og.svg"
+        imageHref="/assets/logo-1200-630.svg"
         imageAlt="Profile picture of the personal website."
       />
       <HeaderSection />
