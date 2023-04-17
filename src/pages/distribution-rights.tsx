@@ -1,17 +1,16 @@
-// import Seo from "@components/seo";
+import Seo from "@components/seo";
 
 function LicensePage() {
   return (
     <>
-      {/* <Seo */}
-      {/*   title="Licensing & Distribution Rights" */}
-      {/*   href="/license" */}
-      {/*   description="Distribution & licensing rights of using Somraj Saha' s */}
-      {/*   personal website" */}
-      {/*   imageHref="/assets/logo-1200-630.png" */}
-      {/*   imageAlt="Logo for Somraj Saha's personal website." */}
-      {/* /> */}
-
+      <Seo
+        title="Licensing & Distribution Rights"
+        url="/distribution-rights"
+        desc="Distribution & licensing rights of using Somraj Saha' s
+        personal website"
+        image="/assets/logo-1200-630.svg"
+        imageAlt="Logo for Somraj Saha's personal website."
+      />
       <article
         className="container prose mx-auto my-16 max-w-none px-10 text-white-30
         prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
