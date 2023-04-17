@@ -8,35 +8,33 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Jarmos-san/personal-website?label=Commit%20Frequency&logo=github&style=flat-square)
 ![Twitter Follow](https://img.shields.io/twitter/follow/Jarmosan?style=social)
 
-This repository hosts the source code for my personal website - [jarmos.dev][1].
-The website is built using the following tech stack:
+This repository hosts the source code for my personal website - [jarmos.dev][1]
+& its built using the following tech stack:
 
-- [Next.js][2]
-- [Sass][3]
-- [TypeScript][4]
-- [Vercel][5]
+- [Next.js][2] to build a React.js based website.
+- [TailwindCSS][3] to design the website aesthetics.
+- [TypeScript][4] to write the source code.
+- [Vercel][5] to deploy & host the website on.
 
 ## 🗒️ About the Project
 
 I've been writing & sharing technical content ever since my country was under a
 strict lockdown due to the COVID-19 pandemic. It was a good productive use of my
 free time & I learned + experienced many nuances of software development in
-general as well.
-
-One such lesson was the importance of fast load times for better SEO
-capabilities of a website. While sites created using Hugo did perform well, they
-lacked modern web dev capabilities like [prefetching][6]. There were a handful
-more reasons to switch to a React-based alternative but that's a story for
-another day.
+general as well. One such lesson was the importance of fast load times for
+better SEO capabilities of a website. While sites created using Hugo did perform
+well, they lacked modern web dev capabilities like [prefetching][6]. There were
+a handful more reasons to switch to a React-based alternative but that's a story
+for another day.
 
 Any way, the project uses Next.js which is a React.js-based framework. It
 provides me with all the modern benefits React.js has to offer in addition to a
-couple more stuff. I suggest reading up on the official docs for more
+couple more stuff. I suggest reading up on the [official docs][7] for more
 information about the framework.
 
-To keep the development complexity plain & simple, the project also uses Sass &
-TypeScript. Using these two tools ensure typed-based bugs & maintainability of
-the project isn't much of a concern.
+To keep the development complexity plain & simple, the project also uses
+TailwindCSS & TypeScript. Using these two tools ensure typed-based bugs &
+maintainability of the project isn't much of a concern.
 
 That said, the project is developed in the open-source which means you're free
 to use it for your needs as well! But before you fork the repository, please
@@ -55,7 +53,8 @@ Once done, fork this repository & then run the following commands:
 1. Clone the repository.
 
    ```console
-   git clone git@github.com:<YOUR-USERNAME>/jarmos.dev.git && cd personal-website
+   git clone git@github.com:<YOUR-USERNAME>/jarmos.dev.git personal-website; \
+   cd personal-website
    ```
 
 2. Install all the necessary dependencies.
@@ -94,7 +93,7 @@ project as you deem fit as long as you adhere to the T&Cs of the license.
 
 [1]: https://jarmos.vercel.app
 [2]: https://nextjs.org
-[3]: https://sass-lang.org
+[3]: https://tailwindcss.com
 [4]: https://www.typescriptlang.org
 [5]: https://vercel.com
 [6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ
