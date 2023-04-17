@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-// import Seo from "@components/seo";
+import Seo from "@components/seo";
 
 function TermsAndConditionsPage() {
   return (
     <>
-      {/* <Seo */}
-      {/*   title="Terms and Conditions" */}
-      {/*   href="/terms-and-conditions" */}
-      {/*   description="Terms & conditions of using Somraj Saha's personal */}
-      {/*   website" */}
-      {/*   imageHref="/assets/logo-1200-630.png" */}
-      {/*   imageAlt="Logo for Somraj Saha's personal website" */}
-      {/* /> */}
+      <Seo
+        title="Terms and Conditions"
+        url="/terms-and-conditions"
+        desc="Terms & conditions of using Somraj Saha's personal
+        website"
+        image="/assets/logo-1200-630.svg"
+        imageAlt="Logo for Somraj Saha's personal website"
+      />
 
       <article
         className="container prose mx-auto my-16 max-w-none px-10 text-white-30

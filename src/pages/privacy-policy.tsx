@@ -1,15 +1,15 @@
-// import Seo from "@components/seo";
+import Seo from "@components/seo";
 
 function LicensePage() {
   return (
     <>
-      {/* <Seo */}
-      {/*   title="Privacy Policy" */}
-      {/*   href="/privacy-policy" */}
-      {/*   description="Privacy policy for using Somraj Saha's personal website" */}
-      {/*   imageHref="/assets/logo-1200-630.png" */}
-      {/*   imageAlt="Logo for personal website." */}
-      {/* /> */}
+      <Seo
+        title="Privacy Policy"
+        url="/privacy-policy"
+        desc="Privacy policy for using Somraj Saha's personal website"
+        image="/assets/logo-1200-630.svg"
+        imageAlt="Logo for personal website."
+      />
 
       <article
         className="container prose mx-auto my-16 max-w-none px-10 text-white-30
