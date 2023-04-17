@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.10",
-    "flowbite": "^1.6.4",
+    "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",
     "gray-matter": "^4.0.3",
     "next": "~13.3.0",
