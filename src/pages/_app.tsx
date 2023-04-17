@@ -1,15 +1,28 @@
 import { AppProps } from "next/app";
+import { Poppins } from "next/font/google";
 
-import Layout from "@components/layout";
-import "@styles/main.scss";
+import Footer from "@components/footer";
+import Navbar from "@components/navbar";
+import "@styles/globals.css";
 
-// import '@styles/globals.css'
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  display: "optional",
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 function RootApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div
+      className={`${poppins.variable} flex min-h-screen flex-col bg-blue-10`}
+    >
+      <Navbar />
+      <main className="mt-10 flex-grow space-y-32">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

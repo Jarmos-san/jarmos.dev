@@ -1,5 +1,5 @@
-import CtaSection from "@components/cta";
-import HeaderSection from "@components/header";
+import CallToAction from "@components/cta";
+import Header from "@components/header";
 import ProjectSection from "@components/projects";
 import Seo from "@components/seo";
 
@@ -7,14 +7,15 @@ function HomePage() {
   return (
     <>
       <Seo
-        description="Somraj Saha, a self-taught Senior Software Engineer &
-        Technical Writer."
-        imageHref="/assets/logo-1200-630.svg"
-        imageAlt="Profile picture of the personal website."
+        desc="The personal website of Somraj Saha who is a Full-Stack Software
+        Engineer and is working independently to provide value services to
+        startup founders & business owners."
+        image="/assets/logo-1200-630.svg"
+        imageAlt="The logo of the personal website"
       />
-      <HeaderSection />
+      <Header />
       <ProjectSection />
-      <CtaSection />
+      <CallToAction />
     </>
   );
 }

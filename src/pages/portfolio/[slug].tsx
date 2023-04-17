@@ -4,9 +4,7 @@ import { remark } from "remark";
 import html from "remark-html";
 
 import Seo from "@components/seo";
-import { PORTFOLIO_DIR } from "@constants/constants";
-
-import styles from "./portfolio.module.scss";
+import { portfolioDir } from "@constants/portfolio";
 
 type ParamTypes = {
   params: {
@@ -15,7 +13,7 @@ type ParamTypes = {
 };
 
 type PropTypes = {
-  frontmatter: {
+  data: {
     title: string;
     description: string;
     metaSummary?: string | null;
@@ -28,44 +26,40 @@ type PropTypes = {
   content: string;
 };
 
-function PortfolioPage({ frontmatter, content }: PropTypes) {
+function PortfolioPage({ data, content }: PropTypes) {
   return (
     <>
       <Seo
-        title={frontmatter.title}
-        href={`/portfolio/${frontmatter.slug}`}
-        description={frontmatter.description}
-        imageHref=""
+        title={data.title}
+        url={`/portfolio/${data.slug}`}
+        desc={data.description}
+        image=""
         imageAlt=""
       />
-      <article className={styles.container}>
-        <div
-          dangerouslySetInnerHTML={{ __html: content }}
-          style={{ color: "#ffffff" }}
-        />
+      <article
+        className="container prose mx-auto my-16 max-w-none px-10 text-white-30
+        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
+        prose-a:text-green-30 prose-a:underline prose-a:underline-offset-4
+        prose-strong:text-white-20 md:px-12 lg:px-36 xl:px-56 2xl:px-96"
+      >
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </article>
     </>
   );
 }
 
 export async function getStaticPaths() {
-  // Get the list of Markdown files
-  const markdownFiles = fs
-    // Read the contents of the "portfolio" directory
-    .readdirSync(PORTFOLIO_DIR, { withFileTypes: true })
-    // Filter out only the files & nothing else
+  const mdfiles = fs
+    .readdirSync(portfolioDir, { withFileTypes: true })
     .filter((file) => file.isFile())
-    // Parse the Direct Objects for the file names
     .map((file) => file.name);
 
-  // Prettify the URLs
-  const paths = markdownFiles.map((file) => ({
+  const paths = mdfiles.map((file) => ({
     params: {
       slug: file.replace(".md", ""),
     },
   }));
 
-  // Return the prettiefied URLs & additionally return a 404 if no page exists
   return {
     paths: paths,
     fallback: false,
@@ -73,21 +67,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }: ParamTypes) {
-  // Read the contents of the Markdown file into memory
-  const filename = fs.readFileSync(`${PORTFOLIO_DIR}/${slug}.md`, "utf-8");
-
-  // Parse the contents of the Markdown files
-  const { data: frontmatter, content } = matter(filename);
-
-  // Convert the Markdown AST to HTML
+  const filename = fs.readFileSync(`${portfolioDir}/${slug}.md`, "utf-8");
+  const { data, content } = matter(filename);
   const markdown = await remark().use(html).process(content);
-
-  // Convert the HTML content to be passed as props data for the component
   const htmlContent = markdown.toString();
 
   return {
     props: {
-      frontmatter: frontmatter,
+      data: data,
       content: htmlContent,
     },
   };

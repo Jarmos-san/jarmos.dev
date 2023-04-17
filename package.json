@@ -9,9 +9,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fontsource/poppins": "^4.5.10",
-    "flowbite": "^1.6.5",
-    "flowbite-react": "^0.4.3",
     "gray-matter": "^4.0.3",
     "next": "~13.3.0",
     "react": "18.2.0",
@@ -21,6 +18,7 @@
     "remark-html": "^15.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.35",
@@ -33,13 +31,13 @@
     "lint-staged": "^13.2.1",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
-    "sass": "^1.62.0",
-    "tailwindcss": "^3.3.1",
-    "typescript": "~5.0.4"
+    "prettier-plugin-tailwindcss": "^0.2.6",
+    "tailwindcss": "^3.3.0",
+    "typescript": "~4.9.5"
   },
   "lint-staged": {
     "*.tsx": "eslint --fix",
-    "*.{tsx,ts,js,json,scss}": "prettier --write"
+    "*.{tsx,ts,js,json,md}": "prettier --write"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -48,12 +46,14 @@
     "bracketSameLine": false,
     "proseWrap": "always",
     "plugins": [
-      "@trivago/prettier-plugin-sort-imports"
+      "@trivago/prettier-plugin-sort-imports",
+      "prettier-plugin-tailwindcss"
     ],
     "importOrder": [
       "^(react$)|(react-dom$)$",
       "^(next/(.*)$)|(next$)$",
       "react-icons/[a-z]*",
+      "<THIRD_PARTY_MODULES>",
       "^@\\w",
       "^[./]"
     ],

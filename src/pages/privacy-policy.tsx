@@ -1,19 +1,22 @@
 import Seo from "@components/seo";
 
-import styles from "./privacy.module.scss";
-
 function LicensePage() {
   return (
     <>
       <Seo
         title="Privacy Policy"
-        href="/privacy-policy"
-        description="Privacy policy for using Somraj Saha's personal website"
-        imageHref="/assets/logo-1200-630.svg"
+        url="/privacy-policy"
+        desc="Privacy policy for using Somraj Saha's personal website"
+        image="/assets/logo-1200-630.svg"
         imageAlt="Logo for personal website."
       />
 
-      <article className={styles.container}>
+      <article
+        className="container prose mx-auto my-16 max-w-none px-10 text-white-30
+        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl prose-a:text-green-30 prose-a:underline
+        prose-a:underline-offset-4 prose-strong:text-white-20 md:px-12
+        lg:px-36 xl:px-56 2xl:px-96"
+      >
         <h1>Privacy Policy</h1>
 
         <p>

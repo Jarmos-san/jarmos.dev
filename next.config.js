@@ -25,9 +25,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   reactStrictMode: true,
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
   // Info about the security headers are available at:
   // https://nextjs.org/docs/advanced-features/security-headers
   async headers() {

@@ -2,20 +2,24 @@ import Link from "next/link";
 
 import Seo from "@components/seo";
 
-import styles from "./terms.module.scss";
-
 function TermsAndConditionsPage() {
   return (
     <>
       <Seo
         title="Terms and Conditions"
-        href="/terms-and-conditions"
-        description="Terms & conditions of using Somraj Saha's personal website"
-        imageHref="/assets/logo-1200-630.svg"
+        url="/terms-and-conditions"
+        desc="Terms & conditions of using Somraj Saha's personal
+        website"
+        image="/assets/logo-1200-630.svg"
         imageAlt="Logo for Somraj Saha's personal website"
       />
 
-      <article className={styles.container}>
+      <article
+        className="container prose mx-auto my-16 max-w-none px-10 text-white-30
+        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl prose-a:text-green-30 prose-a:underline
+        prose-a:underline-offset-4 prose-strong:text-white-20 md:px-12
+        lg:px-36 xl:px-56 2xl:px-96"
+      >
         <h1>Terms And Conditions</h1>
         <p>
           <strong>
@@ -68,19 +72,18 @@ function TermsAndConditionsPage() {
           agreeing to continue to receive further emails and solicitations from
           Somraj Saha.
         </p>
-
         <p>
           <strong>Opt-Out Procedure</strong>: We provide 3 easy ways to opt out
           of from future solicitations.
           <ol>
             <li>
               You may use the opt out link found in any email solicitation that
-              you may receive.{" "}
+              you may receive.
             </li>
             <li>
               You may also choose to opt out, via sending your email address to:{" "}
               <a
-                href="mailto:somraj.mle@gmail.com."
+                href="mailto:somraj.mle@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
