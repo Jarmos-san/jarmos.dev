@@ -37,7 +37,7 @@
   },
   "lint-staged": {
     "*.tsx": "eslint --fix",
-    "*.{tsx,ts,js,json,scss}": "prettier --write"
+    "*.{tsx,ts,js,json,md}": "prettier --write"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -53,6 +53,7 @@
       "^(react$)|(react-dom$)$",
       "^(next/(.*)$)|(next$)$",
       "react-icons/[a-z]*",
+      "<THIRD_PARTY_MODULES>",
       "^@\\w",
       "^[./]"
     ],
