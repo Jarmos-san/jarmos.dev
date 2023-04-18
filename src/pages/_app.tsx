@@ -18,7 +18,7 @@ function RootApp({ Component, pageProps }: AppProps) {
       className={`${poppins.variable} flex min-h-screen flex-col bg-blue-10`}
     >
       <Navbar />
-      <main className="mt-10 flex-grow space-y-32">
+      <main className="my-24 flex-grow space-y-32">
         <Component {...pageProps} />
       </main>
       <Footer />
