@@ -5,12 +5,7 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: [
-    "./node_modules/flowbite/**/*.js",
-    "./node_modules/flowbite-react/**/*.js",
-    "./public/**/*.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
