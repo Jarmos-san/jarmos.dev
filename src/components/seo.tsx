@@ -24,7 +24,7 @@ function Seo({ title, desc, url, image, imageAlt }: PropTypes) {
         content={title ? `${title} | Somraj Saha` : "Somraj Saha"}
       />
       <meta property="og:description" content={desc} />
-      <meta property="og:image" content={`https://${baseUrl}${image}`} />
+      <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_GB" />
@@ -39,7 +39,7 @@ function Seo({ title, desc, url, image, imageAlt }: PropTypes) {
         content={title ? `${title} | Somraj Saha` : "Somraj Saha"}
       />
       <meta name="twitter:description" content={desc} />
-      <meta name="twitter:image" content={`https://${baseUrl}${image}`} />
+      <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={imageAlt} />
       <meta name="twitter:site" content="@Jarmosan" />
       <meta name="twitter:creator" content="@Jarmosan" />
