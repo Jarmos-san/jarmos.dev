@@ -10,10 +10,10 @@ export const legaldocs: legaldocTypes[] = [
   },
   {
     label: "Privacy Policy",
-    href: "privacy-policy",
+    href: "/privacy-policy",
   },
   {
     label: "Distribution Rights",
-    href: "distribution-rights",
+    href: "/distribution-rights",
   },
 ];
