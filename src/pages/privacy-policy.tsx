@@ -10,7 +10,6 @@ function LicensePage() {
         image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
         imageAlt="Logo for personal website."
       />
-
       <article
         className="container prose mx-auto max-w-none px-10 text-white-30
         prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl prose-a:text-green-30 prose-a:underline
@@ -18,7 +17,6 @@ function LicensePage() {
         lg:px-36 xl:px-56 2xl:px-96"
       >
         <h1>Privacy Policy</h1>
-
         <p>
           While developing & maintaining this project, our reader&apos;s privacy
           concerns is of utmost importance to us. Hence, at each & every step of
@@ -34,9 +32,7 @@ function LicensePage() {
           data do we collect, this section of the website contains everything
           you will need to read about.
         </p>
-
         <h2>Information We Collect</h2>
-
         <ul>
           <li>
             <strong>Contact Information</strong>: We might collect your name,
@@ -67,9 +63,7 @@ function LicensePage() {
             device is running.
           </li>
         </ul>
-
         <h2>We Collect Information in Different Ways</h2>
-
         <ul>
           <li>
             <strong>We Collect Information Directly From You</strong>: We
@@ -91,9 +85,7 @@ function LicensePage() {
             address.
           </li>
         </ul>
-
         <h2>Use of Your Personal Information</h2>
-
         <ul>
           <li>
             <strong>We Use the Information to Contact You</strong>: We might use
@@ -145,11 +137,8 @@ function LicensePage() {
             between Somraj Saha & you or a subscription.
           </li>
         </ul>
-
         <p>We use the information as permitted by law.</p>
-
         <h2>Sharing of Information with Third-Parties</h2>
-
         <ul>
           <li>
             <strong>
@@ -195,9 +184,7 @@ function LicensePage() {
             explanation for us to do so.
           </li>
         </ul>
-
         <h2>Email Opt-Out and/or Unsubscribe from Routine Updates</h2>
-
         <p>
           You can opt out of receiving our marketing emails and/or receiving
           personalized contents for our private email list(s). To stop receiving
@@ -211,7 +198,6 @@ function LicensePage() {
           </a>
           . It may take about ten days to process your request.
         </p>
-
         <p>
           But, to receive a prompt unsubsribe request, please check the last
           email you received. There will be an unsubscribe option at the bottom
@@ -219,9 +205,7 @@ function LicensePage() {
           will still be sending you transactional messages through email about
           your purchase of our goods & services.
         </p>
-
         <h2>Third-Party Sites</h2>
-
         <p>
           If you click on one of the links to third party websites, you may be
           taken to websites we do not control. This policy does not apply to the
@@ -229,9 +213,7 @@ function LicensePage() {
           websites carefully. We are not responsible for these third party
           sites.
         </p>
-
         <h2>Grievance Complaints</h2>
-
         <p>
           In accordance with{" "}
           <a
@@ -258,9 +240,7 @@ function LicensePage() {
           telephone or whichever means is convenient for you. Please do so
           without any hesitation.
         </p>
-
         <h2>Updates to This Policy</h2>
-
         <p>
           From time to time we may change our privacy practices. We will notify
           you of any material changes to this policy as required by law. We will
@@ -268,9 +248,7 @@ function LicensePage() {
           top of this Privacy Policy document. Please check our site
           periodically for updates.
         </p>
-
         <h2>Jurisdiction</h2>
-
         <p>
           If you choose to visit the website, your visit and any dispute over
           privacy is subject to this Policy and the website&apos;s terms of use.
