@@ -227,13 +227,11 @@ function LicensePage() {
           individual to share your grievance complaints at the provided email
           address.
         </p>
-
-        {/* FIXME: Figure a way out to style the following component. */}
-        {/* <address> */}
-        {/*     Mr. Somraj Saha Calcutta Textiles, Santipara Masjid Road Agartala, */}
-        {/*     Tripura - 799001 Phone: (+91) 7731 824 653 Email: somraj.mle@gmail.com */}
-        {/* </address> */}
-
+        <address>
+          Mr. Somraj Saha Calcutta Textiles, Santipara, Masjid Road Agartala,
+          West Tripura PIN: 799001 Phone: (+91) 7731 824 653 Email:
+          somraj.mle@gmail.com
+        </address>
         <p>
           If you have any questions about this Policy or other privacy concerns,
           you can reach out to us over electronic mail, traditional mail,
