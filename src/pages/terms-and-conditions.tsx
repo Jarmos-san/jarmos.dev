@@ -10,7 +10,7 @@ function TermsAndConditionsPage() {
         url="/terms-and-conditions"
         desc="Terms & conditions of using Somraj Saha's personal
         website"
-        image="/assets/logo-1200-630.svg"
+        image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
         imageAlt="Logo for Somraj Saha's personal website"
       />
 

@@ -9,7 +9,7 @@ function AboutPage() {
         and working as an Independent Software Developer. He works with startup
         founders and business owners to bring fresh ideas to production and
         serve paying customers.`}
-        image="/assets/logo-1200-630.svg"
+        image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
         imageAlt="Logo of the personal website which Somraj Saha maintains"
         url="/about"
       />

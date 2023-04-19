@@ -10,7 +10,7 @@ function HomePage() {
         desc="The personal website of Somraj Saha who is a Full-Stack Software
         Engineer and is working independently to provide value services to
         startup founders & business owners."
-        image="/assets/logo-1200-630.svg"
+        image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
         imageAlt="The logo of the personal website"
       />
       <Header />
