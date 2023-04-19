@@ -1,7 +1,9 @@
 import { readFileSync, readdirSync } from "fs";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+import ReactMarkdown from "react-markdown";
+import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
+// import dark from "react-syntax-highlighter/dist/esm/prism";
+import remarkGfm from "remark-gfm";
 
 import Seo from "@components/seo";
 import { blogDir } from "@constants/navlinks";
@@ -42,7 +44,30 @@ function BlogPage({ data, content }: PropTypes) {
         prose-a:text-green-30 prose-a:underline prose-a:underline-offset-4
         prose-strong:text-white-20 lg:px-36 xl:px-56 2xl:px-96"
       >
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            code({ node, inline, className, children, ...props }: any) {
+              const match = /language-(\w+)/.exec(className || "");
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  // styles={dark}
+                  PreTag="div"
+                  language={match[1]}
+                  useInlineStyles={false}
+                  showLineNumbers
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
+              ) : (
+                <code>{children}</code>
+              );
+            },
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       </article>
     </>
   );
@@ -65,15 +90,15 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }: ParamTypes) {
   const filename = readFileSync(`${blogDir}/${slug}.md`, "utf-8");
   const { data, content } = matter(filename);
-  const markdown = await remark().use(html).process(content);
-  const htmlContent = markdown.toString();
 
   return {
     props: {
       data: data,
-      content: htmlContent,
+      content: content,
     },
   };
 }
 
 export default BlogPage;
+
+// FIXME: Syntax highlighting is broken fix it some other day
