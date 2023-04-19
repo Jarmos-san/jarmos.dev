@@ -16,6 +16,9 @@ export const navlinks: navlinkTypes[] = [
   },
 ];
 
-export const baseUrl = "jarmos.vercel.app";
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "jarmos.vercel.app"
+    : "localhost:3000";
 
 export const blogDir = path.join(process.cwd(), "_blog");
