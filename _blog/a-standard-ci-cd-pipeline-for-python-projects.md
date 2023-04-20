@@ -7,7 +7,7 @@ description:
   your Python projects. Now spend more time on maintaining your project rather
   than fixing CI/CD issues.
 coverImage:
-  url: "covers/pipeline.png"
+  url:
   alt: "GitHub services coupled with Poetry is a life saver"
 ---
 
