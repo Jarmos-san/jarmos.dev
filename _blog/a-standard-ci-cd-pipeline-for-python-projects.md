@@ -14,10 +14,10 @@ coverImage:
 Have you ever spent ages tinkering with CI/CD tools rather than work on writing
 code for your Python project?
 
-I sure did! There were times [Poetry][poetry landing page] couldn't install
-dependencies due to virtual environments. Or other times, the dependencies
-wouldn't just cache for some reasons. On top of that, CI/CD tools are difficult
-to debug dude to obscure error messages.
+I sure did! There were times [Poetry][1] couldn't install dependencies due to
+virtual environments. Or other times, the dependencies wouldn't just cache for
+some reasons. On top of that, CI/CD tools are difficult to debug dude to obscure
+error messages.
 
 Hence, I'm sharing this GitHub Actions workflow which I use with most of my
 Python projects. It works right out-of-the-box without any tinkering & sets you
@@ -34,8 +34,7 @@ changes:
 - Running integrated test suites for catching any breaking changes before
   merging the PR.
 - Caching dependencies for faster workflow execution times.
-- Uploading coverage reports to [CodeCov][codecov landing page] for following
-  coverage reports.
+- Uploading coverage reports to [CodeCov][2] for following coverage reports.
 
 So, as you can see, the workflow doesn't do much but ensure the bare minimum
 CI/CD principles are taken care of. And, best of all, you can build upon it as
@@ -43,8 +42,8 @@ you'll soon see.
 
 ## About the Workflow
 
-Python's package management scene isn't praiseworthy (**sources**: [1][source 1]
-& [2][source 2]). And coupled with those packaging issues, due to virtualenv
+Python's package management scene isn't praiseworthy (**sources**: [1][5] &
+[2][6]). And coupled with those packaging issues, due to virtualenv
 requirements, setting up CI/CD tools are quite complicated as well (on GitHub
 Actions at least). So, I scourged through the Internet to come up with the most
 optimal CI/CD setup for Python projects. While Poetry, out-of-the-box is a great
@@ -67,10 +66,9 @@ CodeCov. And those were the tasks, the setup **should have at the minimum**.
 Hence, the principles of minimalism were kept in mind.
 
 I also assume most projects are hosted on GitHub repositories so the setup works
-**ONLY** with [GitHub Actions][github actions docs]. And in case you're looking
-to use other CI/CD platforms like [Travis
-CI][travis ci landing page]/[CircleCI][circleci landing page], then you might
-want to look elsewhere.
+**ONLY** with [GitHub Actions][7]. And in case you're looking to use other CI/CD
+platforms like [Travis CI][3]/[CircleCI][4], then you might want to look
+elsewhere.
 
 That said, you can copy the code snippets shared below in an aptly named
 `<NAME-OF-THE-WORKFLOW>.yml` under the `.github` directory of your project. For
@@ -198,20 +196,17 @@ actions when some code is pushed to the repository or a PR is created. While the
 `test` job initiates the array of tests on the code pushed or in a PR.
 
 That said, each job has to be assigned an operating system which is assigned
-with the `runs-on:` keyword. While these [jobs run in
-parallel][running jobs in parallel], they can be made dependent on another.
-Hence, they can also be stopped prior to completion if a dependent job failed
-earlier for some reasons.
+with the `runs-on:` keyword. While these [jobs run in parallel][9], they can be
+made dependent on another. Hence, they can also be stopped prior to completion
+if a dependent job failed earlier for some reasons.
 
 Now for the interesting part. The `steps:` key describes what/which
-workflow/commands to execute. So, the `linter` job executes a [Git
-Checkout][github actions - checkout] first, then sets up an appropriate version
-of Python in the succeeding step.
+workflow/commands to execute. So, the `linter` job executes a [Git Checkout][10]
+first, then sets up an appropriate version of Python in the succeeding step.
 
 The next couple of steps involves caching dependencies for decreased workflow
-execution time. The [actions/cache][github actions - cache] Action loads the
-dependencies if they've been cached earlier. It also identifies the correct
-cache with a signed key.
+execution time. The [actions/cache][11] Action loads the dependencies if they've
+been cached earlier. It also identifies the correct cache with a signed key.
 
 If the dependencies aren't loaded from the cache, then `pip` installs `Black`,
 `pylint` & `isort` for linting purposes.
@@ -260,14 +255,14 @@ Poetry installs the dependencies only if the cached `.venv` wasn't restored.
 Following that, the `.venv` is activated & `pytest` then runs the test suite.
 The arguments passed to `pytest` ensures maximum verbosity for debugging &
 reporting the output in a `.xml` file format in the root directory. The
-generated report then uploads the file to [CodeCov][codecov landing page] using
-the [`codecov/codecov-action`][github actions - codecov].
+generated report then uploads the file to [CodeCov][2] using the
+[`codecov/codecov-action`][12].
 
 The CodeCov Action accepts an API token that you'll have to copy & pass in as a
-[Secret][github secrets docs] Environment Variable. The CodeCov token can be
-found at `https://codecov.io/gh/<GITHUB-USERNAME>/<PROJECT-NAME>` (for projects
-hosted on GitHub). And finally, at the end, the CodeCov Actions is set to fail
-if it errors out.
+[Secret][8] Environment Variable. The CodeCov token can be found at
+`https://codecov.io/gh/<GITHUB-USERNAME>/<PROJECT-NAME>` (for projects hosted on
+GitHub). And finally, at the end, the CodeCov Actions is set to fail if it
+errors out.
 
 The workflow at it's full glory isn't as minimal as it sounds. It's complexity
 comes with the fact that production-grade software should be thoroughly tested &
@@ -298,28 +293,17 @@ Python projects on GitHub.
 Feel I missed out something? Then [reach out](../../about/#contact-me) to me.
 
 <!-- Reference Links -->
-<!-- * Landing Pages -->
 
-[poetry landing page]: https://python-poetry.org/
-[codecov landing page]: https://about.codecov.io/
-[travis ci landing page]: https://www.travis-ci.com/
-[circleci landing page]: https://circleci.com/
-
-<!-- * Quotes -->
-
-[source 1]: https://news.ycombinator.com/item?id=19989188
-[source 2]: https://news.ycombinator.com/item?id=10000479
-
-<!-- * Documentations -->
-
-[github actions docs]: https://docs.github.com/en/actions
-[github secrets docs]:
-  https://docs.github.com/en/actions/reference/encrypted-secrets
-[running jobs in paralle]:
+[1]: https://python-poetry.org/
+[2]: https://about.codecov.io/
+[3]: https://www.travis-ci.com/
+[4]: https://circleci.com/
+[5]: https://news.ycombinator.com/item?id=19989188
+[6]: https://news.ycombinator.com/item?id=10000479
+[7]: https://docs.github.com/en/actions
+[8]: https://docs.github.com/en/actions/reference/encrypted-secrets
+[9]:
   https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymax-parallel
-
-<!-- * GitHub Actions -->
-
-[github actions - checkout]: https://github.com/actions/checkout
-[github actions - cache]: https://github.com/actions/cache
-[github actions - codecov]: https://github.com/codecov/codecov-action
+[10]: https://github.com/actions/checkout
+[11]: https://github.com/actions/cache
+[12]: https://github.com/codecov/codecov-action

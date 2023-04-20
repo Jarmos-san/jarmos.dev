@@ -4,7 +4,7 @@ date: 2020-12-25
 slug: customizing-windows-terminal-a-minimalist-approach
 description: Who needs Linux when you got a fully customized Windows Terminal!
 coverImage:
-  url: "https://i.ibb.co/V3y7Cb4/DRj-DFi-EQZO.gif"
+  url:
   href: "A .gif image of my customized Windows Terminal"
 ---
 
