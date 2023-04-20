@@ -1,16 +1,15 @@
 ---
-title: "Using GitHub Actions to Deploy a FastAPI Project to Heroku"
+title: Using GitHub Actions to Deploy a FastAPI Project to Heroku
+date: 2021-05-05
 slug: "using-github-actions-to-deploy-a-fastapi-project-to-heroku"
-description: |
+description:
   Heroku makes deployment a piece of cake, but compromises on quality control &
   best practices. So, this article shows how to use GitHub Actions in tandem
   with Heroku while maintaining best practices.
 coverImage:
-  href: https://res.cloudinary.com/jarmos/image/upload/v1620895005/GitHub_Actions_Loves_Heroku_dq2ake.jpg
-  alt: Heroku combined with GitHub & GitHub Actions is a match made in heaven.
+  url: https://res.cloudinary.com/jarmos/image/upload/v1620895005/GitHub_Actions_Loves_Heroku_dq2ake.jpg
+  href: Heroku combined with GitHub & GitHub Actions is a match made in heaven.
 ---
-
-# Using GitHub Actions to Deploy a FastAPI Project to Heroku
 
 I build Python projects & host the source code on GitHub repositories quite
 often. And thanks to [GitHub Actions][github actions], I needn't worry about
@@ -361,7 +360,7 @@ try them out, check this article I authored Google's Serverless offering. You
 can read it at:
 [Google Serverless Infrastructure: A Primer on GCP & Serverless Computing](../posts/google-serverless-infrastructure-what-are-the-differences).
 
-Until then cheers & happy developing!🥂
+Until then cheers & happy developing! :clinking_beer_mugs:
 
 <!-- ! Reference Links -->
 
