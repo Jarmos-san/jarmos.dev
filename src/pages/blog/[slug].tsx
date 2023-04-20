@@ -2,7 +2,6 @@ import { readFileSync, readdirSync } from "fs";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
-// import dark from "react-syntax-highlighter/dist/esm/prism";
 import remarkGfm from "remark-gfm";
 
 import Seo from "@components/seo";
@@ -11,6 +10,7 @@ import { blogDir } from "@constants/navlinks";
 type PropTypes = {
   data: {
     title: string;
+    date: Date;
     description: string;
     metaSummary?: string | null;
     coverImage?: {
@@ -51,7 +51,6 @@ function BlogPage({ data, content }: PropTypes) {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (
                 <SyntaxHighlighter
-                  // styles={dark}
                   PreTag="div"
                   language={match[1]}
                   useInlineStyles={false}
