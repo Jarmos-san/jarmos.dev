@@ -19,13 +19,14 @@ function ProjectSection() {
           >
             <h3 className="text-2xl text-white-10">{content.label}</h3>
             <p className="my-4 text-white-20">{content.desc}</p>
-            <Link
+            <a
               className="text-green-30 underline underline-offset-2
               hover:text-green-10"
-              href={`/portfolio${content.href}`}
+              href={content.href}
+              target="_blank"
             >
               Read More...
-            </Link>
+            </a>
           </div>
         ))}
       </div>
