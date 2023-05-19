@@ -4,11 +4,8 @@ import { portfolio } from "@constants/portfolio";
 
 function ProjectSection() {
   return (
-    <section className="container mx-auto px-8 md:px-20 lg:px-36 ">
-      <h2
-        className="mb-4 text-xl font-bold text-white-10 md:text-2xl
-        lg:text-3xl"
-      >
+    <section className="container mx-auto space-y-8 px-8 md:px-20 lg:px-36">
+      <h2 className="text-xl font-bold text-white-10 md:text-2xl lg:text-3xl">
         Portfolio
       </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -29,6 +26,9 @@ function ProjectSection() {
             </a>
           </div>
         ))}
+      </div>
+      <div className="text-xl text-green-20 underline underline-offset-4">
+        <Link href="/portfolio">Check out the other projects...</Link>
       </div>
     </section>
   );
