@@ -27,9 +27,15 @@ function ProjectSection() {
           </div>
         ))}
       </div>
-      <div className="text-xl text-green-20 underline underline-offset-4">
-        <Link href="/portfolio">Check out the other projects...</Link>
-      </div>
+      <p className="text-xl text-white-30">
+        Check out{" "}
+        <Link
+          href="/portfolio"
+          className="text-green-20 underline decoration-1 underline-offset-2"
+        >
+          the entire portfolio...
+        </Link>
+      </p>
     </section>
   );
 }
