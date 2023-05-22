@@ -55,8 +55,8 @@ function AboutPage() {
           collaborate with me, reach out to me over{" "}
           <a href="mailto:somraj.mle@gmail.com" target="_blank" rel="noopener">
             Email
-          </a>{" "}
-          .You can find also find me on:
+          </a>
+          . You can find also find me on:
           <ul>
             <li>
               <a
