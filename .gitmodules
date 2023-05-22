@@ -1,4 +1,0 @@
-[submodule "portfolio"]
-	path = portfolio
-	url = git@github.com:Jarmos-san/portfolio
-  branch = main
