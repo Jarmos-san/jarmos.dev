@@ -54,7 +54,7 @@ function AboutPage() {
           together to build a business would sound like. So, if you want to
           collaborate with me, reach out to me over{" "}
           <a href="mailto:somraj.mle@gmail.com" target="_blank" rel="noopener">
-            Email
+            email
           </a>
           . You can find also find me on:
           <ul>
