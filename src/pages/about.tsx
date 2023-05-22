@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Seo from "@components/seo";
 
 function AboutPage() {
@@ -50,23 +52,45 @@ function AboutPage() {
         <p>
           That was a quick sneak peak into what a typical workflow of us working
           together to build a business would sound like. So, if you want to
-          collaborate with me, reach out to me on{" "}
-          <a href="https://twitter.com/Jarmosan" target="_blank" rel="noopener">
-            Twitter
-          </a>
-          ,{" "}
-          <a
-            href="https://www.linkedin.com/in/jarmos"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn
-          </a>{" "}
-          or{" "}
+          collaborate with me, reach out to me over{" "}
           <a href="mailto:somraj.mle@gmail.com" target="_blank" rel="noopener">
             Email
-          </a>
-          .
+          </a>{" "}
+          .You can find also find me on:
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/Jarmosan"
+                target="_blank"
+                rel="noopener"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jarmos"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Jarmos-san"
+                target="_blank"
+                rel="noopener"
+              >
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </p>
+        <p>
+          And if you want to check out my previous work/experience writing code?
+          Then head over to the <Link href="/portfolio">portfolio</Link> page to
+          see the highlights of the projects I worked on.
         </p>
         <p>
           That said, here are the list of technologies I work with at the
