@@ -1,32 +1,13 @@
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+
 import { readFileSync, readdirSync } from "fs";
 import matter from "gray-matter";
+import path from "path";
 import ReactMarkdown from "react-markdown";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import remarkGfm from "remark-gfm";
 
 import Seo from "@components/seo";
-import { blogDir } from "@constants/navlinks";
-
-type PropTypes = {
-  data: {
-    title: string;
-    date: Date;
-    description: string;
-    metaSummary?: string | null;
-    coverImage?: {
-      href: string;
-      alt: string;
-    };
-    slug: string;
-  };
-  content: string;
-};
-
-type ParamTypes = {
-  params: {
-    slug: string;
-  };
-};
 
 function BlogPage({ data, content }: PropTypes) {
   return (
