@@ -14,6 +14,10 @@ export const navlinks: navlinkTypes[] = [
     label: "About Me",
     href: "/about",
   },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
 ];
 
 export const baseUrl =
