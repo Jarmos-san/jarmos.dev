@@ -9,7 +9,10 @@ import remarkGfm from "remark-gfm";
 
 import Seo from "@components/seo";
 
-function BlogPage({ data, content }: PropTypes) {
+function BlogPage({
+  data,
+  content,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Seo
@@ -53,10 +56,18 @@ function BlogPage({ data, content }: PropTypes) {
   );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Get the location of the "_blog" directory where the Markdown files are at
+  const blogDir = path.join(process.cwd(), "_blog");
+
+  // Get the list of Markdown files in the specified directory
   const mdfiles = readdirSync(blogDir, { withFileTypes: true })
     .filter((file) => file.isFile())
     .map((file) => file.name);
+
+  // TODO: Parse the Markdown file to fetch the "slug" metadata instead for
+  // more granular control over the design of the URL.
+  // Get the URL of the blog post based on the Markdown filename.
   const paths = mdfiles.map((file) => ({
     params: { slug: file.replace(".md", "") },
   }));
@@ -65,19 +76,28 @@ export async function getStaticPaths() {
     paths: paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params: { slug } }: ParamTypes) {
-  const filename = readFileSync(`${blogDir}/${slug}.md`, "utf-8");
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // Get the location where the Markdown blog posts are stored in
+  const blogDir = path.join(process.cwd(), "_blog");
+
+  // Get the Markdown filenames from the "_blog" directory
+  const filename = readFileSync(`${blogDir}/${params?.slug}.md`, "utf-8");
+
+  // Parse the Markdown files for its content and frontmatter metadata
   const { data, content } = matter(filename);
+
+  // Serialise the date metadata to ensure JSON serializability
+  const serialisedData = { ...data, date: data.date.toISOString() };
 
   return {
     props: {
-      data: data,
+      data: serialisedData,
       content: content,
     },
   };
-}
+};
 
 export default BlogPage;
 
