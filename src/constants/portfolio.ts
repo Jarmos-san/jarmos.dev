@@ -1,5 +1,3 @@
-import path from "path";
-
 type PortfolioTypes = {
   label: string;
   desc: string;
@@ -19,18 +17,18 @@ export const portfolio: PortfolioTypes[] = [
   },
   {
     label: "devsindia.in",
-    desc: `A open-source personal website & blog created using Next.js
-            TypeScript & TailwindCSS. This project is the final iteration of
-            the countless previous experimentations I performed to create an
-            ideal personal website.`,
+    desc: `The official landing page for the r/developersIndia Reddit
+            community. The project was created using Next.js, SASS & TypeScript.
+            This project was created in hopes to gather more organic traffic.`,
     border: "border-teal-400",
     href: "https://github.com/developersIndia/website",
   },
   {
     label: "jarmos.dev",
-    desc: `The official landing page for the r/developersIndia Reddit
-            community. The project was created using Next.js, SASS & TypeScript.
-            This project was created in hopes to gather more organic traffic.`,
+    desc: `An open-source personal website & blog created using Next.js
+            TypeScript & TailwindCSS. This project is the final iteration of
+            the countless previous experimentations I performed to create an
+            ideal personal website.`,
     border: "border-rose-400",
     href: "https://github.com/Jarmos-san/jarmos.dev",
   },
@@ -44,5 +42,3 @@ export const portfolio: PortfolioTypes[] = [
     href: "https://github.com/Jarmos-san/neovimulus",
   },
 ];
-
-export const portfolioDir = path.join(process.cwd(), "_portfolio");
