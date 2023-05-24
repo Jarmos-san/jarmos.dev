@@ -10,7 +10,7 @@ import Seo from "@components/seo";
 type FrontmatterData = {
   title: string;
   slug: string;
-  date: Date;
+  date: string;
   description: string;
   coverImage: {
     url: string;
@@ -27,8 +27,8 @@ function BlogPostsPage({
         title="Blog Posts"
         desc="Blog posts Somraj Saha has written and publised on topics like
           programming and software development in general."
-        image=""
-        imageAlt=""
+        image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
+        imageAlt="The logo of the personal website"
         url="/blog"
       />
       <div
@@ -43,7 +43,7 @@ function BlogPostsPage({
                 {data.title}
               </h2>
               <p className="text-gray-200">{data.description}</p>
-              <em className="text-gray-400">Published on</em>
+              <em className="text-gray-400">Published on {data.date}</em>
             </Link>
           </div>
         ))}
@@ -60,8 +60,21 @@ export const getStaticProps: GetStaticProps = async () => {
   const mdFiles = readdirSync(blogDir, "utf8");
 
   // Get the list of frontmatter data
-  const frontmatter = mdFiles.map(
-    (file) => matter.read(`${blogDir}/${file}`).data
+  const frontmatter = mdFiles.map((file) => {
+    const { data } = matter.read(`${blogDir}/${file}`);
+    const formattedDate = new Date(data.date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    return { ...data, date: formattedDate };
+  });
+
+  // Sort the list of frontmatter data with the latest dates closer towards the
+  // beginning of the array's index.
+  frontmatter.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
   return {
