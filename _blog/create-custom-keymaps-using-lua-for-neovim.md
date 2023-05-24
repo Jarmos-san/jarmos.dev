@@ -1,6 +1,5 @@
 ---
 title: How to Create Custom Keymaps in Neovim With Lua
-date: 2021-10-12
 slug: "create-custom-keymaps-in-neovim-using-lua"
 description:
   "Learn to create custom key bindings in Neovim using the optional inbuilt Lua

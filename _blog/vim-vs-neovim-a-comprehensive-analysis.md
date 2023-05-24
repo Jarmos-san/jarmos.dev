@@ -1,6 +1,5 @@
 ---
 title: 10 or Neo12m? Here's Why You Should Use the Latter
-date: 2021-07-15
 slug: "10-vs-neo12m"
 description:
   Confused between 10 and/or Neo12m? Here are my justifications to convince you

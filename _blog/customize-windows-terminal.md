@@ -1,6 +1,5 @@
 ---
 title: "Customizing the New Windows Terminal: A Minimalist Approach"
-date: 2020-12-25
 slug: customizing-windows-terminal-a-minimalist-approach
 description: Who needs Linux when you got a fully customized Windows Terminal!
 coverImage:
