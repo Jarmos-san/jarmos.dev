@@ -39,7 +39,7 @@ function BlogPostsPage({
         {frontmatter.map((data: FrontmatterData) => (
           <div key={data.slug} className="my-8 border-b border-gray-500 py-2">
             <Link href={`blog/${data.slug}`}>
-              <h2 className="text-lg font-semibold text-white-20">
+              <h2 className="text-lg font-semibold text-green-30">
                 {data.title}
               </h2>
               <p className="text-gray-200">{data.description}</p>
