@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "prod": "next build && next start",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "lint": "next lint",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
