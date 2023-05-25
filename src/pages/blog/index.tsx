@@ -16,6 +16,7 @@ type FrontmatterData = {
     url: string;
     alt: string;
   };
+  summary: string;
 };
 
 function BlogPostsPage({
@@ -42,7 +43,7 @@ function BlogPostsPage({
               <h2 className="text-lg font-semibold text-green-30">
                 {data.title}
               </h2>
-              <p className="text-gray-200">{data.description}</p>
+              <p className="text-gray-200">{data.summary}</p>
               <em className="text-gray-400">Published on {data.date}</em>
             </Link>
           </div>
