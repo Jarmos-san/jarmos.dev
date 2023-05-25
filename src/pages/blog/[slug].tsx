@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-import { readFileSync, readdirSync } from "fs";
+import { readdirSync } from "fs";
 import matter from "gray-matter";
 import path from "path";
 import ReactMarkdown from "react-markdown";
@@ -82,11 +82,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Get the location where the Markdown blog posts are stored in
   const blogDir = path.join(process.cwd(), "_blog");
 
-  // Get the Markdown filenames from the "_blog" directory
-  const filename = readFileSync(`${blogDir}/${params?.slug}.md`, "utf-8");
-
   // Parse the Markdown files for its content and frontmatter metadata
-  const { data, content } = matter(filename);
+  const { data, content } = matter.read(`${blogDir}/${params?.slug}.md`);
 
   // Serialise the date metadata to ensure JSON serializability
   const serialisedData = { ...data, date: data.date.toISOString() };
