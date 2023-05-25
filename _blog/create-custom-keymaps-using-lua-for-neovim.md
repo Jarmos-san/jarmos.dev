@@ -1,13 +1,24 @@
 ---
 title: How to Create Custom Keymaps in Neovim With Lua
-slug: "create-custom-keymaps-in-neovim-using-lua"
-description:
-  "Learn to create custom key bindings in Neovim using the optional inbuilt Lua
-  runtime. And ditch the archaic & cryptic Vimscript in Lua's favour!"
+date: 2023-01-28
+slug: create-custom-keymaps-using-lua-for-neovim
+description: |
+  Learn to create custom key bindings in Neovim using the optional inbuilt Lua
+  runtime. And ditch the archaic & cryptic Vimscript in Lua's favour!
 coverImage:
   url:
   alt: "Ditching Vimscript in favour of Lua for easier Neovim configurations"
+summary: |
+  Neovim's Lua runtime allows for powerful customization through custom
+  keybindings. Learn how to write Lua functions for key mappings and modularize
+  your configurations. Check out the Neovim-Lua Guide and other resources for
+  more information. Migrate your Vimscript configs to Lua for a better
+  experience.
 ---
+
+# How to Create Custom Keymaps in Neovim Using the Embedded Lua Environment
+
+![Test Cover Image](https://picsum.photos/1200/640)
 
 Neovim (or even Vim) is an excellent piece of software for any developers out
 there. The ability to create custom keybindings & do pretty much anything is
@@ -47,7 +58,7 @@ runtime in Neovim. Having some idea of it will help better understand the how's
 & what's possible to create.
 
 That said, Neovim was released with a set of some useful features. One such
-feature that makes Neovim stand out is it's
+feature that makes Neovim stand out is its
 [builtin API](https://neovim.io/doc/user/api.html). The programmatic access to
 the API & the Lua runtime means you can let your imaginations go wild if you so
 desire.
@@ -98,7 +109,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 ```
 
 Fortunately for us, Neovim provides a helper function through it's builtin API.
-Aptly named `nvim_set_keymap()`, the users are expected to use this function
+Aptly named `vim.keymap.set()`, the users are expected to use this function
 directly or by wrapping it in Lua code. The later method is recommended since
 that way it's possible to adhere to standard coding practices. Using Lua code in
 tandem with the Neovim API also helps in modularising the configurations. Thus
@@ -117,10 +128,12 @@ Following are some such examples:
 -- Functional wrapper for mapping custom keybindings
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
+
     if opts then
         options = vim.tbl_extend("force", options, opts)
     end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+
+    vim.keymap.set(mode, lhs, rhs, options)
 end
 
 map("n", ",<Space>", ":nohlsearch<CR>", { silent = true })
@@ -145,8 +158,8 @@ By default, the `opts` parameter of the `map()` function is assigned to a table
 `{ noremap = true }`. In doing so, nested & recusive use of mappings are allowed
 (refer to `:h map-commands` for more info on it). You can expand the `opts`
 table further with additional `map-arguments` as you require. And at the core of
-the wrapper is the `vim.api.nvim_set_keymap()` function which accepts the list
-of parameters mentioned above.
+the wrapper is the `vim.keymap.set()` function which accepts the list of
+parameters mentioned above.
 
 This function can then be reused wherever you need them. As you'll see in the
 next we can modularise our Neovim configurations even further!
@@ -197,7 +210,7 @@ function M.map(mode, lhs, rhs, opts)
     if opts then
         options = vim.tbl_extend("force", options, opts)
     end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    vim.keymap.set(mode, lhs, rhs, options)
 end
 
 return M
@@ -250,16 +263,10 @@ at if configuring Neovim with Lua piques your interests.
 1. [A Guide to Using Lua in Neovim](https://github.com/nanotee/nvim-lua-guide)
 2. [`h: lua`](https://neovim.io/doc/user/lua.html) for a comprehensive guide on
    how to use Lua within Neovim.
-3. And a bit of a shameless plug, you could use my blog as a source of reference
-   as well. I've written one such articles introducing the benefits of using Lua
-   for Neovim in
-   [Vim or Neovim? Here's Why You Should Use the Latter](../vim-vs-neovim).
-   There're more such articles to come so keep your eyes peeled.
 
-Did I miss out any other useful resources? Let me know if I did!
+There is obviously a lot more that is possible with using Lua for Neovim
+configuration, so in case I missed out on something, do let me know?
 
 And to conclude this article, what do you think of using Lua to configure
 Neovim? Are you current configuration in Vimscript or Lua? And have you noticed
-any difference while using either? Drop me a DM on
-[Twitter @Jarmosan](https://twitter.com/Jarmosan) or an email whichever you
-prefer.
+any difference while using either? Let me know...

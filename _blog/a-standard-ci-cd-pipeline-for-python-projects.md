@@ -1,19 +1,31 @@
 ---
 title: A Standard & Complete CI/CD Pipeline for Most Python Projects
+date: 2022-03-01
 slug: a-standard-ci-cd-pipeline-for-python-projects
 description:
-  The most complete (yet standard) CI/CD pipeline you'll ever find for most of
-  your Python projects. Now spend more time on maintaining your project rather
-  than fixing CI/CD issues.
+  Optimize your Python project's CI/CD with a comprehensive GitHub Actions
+  workflow. Learn how to automate linting, testing, coverage reports, and more
+  without any hassle. Build upon this minimalistic setup for further
+  customization and improvements.
 coverImage:
   url: https://picsum.photos/200/300
   alt: "GitHub services coupled with Poetry is a life saver"
+summary: |
+  Optimize your Python project's CI/CD with a comprehensive GitHub Actions
+  workflow. Learn how to automate linting, testing, coverage reports, and more
+  without any hassle. Build upon this minimalistic setup for further
+  customization and improvements.
 ---
 
+# A Standard and Complete CI/CD Pipeline for Python Projects
+
+![Test Image](https://picsum.photos/1200/640)
+
 Have you ever spent ages tinkering with CI/CD tools rather than work on writing
-code for your Python project? I sure did! There were times [Poetry][1] couldn't
-install dependencies due to virtual environments. Or other times, the
-dependencies wouldn't just cache for some reasons.
+code for your Python project? I sure did! There were times
+[Poetry](https://python-poetry.com) couldn't install dependencies due to virtual
+environments issues. Or other times, the dependencies wouldn't just cache for
+some other reasons.
 
 On top of it, some CI/CD tools are difficult to debug due to obscure error
 messages. Hence, I'm sharing this GitHub Actions workflow which I use with most
@@ -31,7 +43,8 @@ changes:
 - Running integrated test suites for catching any breaking changes before
   merging the PR.
 - Caching dependencies for faster workflow execution times.
-- Uploading coverage reports to [CodeCov][2] for following coverage reports.
+- Uploading coverage reports to [CodeCov](https://www.codecov.org) for following
+  coverage reports.
 
 So, as you can see, the workflow doesn't do much but ensure the bare minimum
 CI/CD principles are taken care of. And, best of all, you can build upon it as
@@ -39,23 +52,22 @@ you'll soon see.
 
 ## About the Workflow
 
-Python's package management scene isn't praiseworthy (**sources**: [1][5] &
-[2][6]). And coupled with those packaging issues, due to virtualenv
-requirements, setting up CI/CD tools are quite complicated as well (on GitHub
-Actions at least). So, I scourged through the Internet to come up with the most
-optimal CI/CD setup for Python projects. While Poetry, out-of-the-box is a great
-CLI tool for local development, it doesn't work well with CI/CD platforms. With
-Poetry, you can manage local virtualenvs as easily as publishing your project on
-PyPi right from your terminal!
+Python's package management scene isn't praiseworthy. And coupled with those
+packaging issues, due to virtualenv requirements, setting up CI/CD tools are
+quite complicated as well (on GitHub Actions at least). So, I scourged through
+the Internet to come up with the most optimal CI/CD setup for Python projects.
+While Poetry, out-of-the-box is a great CLI tool for local development, it
+doesn't work well with CI/CD platforms. With Poetry, you can manage local
+virtualenvs as easily as publishing your project on PyPi right from your
+terminal!
 
-But that's manual labour. And as developers, we commit often & push to remote
+But that's manual labour and as developers we commit often & push to remote
 repositories on regular intervals. Repeated manual tasks are subject to mistakes
 thus increasing the chances of a bug or breaking changes creeping into the
-project. Hence, I set out with a goal to resolve this issue without spending too
-much time setting up CI/CD tools.
-
-The goal was to make the setup as simple & minimal as possible, yet should
-qualify to meet the modern standards of CI/CD principles.
+project. I wanted to resolve this issue without spending too much time setting
+up CI/CD tools. The goal was to make the setup as simple & as minimal as
+possible, yet it should qualify to meet the modern standards of CI/CD
+principles.
 
 In other words, the setup should be able to perform linting and/or formatting
 tasks, run the test suites, generate coverage reports & upload the report to
@@ -63,9 +75,10 @@ CodeCov. And those were the tasks, the setup **should have at the minimum**.
 Hence, the principles of minimalism were kept in mind.
 
 I also assume most projects are hosted on GitHub repositories so the setup works
-**ONLY** with [GitHub Actions][7]. And in case you're looking to use other CI/CD
-platforms like [Travis CI][3]/[CircleCI][4], then you might want to look
-elsewhere.
+**ONLY** with [GitHub Actions](https://features.github.com/actions). And in case
+you're looking to use other CI/CD platforms like
+[Travis CI](https://www.travis-ci.com)/[CircleCI](https://circleci.com), then
+you might want to look elsewhere.
 
 That said, you can copy the code snippets shared below in an aptly named
 `<NAME-OF-THE-WORKFLOW>.yml` under the `.github` directory of your project. For
@@ -87,17 +100,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.5.2
+
       - name: Set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4.6.1
+
       - name: Load cache (if exists)
-        uses: actions/cache@v2.1.3
+        uses: actions/cache@v3.3.1
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip
           restore-keys: ${{ runner.os }}-pip
+
       - name: Install Black, Pylint & iSort
         run: python -m pip install black pylint isort
+
       - name: Run linters
         run: |
           pylint alokka
@@ -110,39 +127,43 @@ jobs:
       fail-fast: true
       matrix:
         os: ["ubuntu-latest", "macos-latest", "windows-latest"]
-        python-version: ["3.8", "3.9"]
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
     defaults:
       run:
         shell: bash
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.5.2
+
       - name: Set up Python v${{matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4.6.1
         with:
           python-version: ${{ matrix.python-version}}
+
       - name: Install Poetry
-        uses: snok/install-poetry@v1.1.1
+        uses: snok/install-poetry@v1.3.3
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
+
       - name: Load Cached Virtualenv
         id: cached-pip-wheels
-        uses: actions/cache@v2.1.3
+        uses: actions/cache@v3.3.1
         with:
           path: ~/.cache
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install dependencies
+
+      - name: Install Dependencies
         run: poetry install --no-interaction --no-root -vvv
-      - name: Install Aurochs
-        run: poetry install --no-interaction
-      - name: Run tests
+
+      - name: Run Tests
         run: |
           source $VENV
           pytest -vvv --cov-report xml --cov=./
-      - name: Upload coverage
-        uses: codecov/codecov-action@v1.2.1
+
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v3.1.4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: coverage.xml
@@ -163,9 +184,9 @@ what you should know:
 - `linter` runs on an Ubuntu VM & installs `pylint`, `Black` & `isort` for
   linting & formatting the code. They're also cached for decreasing the
   execution times.
-- `test` runs on a MacOS, an Ubuntu & a Windows VM with Python versions - `3.8`
-  & `3.9` respectively. Do note, these runs happen in parallel irrespective of
-  each other's execution state.
+- `test` runs on a MacOS, an Ubuntu & a Windows VM with Python versions - `3.8`,
+  `3.9`, `3.10` and `3.11` respectively. Do note, these runs happen in parallel
+  irrespective of each other's execution state.
 - The `test` job will also cache & install the virtualenv stored under the
   `.venv` directory. And then run the test suites with PyTest which generates a
   `coverage.xml` report to be uploaded to CodeCov.
@@ -193,17 +214,18 @@ actions when some code is pushed to the repository or a PR is created. While the
 `test` job initiates the array of tests on the code pushed or in a PR.
 
 That said, each job has to be assigned an operating system which is assigned
-with the `runs-on:` keyword. While these [jobs run in parallel][9], they can be
-made dependent on another. Hence, they can also be stopped prior to completion
-if a dependent job failed earlier for some reasons.
+with the `runs-on:` keyword. While these jobs run in parallel, they can be made
+dependent on another. Hence, they can also be stopped prior to completion if a
+dependent job failed earlier for some reasons.
 
 Now for the interesting part. The `steps:` key describes what/which
-workflow/commands to execute. So, the `linter` job executes a [Git Checkout][10]
+workflow/commands to execute. So, the `linter` job executes a `git checkout`
 first, then sets up an appropriate version of Python in the succeeding step.
 
 The next couple of steps involves caching dependencies for decreased workflow
-execution time. The [actions/cache][11] Action loads the dependencies if they've
-been cached earlier. It also identifies the correct cache with a signed key.
+execution time. The [actions/cache](https://github.com/actions/cache) GitHub
+Action loads the dependencies if they've been cached earlier. It also identifies
+the correct cache with a signed key.
 
 If the dependencies aren't loaded from the cache, then `pip` installs `Black`,
 `pylint` & `isort` for linting purposes.
@@ -286,21 +308,3 @@ individual maintainer's requirements.
 
 But all said & done, the code shared here should suffice for most open-sourced
 Python projects on GitHub.
-
-Feel I missed out something? Then [reach out](../../about/#contact-me) to me.
-
-<!-- Reference Links -->
-
-[1]: https://python-poetry.org/
-[2]: https://about.codecov.io/
-[3]: https://www.travis-ci.com/
-[4]: https://circleci.com/
-[5]: https://news.ycombinator.com/item?id=19989188
-[6]: https://news.ycombinator.com/item?id=10000479
-[7]: https://docs.github.com/en/actions
-[8]: https://docs.github.com/en/actions/reference/encrypted-secrets
-[9]:
-  https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymax-parallel
-[10]: https://github.com/actions/checkout
-[11]: https://github.com/actions/cache
-[12]: https://github.com/codecov/codecov-action

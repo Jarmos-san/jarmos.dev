@@ -1,11 +1,24 @@
 ---
 title: "Customizing the New Windows Terminal: A Minimalist Approach"
-slug: customizing-windows-terminal-a-minimalist-approach
+date: 2023-18-25
+slug: customize-windows-terminal
 description: Who needs Linux when you got a fully customized Windows Terminal!
 coverImage:
-  url:
+  url: https://picsum.photos/1200/640
   href: "A .gif image of my customized Windows Terminal"
+summary: |
+  Boost productivity with Windows Terminal: Customize for a minimalist approach.
+  Learn settings, profiles, color schemes, key bindings & more. Streamline your
+  coding experience on Windows.
 ---
+
+# Customise Windows Terminal: A Minimalist Approach
+
+![Test Cover Image](https://picsum.photos/1200/640)
+
+**Disclaimer**: As of May 25, 2023, I am no longer using Windows (and its
+related technologies) for software development, hence I cannot guranteed the
+suggestions made in this blog post will work for you!
 
 Heard of the new Windows Terminal (WT), Microsoft has been actively working on
 recently? You might’ve if you’ve been following my updates on Twitter. I was
@@ -18,9 +31,9 @@ the better.
 
 With that said, WT is a console developed & distributed by Microsoft. It
 supports a wide variety of shells, the full list of which I’m not aware of. But
-I’m assured it supports most of the popular ones. Hence, by popularity, Bash/zsh
+I’m assured it supports most of the popular ones. Hence, by popularity, Bash/ZSH
 is supported through Windows Subsystem for Linux (WSL) & PowerShell 5.1 which
-ships pre-packaged with Windows 10.
+ships pre-packaged with Windows 10+.
 
 On that note, I’ve been using PowerShell 5.1 mainly because it’s there by
 default & is a much easier scripting language over Bash. So, without further
@@ -43,45 +56,134 @@ arises, customizing the Terminal to fit those needs is still an open option.
 Anyway, enough of my justifications & let’s cut the chase. This is the
 configuration I use, feel free to copy & use them.
 
-{{< highlight json >}} { "$schema": "https://aka.ms/terminal-profiles-schema",
-"actions": [ { "command": { "action": "copy", "singleLine": false }, "keys":
-"ctrl+c" }, { "command": "paste", "keys": "ctrl+v" }, { "command": "find",
-"keys": "ctrl+shift+f" }, { "command": { "action": "splitPane", "split": "auto",
-"splitMode": "duplicate" }, "keys": "alt+shift+d" }, { "command": { "action":
-"splitPane", "profile": "Neovim v0.4.4", "split": "auto" }, "keys":
-"shift+alt+2" }, { "command": "closeTab", "keys": "ctrl+w" }, { "command":
-"closeOtherTabs", "keys": "ctrl+t" }, { "command": "closePane", "keys":
-"ctrl+shift+w" } ], "copyFormatting": "none", "copyOnSelect": false,
-"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-"disabledProfileSources": [ "Windows.Terminal.Azure", "Windows.Terminal.Wsl" ],
-"launchMode": "maximized", "profiles": { "defaults": { "acrylicOpacity": 0.2,
-"colorScheme": "Nord", "cursorColor": "#969696", "cursorShape": "filledBox",
-"fontFace": "MesloLGL Nerd Font", "fontSize": 11, "padding": "20, 8, 8, 3",
-"startingDirectory": "E:\\Projects", "useAcrylic": true, "backgroundImage":
-"%USERPROFILE%\\Pictures\\Saved Pictures\\312629.jpg" }, "list": [ {
-"commandline": "powershell.exe", "guid":
-"{61c54bbd-c2c6-5271-96e7-009a87ff44bf}", "hidden": false, "name": "Windows
-PowerShell v5.1" }, { "commandline": "cmd.exe", "guid":
-"{0caa0dad-35be-5f56-a8ff-afceeeaa6101}", "hidden": true, "name": "Command
-Prompt" }, { "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}", "hidden": false,
-"name": "PowerShell v7.2", "source": "Windows.Terminal.PowershellCore" }, {
-"guid": "{905ee199-8709-449b-b0f1-5ac7ea8638b9}", "commandline": "py.exe",
-"icon": "%PROGRAMFILES(x86)%\\Python38-32\\python.png", "name": "Python v3.8.5"
-}, { "commandline": "nvim", "guid": "{cec59ed5-e63e-4199-9e5f-d292b4ce5346}",
-"icon": "C:\\Tools\\Neovim\\neovim.png", "name": "Neovim v0.4.4" } ] },
-"schemes": [ { "background": "#2E3440", "black": "#3B4252", "blue": "#81A1C1",
-"brightBlack": "#4C566A", "brightBlue": "#81A1C1", "brightCyan": "#88C0D0",
-"brightGreen": "#A3BE8C", "brightPurple": "#B48EAD", "brightRed": "#BF616A",
-"brightWhite": "#E5E9F0", "brightYellow": "#EBCB8B", "cursorColor": "#FFFFFF",
-"cyan": "#88C0D0", "foreground": "#D8DEE9", "green": "#A3BE8C", "name": "Nord",
-"purple": "#B48EAD", "red": "#BF616A", "selectionBackground": "#FFFFFF",
-"white": "#E5E9F0", "yellow": "#EBCB8B" } ], "tabWidthMode": "equal", "theme":
-"dark" } {{< / highlight >}}
-
-<script src="https://gist.github.com/Jarmos-san/6464fc65ac3c81f94f855fc76190c911.js"></script>
-
-Anyway, enough of my justifications & let’s cut the chase. This is the
-configuration I use, feel free to copy & use them.
+```json
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "profile": "Neovim v0.4.4",
+        "split": "auto"
+      },
+      "keys": "shift+alt+2"
+    },
+    {
+      "command": "closeTab",
+      "keys": "ctrl+w"
+    },
+    {
+      "command": "closeOtherTabs",
+      "keys": "ctrl+t"
+    },
+    {
+      "command": "closePane",
+      "keys": "ctrl+shift+w"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+  "disabledProfileSources": ["Windows.Terminal.Azure", "Windows.Terminal.Wsl"],
+  "launchMode": "maximized",
+  "profiles": {
+    "defaults": {
+      "acrylicOpacity": 0.2,
+      "colorScheme": "Nord",
+      "cursorColor": "#969696",
+      "cursorShape": "filledBox",
+      "fontFace": "MesloLGL Nerd Font",
+      "fontSize": 11,
+      "padding": "20, 8, 8, 3",
+      "startingDirectory": "E:\\Projects",
+      "useAcrylic": true,
+      "backgroundImage": "%USERPROFILE%\\Pictures\\Saved Pictures\\312629.jpg"
+    },
+    "list": [
+      {
+        "commandline": "powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell v5.1"
+      },
+      {
+        "commandline": "cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": true,
+        "name": "Command Prompt"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell v7.2",
+        "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "guid": "{905ee199-8709-449b-b0f1-5ac7ea8638b9}",
+        "commandline": "py.exe",
+        "icon": "%PROGRAMFILES(x86)%\\Python38-32\\python.png",
+        "name": "Python v3.8.5"
+      },
+      {
+        "commandline": "nvim",
+        "guid": "{cec59ed5-e63e-4199-9e5f-d292b4ce5346}",
+        "icon": "C:\\Tools\\Neovim\\neovim.png",
+        "name": "Neovim v0.4.4"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#2E3440",
+      "black": "#3B4252",
+      "blue": "#81A1C1",
+      "brightBlack": "#4C566A",
+      "brightBlue": "#81A1C1",
+      "brightCyan": "#88C0D0",
+      "brightGreen": "#A3BE8C",
+      "brightPurple": "#B48EAD",
+      "brightRed": "#BF616A",
+      "brightWhite": "#E5E9F0",
+      "brightYellow": "#EBCB8B",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#88C0D0",
+      "foreground": "#D8DEE9",
+      "green": "#A3BE8C",
+      "name": "Nord",
+      "purple": "#B48EAD",
+      "red": "#BF616A",
+      "selectionBackground": "#FFFFFF",
+      "white": "#E5E9F0",
+      "yellow": "#EBCB8B"
+    }
+  ],
+  "tabWidthMode": "equal",
+  "theme": "dark"
+}
+```
 
 ## My Customization & Description of the Config File
 

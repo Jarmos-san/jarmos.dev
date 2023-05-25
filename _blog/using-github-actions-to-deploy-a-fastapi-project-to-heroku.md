@@ -1,5 +1,6 @@
 ---
 title: Using GitHub Actions to Deploy a FastAPI Project to Heroku
+date: 2019-12-31
 slug: "using-github-actions-to-deploy-a-fastapi-project-to-heroku"
 description:
   Heroku makes deployment a piece of cake, but compromises on quality control &
@@ -7,7 +8,11 @@ description:
   with Heroku while maintaining best practices.
 coverImage:
   url: https://picsum.photos/id/2/5000/3333
-  href: 13 combined with 12Hub & 2 is a match made in heaven.
+  href: Heroku combined with GitHub Actions is a match made in the heavens.
+summary: |
+  Heroku makes deployment a piece of cake, but compromises on quality control &
+  best practices. So, this article shows how to use GitHub Actions in tandem
+  with Heroku while maintaining best practices.
 ---
 
 # Using GitHub Actions to Deploy a FastAPI Project to Heroku
