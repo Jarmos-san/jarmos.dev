@@ -1,14 +1,16 @@
 ---
 title: Using GitHub Actions to Deploy a FastAPI Project to Heroku
-date: 2019-12-31
+date: 2021-05-05
 slug: "using-github-actions-to-deploy-a-fastapi-project-to-heroku"
 description:
   Heroku makes deployment a piece of cake, but compromises on quality control &
   best practices. So, this article shows how to use GitHub Actions in tandem
   with Heroku while maintaining best practices.
 coverImage:
-  url: https://picsum.photos/id/2/5000/3333
-  href: Heroku combined with GitHub Actions is a match made in the heavens.
+  url: https://ik.imagekit.io/jarmos/learn-to-deploy-fastapi-project-to-heroku.png?updatedAt=1685086095459
+  alt: |
+    Learn to deploy a Python based FastAPI project to Heroku using GitHub
+    Actions and more!
 summary: |
   Heroku makes deployment a piece of cake, but compromises on quality control &
   best practices. So, this article shows how to use GitHub Actions in tandem
@@ -17,7 +19,7 @@ summary: |
 
 # Using GitHub Actions to Deploy a FastAPI Project to Heroku
 
-![Temporary cover image](https://picsum.photos/id/2/5000/3333)
+![Learn to deploy FastAPI project to Heroku using GitHub Actions](https://ik.imagekit.io/jarmos/learn-to-deploy-fastapi-project-to-heroku.png?updatedAt=1685086095459)
 
 **DISCLAIMER**: Heroku no longer supports their free tier (see this [FAQ][6] for
 more clarification) and hence I cannpt guranteed the workflow suggested in this

@@ -1,13 +1,14 @@
 ---
 title: How to Create an Overpowered Blog With Hugo (As a Wordpress Alternative)
-date: 2023-05-04
+date: 2021-02-21
 slug: blogging-with-hugo-as-an-wordpress-alternative
 description:
   Create a blog with Hugo Static Site Generator as a Wordpress alternative &
   with added automation plus other superpowers
 coverImage:
-  url: https://picsum.photos/200/300
-  alt: Hugo, the static site generator with biceps working out with dumbbells.
+  url: https://ik.imagekit.io/jarmos/creating-hugo-blog.png?updatedAt=1685086095343
+  alt: |
+    Learn to build a blog with Hugo as a WordPress alternative.
 summary: |
   Learn how to set up a blog with Hugo, a user-friendly Static Site Generator.
   Hugo offers benefits like easy installation, content management, and SEO
@@ -17,7 +18,7 @@ summary: |
 
 # How to Create an Overpowered Blog With Hugo (as a Wordpress Alternative)
 
-![Test Cover Image](https://picsum.photos/1200/640)
+![Learn to build a blog with Hugo as a WordPress alternative](https://ik.imagekit.io/jarmos/creating-hugo-blog.png?updatedAt=1685086095343)
 
 **Disclaimer**: This blog post suggest using Forestry as a CMS earlier but as of
 May 25, 2023, Forestry is now [ TinaCMS ](https://tina.io).

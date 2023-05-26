@@ -1,13 +1,15 @@
 ---
 title: How to Create Custom Keymaps in Neovim With Lua
-date: 2023-01-28
+date: 2021-10-12
 slug: create-custom-keymaps-using-lua-for-neovim
 description: |
   Learn to create custom key bindings in Neovim using the optional inbuilt Lua
   runtime. And ditch the archaic & cryptic Vimscript in Lua's favour!
 coverImage:
-  url:
-  alt: "Ditching Vimscript in favour of Lua for easier Neovim configurations"
+  url: https://ik.imagekit.io/jarmos/create-custom-keymaps-using-lua.png?updatedAt=1685086095483
+  alt: |
+    Learn to create custom Neovim keymaps using the inbuilt Lua embedded
+    scripting environment and the native Lua API.
 summary: |
   Neovim's Lua runtime allows for powerful customization through custom
   keybindings. Learn how to write Lua functions for key mappings and modularize
@@ -18,7 +20,7 @@ summary: |
 
 # How to Create Custom Keymaps in Neovim Using the Embedded Lua Environment
 
-![Test Cover Image](https://picsum.photos/1200/640)
+![Learn to create custom keymaps in Neovim using Lua](https://ik.imagekit.io/jarmos/create-custom-keymaps-using-lua.png?updatedAt=1685086095483)
 
 Neovim (or even Vim) is an excellent piece of software for any developers out
 there. The ability to create custom keybindings & do pretty much anything is

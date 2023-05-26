@@ -1,13 +1,15 @@
 ---
 title: Vim or Neovim? Here's Why You Should Use the Latter
-date: 2018-19-10
+date: 2021-07-15
 slug: vim-vs-neovim-a-comprehensive-analysis
 description:
   Confused between Vim and/or Neovim? Here are my justifications to convince you
   to use Neovim instead!
 coverImage:
-  url: https://picsum.photos/id/2/5000/3333
-  alt: Vim or Neovim; Which one to use?
+  url: https://ik.imagekit.io/jarmos/vim-vs-neovim.png?updatedAt=1685086095409
+  alt: |
+    A comprehensive analysis between Vim and Neovim intended for interested
+    users who are confused about which to use.
 summary: |
   Choose Neovim over Vim for faster performance, cleaner code, embedded Lua
   scripting, standard library, and sensible default settings. Discover the
@@ -16,7 +18,7 @@ summary: |
 
 # Vim or Neovim? Here's Why You Should Use the Latter
 
-![Test Cover Image](https://picsum.photos/1200/640)
+![Vim vs Neovim: A Comprehensive Analysis](https://ik.imagekit.io/jarmos/vim-vs-neovim.png?updatedAt=1685086095409)
 
 If you ever heard of [Vim](https://www.vim.org) before, you would know all about
 its forks that have popped up in recent years! There’s

@@ -1,6 +1,6 @@
 ---
 title: A Standard & Complete CI/CD Pipeline for Most Python Projects
-date: 2022-03-01
+date: 2021-01-21
 slug: a-standard-ci-cd-pipeline-for-python-projects
 description:
   Optimize your Python project's CI/CD with a comprehensive GitHub Actions
@@ -8,8 +8,10 @@ description:
   without any hassle. Build upon this minimalistic setup for further
   customization and improvements.
 coverImage:
-  url: https://picsum.photos/200/300
-  alt: "GitHub services coupled with Poetry is a life saver"
+  url: https://ik.imagekit.io/jarmos/learn-cicd-practices-for-python.png?updatedAt=1685086095424
+  alt: |
+    Learn to utilise GitHub Actions to create a robust CI/CD pipeline for
+    your Python projects.
 summary: |
   Optimize your Python project's CI/CD with a comprehensive GitHub Actions
   workflow. Learn how to automate linting, testing, coverage reports, and more
@@ -19,7 +21,7 @@ summary: |
 
 # A Standard and Complete CI/CD Pipeline for Python Projects
 
-![Test Image](https://picsum.photos/1200/640)
+![Learn to create robust CI/CD pipelines for your Python projects](https://ik.imagekit.io/jarmos/learn-cicd-practices-for-python.png?updatedAt=1685086095424)
 
 Have you ever spent ages tinkering with CI/CD tools rather than work on writing
 code for your Python project? I sure did! There were times

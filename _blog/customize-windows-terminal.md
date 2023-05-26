@@ -1,11 +1,13 @@
 ---
 title: "Customizing the New Windows Terminal: A Minimalist Approach"
-date: 2023-18-25
+date: 2020-12-25
 slug: customize-windows-terminal
 description: Who needs Linux when you got a fully customized Windows Terminal!
 coverImage:
-  url: https://picsum.photos/1200/640
-  href: "A .gif image of my customized Windows Terminal"
+  url: https://ik.imagekit.io/jarmos/windows-terminal-customisation.png?updatedAt=1685086095311
+  alt: |
+    Learn how to customise the new Windows Terminal using a minimalist
+    approach.
 summary: |
   Boost productivity with Windows Terminal: Customize for a minimalist approach.
   Learn settings, profiles, color schemes, key bindings & more. Streamline your
@@ -14,7 +16,7 @@ summary: |
 
 # Customise Windows Terminal: A Minimalist Approach
 
-![Test Cover Image](https://picsum.photos/1200/640)
+![Customise Windows Terminal with a minimalist approach](https://ik.imagekit.io/jarmos/windows-terminal-customisation.png?updatedAt=1685086095311)
 
 **Disclaimer**: As of May 25, 2023, I am no longer using Windows (and its
 related technologies) for software development, hence I cannot guranteed the
