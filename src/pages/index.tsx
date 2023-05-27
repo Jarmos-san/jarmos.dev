@@ -2,6 +2,7 @@ import CallToAction from "@components/cta";
 import Header from "@components/header";
 import ProjectSection from "@components/projects";
 import Seo from "@components/seo";
+import WritingsSection from "@components/writings";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
         imageAlt="The logo of the personal website"
       />
       <Header />
+      <WritingsSection />
       <ProjectSection />
       <CallToAction />
     </>

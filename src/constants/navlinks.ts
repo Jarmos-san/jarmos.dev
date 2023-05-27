@@ -1,3 +1,5 @@
+import path from "path";
+
 type navlinkTypes = {
   label: string;
   href: string;
@@ -12,6 +14,15 @@ export const navlinks: navlinkTypes[] = [
     label: "About Me",
     href: "/about",
   },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
 ];
 
-export const baseUrl = "jarmos.vercel.app";
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "jarmos.vercel.app"
+    : "localhost:3000";
+
+export const blogDir = path.join(process.cwd(), "_blog");

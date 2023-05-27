@@ -32,6 +32,15 @@ module.exports = {
           30: "#83F9A2",
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            code: {
+              color: theme("colors.teal.500"),
+            },
+          },
+        },
+      }),
     },
   },
 };
