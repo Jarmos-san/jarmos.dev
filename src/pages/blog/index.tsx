@@ -46,7 +46,7 @@ function BlogPostsPage({
               >
                 {data.title}
               </h2>
-              <p className="my-2 text-gray-200">{data.summary}</p>
+              <p className="my-2 text-white-20">{data.summary}</p>
               <em className="text-gray-400">Published on {data.date}</em>
             </Link>
           </div>

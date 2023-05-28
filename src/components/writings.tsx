@@ -33,7 +33,7 @@ function WritingsSection() {
             >
               {article.title}
             </Link>
-            <p className="my-2 text-gray-200">{article.summary}</p>
+            <p className="my-2 text-white-20">{article.summary}</p>
             <em className="text-gray-400">
               Published on{" "}
               {article.publishedDate.toLocaleDateString("en-US", {
