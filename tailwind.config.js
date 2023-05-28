@@ -36,7 +36,33 @@ module.exports = {
         DEFAULT: {
           css: {
             code: {
-              color: theme("colors.teal.500"),
+              color: theme("colors.gray.400"),
+            },
+            h1: {
+              color: theme("colors.green.30"),
+              fontWeight: theme("fontWeight.bold"),
+              fontSize: theme("fontSize.3xl"),
+            },
+            h2: {
+              color: theme("colors.green.10"),
+              fontWeight: theme("fontWeight.semibold"),
+              fontSize: theme("fontSize.2xl"),
+            },
+            a: {
+              color: theme("colors.white.10"),
+              textDecorationColor: theme("colors.gray.100"),
+            },
+            p: {
+              color: theme("colors.white.20"),
+            },
+            li: {
+              color: theme("colors.white.20"),
+            },
+            strong: {
+              color: theme("colors.white.20"),
+            },
+            address: {
+              color: theme("colors.white.20"),
             },
           },
         },

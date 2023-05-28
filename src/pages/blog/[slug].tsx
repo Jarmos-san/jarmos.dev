@@ -22,12 +22,7 @@ function BlogPage({
         image={data.coverImage.href}
         imageAlt={data.coverImage.alt}
       />
-      <article
-        className="prose max-w-none px-10 text-white-30
-        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
-        prose-a:text-green-30 prose-a:underline prose-a:underline-offset-4
-        prose-strong:text-white-20 lg:px-36 xl:px-56 2xl:px-96"
-      >
+      <article className="prose max-w-none px-10 lg:px-36 xl:px-56 2xl:px-96">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{

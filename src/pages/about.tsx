@@ -16,10 +16,8 @@ function AboutPage() {
         url="/about"
       />
       <article
-        className="container prose mx-auto max-w-none px-10 text-white-30
-        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
-        prose-a:text-green-30 prose-a:underline prose-a:underline-offset-4
-        prose-strong:text-white-20 md:px-12 lg:px-36 xl:px-56 2xl:px-96"
+        className="container prose mx-auto max-w-none px-10 md:px-12 lg:px-36
+        xl:px-56 2xl:px-96"
       >
         <h1>About Somraj Saha</h1>
         <p>Hi There!</p>
