@@ -8,8 +8,8 @@ import { navlinks } from "@constants/navlinks";
 function Footer() {
   return (
     <footer
-      className="container mx-auto my-10 flex flex-col items-center
-      space-y-8"
+      className="container my-10 flex flex-col items-center space-y-8
+      px-5"
     >
       <Image
         src="/assets/logo-og.svg"
@@ -54,13 +54,13 @@ function Footer() {
         {new Date().getFullYear()}
       </small>
 
-      <small className="space-x-10">
+      <small className="flex space-x-10 text-center">
         {legaldocs.map((link) => (
           <Link
             key={link.label}
             href={link.href}
             className="text-white-10 underline-offset-2 hover:text-green-30
-              hover:underline"
+            hover:underline"
           >
             {link.label}
           </Link>

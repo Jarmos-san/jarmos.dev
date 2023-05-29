@@ -2,7 +2,10 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="space-y-5 px-8 md:px-20 lg:px-36 xl:px-56 2xl:px-96">
+    <header
+      className="container mx-auto max-w-screen-sm space-y-5 px-5
+      lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    >
       <h1
         className="bg-gradient-to-r from-green-30 to-green-10 bg-clip-text
         text-2xl font-bold leading-10 text-green-10 text-transparent md:text-3xl

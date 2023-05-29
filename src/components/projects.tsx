@@ -6,7 +6,10 @@ import { portfolio } from "@constants/portfolio";
 
 function ProjectSection() {
   return (
-    <section className="container mx-auto space-y-8 px-8 md:px-20 lg:px-36">
+    <section
+      className="container mx-auto max-w-screen-sm space-y-8 px-5
+      lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    >
       <div className="flex justify-between">
         <h2 className="text-xl font-bold text-white-10 md:text-2xl lg:text-3xl">
           Featured Projects

@@ -46,8 +46,9 @@ function Navbar() {
   return (
     <>
       <nav
-        className="container flex max-w-none items-center justify-between px-5
-        py-4 md:px-10 lg:px-32 xl:px-52 2xl:px-96"
+        className="container mx-auto flex max-w-screen-sm items-center
+        justify-between px-4 pt-4 sm:px-0 lg:max-w-screen-md
+        xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
         <Link
           href="/"
