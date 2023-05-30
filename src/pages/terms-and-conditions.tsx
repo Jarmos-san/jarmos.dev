@@ -15,8 +15,8 @@ function TermsAndConditionsPage() {
       />
 
       <article
-        className="container prose mx-auto max-w-none px-10 md:px-12 lg:px-36
-        xl:px-56 2xl:px-96"
+        className="container prose mx-auto max-w-screen-sm px-5
+        lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
         <h1>Terms And Conditions</h1>
         <p>

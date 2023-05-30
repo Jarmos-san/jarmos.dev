@@ -33,8 +33,8 @@ function BlogPostsPage({
         url="/blog"
       />
       <div
-        className="container mx-auto max-w-none px-10 md:px-12 lg:px-36
-        xl:px-56 2xl:px-96"
+        className="container mx-auto max-w-screen-sm px-5 lg:max-w-screen-md
+        xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
         <h1 className="mb-6 text-3xl font-bold text-white-10">Blog Posts</h1>
         {frontmatter.map((data: FrontmatterData) => (

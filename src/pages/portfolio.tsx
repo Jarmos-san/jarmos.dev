@@ -11,10 +11,8 @@ function PortfolioPage() {
         imageAlt="Logo for Somraj Saha's personal website."
       />
       <article
-        className="container prose mx-auto my-16 max-w-none px-10 text-white-30
-        prose-headings:font-bold prose-headings:text-white-10 prose-h1:text-3xl
-        prose-a:text-green-30 prose-a:underline prose-a:underline-offset-4
-        prose-strong:text-white-20 md:px-12 lg:px-36 xl:px-56 2xl:px-96"
+        className="container prose mx-auto max-w-screen-sm px-5
+        lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
         <h1>Portfolio</h1>
         <p>
