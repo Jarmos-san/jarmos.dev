@@ -4,6 +4,8 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
+# TODO: Uncomment the following lines when the following issue is fixed;
+# https://github.com/Jarmos-san/jarmos.dev/issues/159
 on: [ "push" ]
   # push:
   #   branches-ignore:
@@ -65,8 +67,6 @@ jobs:
         id: deployment_url
         run: echo "PREVIEW_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
 
-  # INFO: See the documentation below for information about this:
-  # https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs#example-defining-outputs-for-a-job
   lighthouse-report:
     name: Lighthouse Check
     runs-on: ubuntu-latest
