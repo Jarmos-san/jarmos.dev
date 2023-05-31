@@ -75,8 +75,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # TODO: Utilise the "unlighthouse" NPM package to check for the Lighthouse reports
+      - name: Setup Node.js for the Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install the Dependencies
+        run: npm install --global @unlighthouse/cli puppeteer
+
       - name: Generate the Lighthouse Report
         env:
           PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
-        run: echo "$PREVIEW_URL"
+        run: unlighthouse-ci --site "$PREVIEW_URL" --budget 90 --build-static
+
+      # TODO: Generate a static report and deploy it to Vercel before sharing it in the comments
