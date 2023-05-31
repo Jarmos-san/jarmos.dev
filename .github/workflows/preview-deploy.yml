@@ -88,7 +88,7 @@ jobs:
       - name: Generate the Lighthouse Report
         env:
           preview-url: ${{ needs.deploy-preview.outputs.preview-url }}
-        run: npm run unlighthouse:ci -- "$preview-url"
+        run: npm run lighthouse:ci -- "$preview-url"
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
