@@ -2,7 +2,6 @@ name: Vercel Production Deployment
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
   push:
@@ -38,8 +37,9 @@ jobs:
     needs: code-quality-checks
     environment:
       name: Production
-      # TODO: Configure this URL to be evaluated dynamically or from a global variable.
-      url: https://jarmos.vercel.app
+      url: ${{ steps.prod-deployment.outputs.production-url }}
+    env:
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm-global
-          key: ${{ runner.os }}-npm-global-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-npm-global-${{ hashFiles('../../package-lock.json') }}
           restore-keys: ${{ runner.os }}-npm-global-
 
       - name: Install Vercel CLI
@@ -67,4 +67,6 @@ jobs:
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        id: prod-deployment
+        run: |
+          echo "production-url=$(vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
