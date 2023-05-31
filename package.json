@@ -8,6 +8,7 @@
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
     "lighthouse": "unlighthouse --site 'http://localhost:3000'",
+    "lighthouse:ci": "unlighthouse-ci --site",
     "prepare": "husky install"
   },
   "dependencies": {
