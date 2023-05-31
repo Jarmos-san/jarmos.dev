@@ -83,12 +83,13 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm ci
+        run: npm @unlighthouse/cli puppeteer
 
       - name: Generate the Lighthouse Report
         env:
           preview-url: ${{ needs.deploy-preview.outputs.preview-url }}
-        run: npm run lighthouse:ci -- "$preview-url"
+        run: |
+          unlighthouse-ci --site "$preview-url" --report jsonExpanded --budget 90 --build-static --throttle
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
