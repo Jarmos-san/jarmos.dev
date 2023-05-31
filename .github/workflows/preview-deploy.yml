@@ -72,12 +72,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-preview
     steps:
-      - env:
-        PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
-
       - name: Checkout Repository
         uses: actions/checkout@v3
 
       # TODO: Utilise the "unlighthouse" NPM package to check for the Lighthouse reports
       - name: Generate the Lighthouse Report
+        env:
+          PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
         run: echo "$PREVIEW_URL"
