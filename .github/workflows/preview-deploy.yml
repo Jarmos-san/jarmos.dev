@@ -83,7 +83,7 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm install --global @unlighthouse/cli puppeteer
+        run: npm install --global @unlighthouse/cli unlighthouse puppeteer
 
       - name: Generate the Lighthouse Report
         env:
@@ -97,4 +97,4 @@ jobs:
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy ".unlighthouse" --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
