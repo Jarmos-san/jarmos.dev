@@ -2,10 +2,9 @@ name: Vercel Preview Deployment
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-# TODO: Uncomment the following lines when the following issue is fixed;
-# https://github.com/Jarmos-san/jarmos.dev/issues/159
-on: [ "push", "workflow_dispatch" ]
+on: [ "push" ]
   # push:
   #   branches-ignore:
   #     - main
@@ -41,13 +40,14 @@ jobs:
   deploy-preview:
     name: Preview Deployment
     runs-on: ubuntu-latest
+
     outputs:
-      preview-url: ${{ steps.deployment-url.outputs.preview-url }}
+      preview-url: ${{ steps.deployment_url.outputs.PREVIEW_URL }}
+
     environment:
       name: Preview
-      url: ${{ steps.deployment-url.outputs.preview-url }}
-    env:
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      url: ${{ steps.deployment_url.outputs.PREVIEW_URL }}
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -62,16 +62,15 @@ jobs:
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
-        id: deployment-url
-        run: |
-          echo "preview-url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
+        id: deployment_url
+        run: echo "PREVIEW_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> "$GITHUB_OUTPUT"
 
+  # INFO: See the documentation below for information about this:
+  # https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs#example-defining-outputs-for-a-job
   lighthouse-report:
     name: Lighthouse Check
     runs-on: ubuntu-latest
     needs: deploy-preview
-    env:
-      VERCEL_LIGHTHOUSE_PROJECT_ID: ${{ secrets.VERCEL_LIGHTHOUSE_PROJECT_ID }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -83,19 +82,11 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm install --global @unlighthouse/cli@0.8.6 puppeteer
+        run: npm install --global @unlighthouse/cli puppeteer
 
       - name: Generate the Lighthouse Report
         env:
-          preview-url: ${{ needs.deploy-preview.outputs.preview-url }}
-        run: |
-          unlighthouse-ci --site "$preview-url" --report jsonExpanded --budget 90 --build-static --throttle
+          PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
+        run: unlighthouse-ci --site "$PREVIEW_URL" --budget 90 --build-static
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy ".unlighthouse" --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      # TODO: Generate a static report and deploy it to Vercel before sharing it in the comments
