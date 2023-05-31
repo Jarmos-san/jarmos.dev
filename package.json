@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "vercel-build": "next build",
     "prod": "next build && next start",
     "dev": "next dev --turbo",
     "lint": "next lint",
