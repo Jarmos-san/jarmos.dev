@@ -83,7 +83,7 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm ci && npm install --global @unlighthouse/cli puppeteer
+        run: npm ci
 
       - name: Generate the Lighthouse Report
         env:
