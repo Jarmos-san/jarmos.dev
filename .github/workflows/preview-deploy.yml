@@ -87,6 +87,9 @@ jobs:
       - name: Generate the Lighthouse Report
         env:
           PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
+        # FIXME: Rather than passing flags to the binary, use a config file instead
         run: unlighthouse-ci --site "$PREVIEW_URL" --budget 90 --build-static --reporter jsonExpanded
 
       # TODO: Figure a way out to deploy the static contents online!
+
+      # TODO: Figure a way out to parse the JSON output and comment it on the PR
