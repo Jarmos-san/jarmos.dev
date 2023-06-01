@@ -87,10 +87,6 @@ jobs:
       - name: Generate the Lighthouse Report
         env:
           PREVIEW_URL: ${{ needs.deploy-preview.outputs.preview-url }}
-        run: unlighthouse-ci --site "$PREVIEW_URL" --budget 90 --build-static
+        run: unlighthouse-ci --site "$PREVIEW_URL" --budget 90 --build-static --reporter jsonExpanded
 
-      - name: Fetch Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Deploy Lighthouse Report to Vercel
-        run: vercel deploy ".unlighthouse" --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      # TODO: Figure a way out to deploy the static contents online!
