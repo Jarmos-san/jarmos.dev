@@ -3,15 +3,15 @@ name: Vercel Preview Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
 
-on: [ "push" ]
-  # push:
-  #   branches-ignore:
-  #     - main
-  #     - "dependabot/**"
-  # pull_request:
-  #   branches-ignore:
-  #     - main
-  #     - "dependabot/**"
+on:
+  push:
+    branches-ignore:
+      - main
+      - "dependabot/**"
+  pull_request:
+    branches-ignore:
+      - main
+      - "dependabot/**"
 
 jobs:
   code-quality-checks:
