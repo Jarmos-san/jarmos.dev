@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "~13.4.7",
+    "next": "~13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.4.1",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@types/react-syntax-highlighter": "^15.5.7",
