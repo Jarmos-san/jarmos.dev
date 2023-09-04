@@ -34,11 +34,11 @@
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.29",
     "prettier": "^3.0.2",
-    "prettier-plugin-tailwindcss": "^0.5.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
     "tailwindcss": "^3.3.3",
-    "typescript": "~5.1.6",
+    "typescript": "~5.2.2",
     "unlighthouse": "^0.10.0"
   },
   "lint-staged": {
