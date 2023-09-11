@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js in the Runtime
         uses: actions/setup-node@v3.6.0
@@ -48,7 +48,7 @@ jobs:
       url: ${{ steps.deployment_url.outputs.PREVIEW_URL }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
@@ -73,7 +73,7 @@ jobs:
       VERCEL_LIGHTHOUSE_PROJECT_ID: ${{ secrets.VERCEL_LIGHTHOUSE_PROJECT_ID }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js for the Environment
         uses: actions/setup-node@v3
