@@ -8,8 +8,8 @@ import { navlinks } from "@constants/navlinks";
 function Footer() {
   return (
     <footer
-      className="container my-10 flex flex-col items-center space-y-8
-      px-5"
+      className="container mx-auto my-10 flex flex-col items-center
+      space-y-8 px-5"
     >
       <Image
         src="/assets/logo-og.svg"
