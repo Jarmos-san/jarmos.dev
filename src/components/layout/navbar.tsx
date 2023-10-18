@@ -1,8 +1,9 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -35,13 +36,10 @@ function Navbar() {
   // State handler for toggling the mobile menu open/close
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
-  // The Router Object that Next.js provides to handle concerns with routing
-  const router = useRouter();
-
   // Side-effect to close the mobile menu when navigating to another page
   useEffect(() => {
     setMenuOpen(false);
-  }, [router.asPath]);
+  }, []);
 
   return (
     <>

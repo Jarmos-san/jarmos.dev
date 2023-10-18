@@ -1,20 +1,8 @@
 import Link from "next/link";
 
-import Seo from "@components/seo";
-
 function AboutPage() {
   return (
     <>
-      <Seo
-        title="About Me"
-        desc={`This is about Somraj Saha who is a Full-Stack Software Engineer
-        and working as an Independent Software Developer. He works with startup
-        founders and business owners to bring fresh ideas to production and
-        serve paying customers.`}
-        image="https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"
-        imageAlt="Logo of the personal website which Somraj Saha maintains"
-        url="/about"
-      />
       <article
         className="container prose mx-auto max-w-screen-sm px-5
         lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
