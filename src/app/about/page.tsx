@@ -13,28 +13,29 @@ function AboutPage() {
           I am a Independent Software Engineer & I work with startup founders
           &amp; business owners from different backgrounds to build/design their
           MVPs. If you do decide to work with me, here is what a typical
-          workflow will look like:
-          <ol>
-            <li>
-              I will sit with you to understand the business problem &amp; the
-              target customers of the product. During this phase I might as well
-              suggest some pros/cons of the approach you have in mind (if at all
-              needed).
-            </li>
-            <li>
-              With the initial ideation phase complete, I will design & draft
-              the software architecture & specification of the product which
-              will be later used as a source of reference for other teams
-              contributing to the product.
-            </li>
-            <li>
-              With the documentation for the software architecture complete, I
-              will then proceed towards building the MVP. I will also be hiring
-              the first group of engineers, developers & related roles to build
-              & maintain the product during this phase.
-            </li>
-          </ol>
+          workflow will look like:{" "}
         </p>
+        <ol>
+          <li>
+            I will sit with you to understand the business problem &amp; the
+            target customers of the product. During this phase I might as well
+            suggest some pros/cons of the approach you have in mind (if at all
+            needed).
+          </li>
+          <li>
+            With the initial ideation phase complete, I will design & draft the
+            software architecture & specification of the product which will be
+            later used as a source of reference for other teams contributing to
+            the product.
+          </li>
+          <li>
+            With the documentation for the software architecture complete, I
+            will then proceed towards building the MVP. I will also be hiring
+            the first group of engineers, developers & related roles to build &
+            maintain the product during this phase.
+          </li>
+        </ol>
+
         <p>
           That was a quick sneak peak into what a typical workflow of us working
           together to build a business would sound like. So, if you want to
@@ -42,37 +43,38 @@ function AboutPage() {
           <a href="mailto:somraj.mle@gmail.com" target="_blank" rel="noopener">
             email
           </a>
-          . You can find also find me on:
-          <ul>
-            <li>
-              <a
-                href="https://twitter.com/Jarmosan"
-                target="_blank"
-                rel="noopener"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/jarmos"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Jarmos-san"
-                target="_blank"
-                rel="noopener"
-              >
-                GitHub
-              </a>
-            </li>
-          </ul>
+          . You can find also find me on:{" "}
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/Jarmosan"
+              target="_blank"
+              rel="noopener"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jarmos"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Jarmos-san"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+
         <p>
           And if you want to check out my previous work/experience writing code?
           Then head over to the <Link href="/portfolio">portfolio</Link> page to
