@@ -10,7 +10,7 @@ function AboutPage() {
         <h1>About Somraj Saha</h1>
         <p>Hi There!</p>
         <p>
-          I am a Independent Software Engineer & I work with startup founders
+          I am an Independent Software Engineer & I work with startup founders
           &amp; business owners from different backgrounds to build/design their
           MVPs. If you do decide to work with me, here is what a typical
           workflow will look like:{" "}
