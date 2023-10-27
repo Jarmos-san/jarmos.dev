@@ -14,6 +14,86 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+export const metadata: Metadata = {
+  title: {
+    default: "Somraj Saha",
+    template: "%s | Somraj Saha",
+  },
+  description: `The personal website of Somraj Saha who is a Full-Stack Software
+  Engineer and is working independently to provide value services to
+  startup founders & business owners.`,
+  generator: "Next.js",
+  applicationName: "Somraj Saha",
+  referrer: "origin-when-cross-origin",
+  keywords: ["software engineer", "software developer", "web developer"],
+  creator: "Somraj Saha",
+  publisher: "Somraj Saha",
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://jarmos.dev/"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Somraj Saha",
+    description: `The personal website of Somraj Saha who is a Full-Stack Software
+    Engineer and is working independently to provide value services to
+    startup founders & business owners.`,
+    url: "https://jarmos.dev/",
+    siteName: "Jarmos Saha",
+    images: [
+      {
+        url: "https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg",
+        alt: "The logo of the personal website",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    googleBot: {
+      index: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  twitter: {
+    card: "summary_large_image",
+    title: "Somraj Saha",
+    description: `The personal website of Somraj Saha who is a Full-Stack Software
+    Engineer and is working independently to provide value services to
+    startup founders & business owners.`,
+    creator: "@Jarmosan",
+    images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
+  },
+  verification: {
+    // INFO: Google Verification ID stored in .env.local
+    google: process.env.NEXT_PUBLIC_GOOGLE_CONSOLE,
+  },
+  appleWebApp: {
+    title: "Somraj Saha",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "/apple-touch-icon.png",
+      {
+        url: "/apple-touch-icon.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
+  assets: ["https://jarmos.dev/assets"],
+  category: "technology",
+};
+
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" className={`${poppins.variable}`}>
