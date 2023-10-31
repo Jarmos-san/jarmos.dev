@@ -1,4 +1,44 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions",
+  description: `Terms & conditions of using Somraj Saha's personal website`,
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
+  openGraph: {
+    title: "Terms and Conditions | Somraj Saha",
+    description: `Terms & conditions of using Somraj Saha's personal website`,
+    url: "https://jarmos.dev/terms-and-conditions",
+    siteName: "Somraj Saha",
+    images: [
+      {
+        url: "https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg",
+        alt: "The logo of the personal website",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms and Conditions | Somraj Saha",
+    description: `Terms & conditions of using Somraj Saha's personal website`,
+    creator: "@Jarmosan",
+    images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
+  },
+  appleWebApp: {
+    title: "Terms and Conditions | Somraj Saha",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "/apple-touch-icon.png",
+      {
+        url: "/apple-touch-icon.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
+};
 
 const TermsAndConditionsPage = () => {
   return (

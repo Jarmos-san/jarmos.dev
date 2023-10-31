@@ -1,3 +1,44 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: `Privacy policy for using Somraj Saha's personal website`,
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Somraj Saha",
+    description: `Privacy policy for using Somraj Saha's personal website`,
+    url: "https://jarmos.dev/privacy-policy",
+    siteName: "Somraj Saha",
+    images: [
+      {
+        url: "https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg",
+        alt: "The logo of the personal website",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Somraj Saha",
+    description: `Privacy policy for using Somraj Saha's personal website`,
+    creator: "@Jarmosan",
+    images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
+  },
+  appleWebApp: {
+    title: "Privacy Policy | Somraj Saha",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "/apple-touch-icon.png",
+      {
+        url: "/apple-touch-icon.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
+};
+
 const LicensePage = () => {
   return (
     <>

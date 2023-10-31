@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { readdirSync } from "fs";
@@ -14,6 +15,48 @@ type FrontmatterData = {
     alt: string;
   };
   summary: string;
+};
+
+export const metadata: Metadata = {
+  title: "Blog Posts",
+  description: `Blog posts Somraj Saha has written and publised on topics like
+    programming and software development in general.`,
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog Posts | Somraj Saha",
+    description: `Blog posts Somraj Saha has written and publised on topics like
+      programming and software development in general.`,
+    url: "https://jarmos.dev/blog",
+    siteName: "Somraj Saha",
+    images: [
+      {
+        url: "https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg",
+        alt: "The logo of the personal website",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog Posts | Somraj Saha",
+    description: `Blog posts Somraj Saha has written and publised on topics like
+      programming and software development in general.`,
+    creator: "@Jarmosan",
+    images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
+  },
+  appleWebApp: {
+    title: "Blog Posts | Somraj Saha",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "/apple-touch-icon.png",
+      {
+        url: "/apple-touch-icon.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
 };
 
 async function BlogPostsPage() {
