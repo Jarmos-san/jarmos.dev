@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 };
 
-function AboutPage() {
+const AboutPage = () => {
   return (
     <>
       <article
@@ -399,6 +399,6 @@ function AboutPage() {
       </article>
     </>
   );
-}
+};
 
 export default AboutPage;
