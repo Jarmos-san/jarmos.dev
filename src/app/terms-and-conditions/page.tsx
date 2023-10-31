@@ -81,10 +81,10 @@ const TermsAndConditionsPage = () => {
         </p>
         <p>
           <strong>Proprietary Rights</strong>. Somraj Saha has proprietary
-          rights and trade secrets in the Products & Services mentioned in this
-          Website. You may copy, reproduce, resell or redistribute any Products
-          & Services manufactured and/or distributed by Somraj Saha under the
-          Terms & Conditions of the{" "}
+          rights and trade secrets in the Products &amp; Services mentioned in
+          this Website. You may copy, reproduce, resell or redistribute any
+          Products &amp; Services manufactured and/or distributed by Somraj Saha
+          under the Terms &amp; Conditions of the{" "}
           <a
             href="https://creativecommons.org/licenses/by-nc/4.0/legalcode"
             target="_blank"
@@ -137,7 +137,7 @@ const TermsAndConditionsPage = () => {
           License. By using this Website, you are granted a limited,
           non-exclusive, non-transferable right to use the content and materials
           on the Website in connection with your normal, noncommercial, use of
-          the Website under the Terms & Conditions laid down by{" "}
+          the Website under the Terms &amp; Conditions laid down by{" "}
           <a
             href="https://creativecommons.org/licenses/by-nc/4.0/legalcode"
             target="_blank"
