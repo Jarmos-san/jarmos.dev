@@ -7,9 +7,10 @@ const LicensePage = () => {
       >
         <h1>Privacy Policy</h1>
         <p>
-          While developing & maintaining this project, our reader&apos;s privacy
-          concerns is of utmost importance to us. Hence, at each & every step of
-          developing this website, we ensured everything is covered under the{" "}
+          While developing &amp; maintaining this project, our reader&apos;s
+          privacy concerns is of utmost importance to us. Hence, at each &amp;
+          every step of developing this website, we ensured everything is
+          covered under the{" "}
           <a
             href="https://gdpr-info.eu"
             target="_blank"
@@ -29,18 +30,18 @@ const LicensePage = () => {
             country and IP address.
           </li>
           <li>
-            <strong>Information You Share</strong>: We collect information &
-            other details like email you share with us through HTML forms &
+            <strong>Information You Share</strong>: We collect information &amp;
+            other details like email you share with us through HTML forms &amp;
             other means of gathering user feedback like onlines questionnaires
             such as those from Google Forms and/or TypeForm.
           </li>
           <li>
             <strong>Demographic Information</strong>: We may collect demographic
             information about you. These information might include your age,
-            your residence, country, gender, specific preferences for content &
-            so on. They are collected through use of third-party trackers like
-            Google Analytics, Cloudflare Analytics & Twitter Analytics. We might
-            collect this as a part of a survey also.
+            your residence, country, gender, specific preferences for content
+            &amp; so on. They are collected through use of third-party trackers
+            like Google Analytics, Cloudflare Analytics &amp; Twitter Analytics.
+            We might collect this as a part of a survey also.
           </li>
           <li>
             <strong>Other Information</strong>: If you use our website, we may
@@ -86,11 +87,11 @@ const LicensePage = () => {
               We Use the Information to Respond to Your Requests or Questions
             </strong>
             : We might use your information to confirm your registration for an
-            event, a subscription, giveaways & other similar activities.
+            event, a subscription, giveaways &amp; other similar activities.
           </li>
           <li>
             <strong>
-              We Use Information to Improve Our Products & Services
+              We Use Information to Improve Our Products &amp; Services
             </strong>
             : We might use your information to customize your experience with
             us. This could include displaying content based upon your
@@ -98,7 +99,7 @@ const LicensePage = () => {
           </li>
           <li>
             <strong>
-              We Use Information to Look at Site Trends & Reader Interests
+              We Use Information to Look at Site Trends &amp; Reader Interests
             </strong>
             : We may use your information to make our website and products
             better. We may combine information we get from you with information
@@ -115,15 +116,15 @@ const LicensePage = () => {
             also tell you about new features or products. These might be our own
             offers or products, or third-party offers or products we think you
             might find interesting. Or, for example, posts containing affiliate
-            links & other sponsored posts. Do note, you will be notified of the
-            nature of the posts when we send you one.
+            links &amp; other sponsored posts. Do note, you will be notified of
+            the nature of the posts when we send you one.
           </li>
           <li>
             <strong>
               We Use Information to Send You Transactional Communications
             </strong>
-            : We might send you emails about the terms & conditions of services
-            between Somraj Saha & you or a subscription.
+            : We might send you emails about the terms &amp; conditions of
+            services between Somraj Saha &amp; you or a subscription.
           </li>
         </ul>
         <p>We use the information as permitted by law.</p>
@@ -192,7 +193,7 @@ const LicensePage = () => {
           email you received. There will be an unsubscribe option at the bottom
           of it. Do note, even if you opt out of getting marketing messages, we
           will still be sending you transactional messages through email about
-          your purchase of our goods & services.
+          your purchase of our goods &amp; services.
         </p>
         <h2>Third-Party Sites</h2>
         <p>
