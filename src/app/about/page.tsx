@@ -3,16 +3,16 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `This is about Somraj Saha who is a Full-Stack Software Engineer and 
-  working as an Independent Software Developer. He works with startup founders and 
+  description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
+  working as an Independent Software Developer. He works with startup founders and
   business owners to bring fresh ideas to production and serve paying customers.`,
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About | Somraj Saha",
-    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and 
-    working as an Independent Software Developer. He works with startup founders and 
+    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
+    working as an Independent Software Developer. He works with startup founders and
     business owners to bring fresh ideas to production and serve paying customers.`,
     url: "https://jarmos.dev/about",
     siteName: "Somraj Saha",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Somraj Saha | About",
-    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and 
-    working as an Independent Software Developer. He works with startup founders and 
+    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
+    working as an Independent Software Developer. He works with startup founders and
     business owners to bring fresh ideas to production and serve paying customers.`,
     creator: "@Jarmosan",
     images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
