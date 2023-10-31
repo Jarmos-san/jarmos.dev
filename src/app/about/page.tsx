@@ -165,7 +165,7 @@ const AboutPage = () => {
           >
             Lua
           </a>
-          for scripting & configuring
+          for scripting &amp; configuring
           <a href="https://neovim.io" target="_blank" rel="noopener">
             Neovim
           </a>
@@ -173,7 +173,7 @@ const AboutPage = () => {
           where I can make full use of my Lua programming skills.
         </li>
       </ol>
-      <h2>Frameworks & Libraries I Use to Develop Software</h2>
+      <h2>Frameworks &amp; Libraries I Use to Develop Software</h2>
       <ol>
         <li>
           <a
