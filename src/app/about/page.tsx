@@ -55,10 +55,10 @@ const AboutPage = () => {
       <h1>About Somraj Saha</h1>
       <p>Hi There!</p>
       <p>
-        I am an Independent Software Engineer & I work with startup founders
+        I am an Independent Software Engineer &amp; I work with startup founders
         &amp; business owners from different backgrounds to build/design their
         MVPs. If you do decide to work with me, here is what a typical workflow
-        will look like:{" "}
+        will look like:
       </p>
       <ol>
         <li>
@@ -68,27 +68,27 @@ const AboutPage = () => {
           needed).
         </li>
         <li>
-          With the initial ideation phase complete, I will design & draft the
-          software architecture & specification of the product which will be
-          later used as a source of reference for other teams contributing to
-          the product.
+          With the initial ideation phase complete, I will design &amp; draft
+          the software architecture &amp; specification of the product which
+          will be later used as a source of reference for other teams
+          contributing to the product.
         </li>
         <li>
           With the documentation for the software architecture complete, I will
           then proceed towards building the MVP. I will also be hiring the first
-          group of engineers, developers & related roles to build & maintain the
-          product during this phase.
+          group of engineers, developers &amp; related roles to build &amp;
+          maintain the product during this phase.
         </li>
       </ol>
 
       <p>
         That was a quick sneak peak into what a typical workflow of us working
         together to build a business would sound like. So, if you want to
-        collaborate with me, reach out to me over{" "}
+        collaborate with me, reach out to me over
         <a href="mailto:somraj.mle@gmail.com" target="_blank" rel="noopener">
           email
         </a>
-        . You can find also find me on:{" "}
+        . You can find also find me on:
       </p>
       <ul>
         <li>
@@ -123,8 +123,8 @@ const AboutPage = () => {
       </p>
       <p>
         That said, here are the list of technologies I work with at the moment.
-        Do note, the list shared below is by no means exhaustive & I&apos;m open
-        to picking up other technologies as the need arises.
+        Do note, the list shared below is by no means exhaustive &amp; I&apos;m
+        open to picking up other technologies as the need arises.
       </p>
       <h2>Programming Languages I Work With</h2>
       <ol>
@@ -135,7 +135,7 @@ const AboutPage = () => {
             rel="noopener noreferrer"
           >
             Python
-          </a>{" "}
+          </a>
           for small-scale scripting, system automation and/or building backend
           REST APIs. I also often use Python to build CLI applications which are
           not complex in functionality and design.
@@ -147,11 +147,11 @@ const AboutPage = () => {
             target="_blank"
           >
             TypeScript
-          </a>{" "}
-          when working on{" "}
+          </a>
+          when working on
           <a href="https://react.dev" target="_blank" rel="noopener">
             React.js
-          </a>{" "}
+          </a>
           based projects since I enjoy working with the static-typing
           capabilities the language provides. The language also helps me nip
           common bugs introduced by dynamic-typing &amp; other JavaScript
@@ -164,8 +164,8 @@ const AboutPage = () => {
             target="_blank"
           >
             Lua
-          </a>{" "}
-          for scripting & configuring{" "}
+          </a>
+          for scripting & configuring
           <a href="https://neovim.io" target="_blank" rel="noopener">
             Neovim
           </a>
@@ -182,11 +182,11 @@ const AboutPage = () => {
             target="_blank"
           >
             Next.js
-          </a>{" "}
-          is a React.js-based framework & I use it to build fast &
+          </a>
+          is a React.js-based framework &amp; I use it to build fast &amp;
           well-optimised websites. A quick heads up for you, the website you are
           on, was built using Next.js as well! If you are interested, go ahead
-          &amp; check out the{" "}
+          &amp; check out the
           <a
             href="https://github.com/Jarmos-san/jarmos.dev"
             target="_blank"
@@ -203,25 +203,25 @@ const AboutPage = () => {
             target="_blank"
           >
             FastAPI
-          </a>{" "}
-          is a Python framework for developing & building REST APIs. This is my
-          favourite go-to framework for backend projects because of its speed
-          &amp; static-typing support which alternatives like{" "}
+          </a>
+          is a Python framework for developing &amp; building REST APIs. This is
+          my favourite go-to framework for backend projects because of its speed
+          &amp; static-typing support which alternatives like
           <a
             href="https://www.django-rest-framework.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Django Rest Framework
-          </a>{" "}
-          or{" "}
+          </a>
+          or
           <a
             href="https://flask.palletsprojects.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Flask
-          </a>{" "}
+          </a>
           lacks.
         </li>
         <li>
@@ -231,16 +231,16 @@ const AboutPage = () => {
             target="_blank"
           >
             TailwindCSS
-          </a>{" "}
+          </a>
           is a CSS framework for those who does not like the monotonic
-          aesthetics of other CSS frameworks like{" "}
+          aesthetics of other CSS frameworks like
           <a
             href="https://getbootstrap.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Bootstrap
-          </a>{" "}
+          </a>
           &amp; so on. I use it often to develop most of my frontend projects
           &amp; not worry about the overhead of &ldquo;CSS anxiety&ldquo;.
         </li>
@@ -251,12 +251,12 @@ const AboutPage = () => {
             target="_blank"
           >
             Chakra-UI
-          </a>{" "}
-          is a ready-to-use React Component library & I use it when I need to
-          build a web project real quick! This library is best suited for usage
-          when the project need not require a lot of aesthetic customisation.
-          There are other React component libraries out there as well &amp; some
-          of those which I used are:{" "}
+          </a>
+          is a ready-to-use React Component library &amp; I use it when I need
+          to build a web project real quick! This library is best suited for
+          usage when the project need not require a lot of aesthetic
+          customisation. There are other React component libraries out there as
+          well &amp; some of those which I used are:
           <a
             href="https://nextui.org"
             target="_blank"
@@ -264,15 +264,15 @@ const AboutPage = () => {
           >
             NextUI
           </a>
-          ,{" "}
+          ,
           <a
             href="https://flowbite-react.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Flowbite
-          </a>{" "}
-          &amp;{" "}
+          </a>
+          &amp;
           <a
             href="https://www.radix-ui.com"
             target="_blank"
@@ -288,11 +288,11 @@ const AboutPage = () => {
             target="_blank"
           >
             SASS
-          </a>{" "}
-          is a CSS preprocesser & it has &ldquo;first-class support&ldquo; with
-          Next.js through CSS Modules. Hence, making life much easier by
-          allowing me to write more modular, clean & dry CSS code for my Next.js
-          projects.
+          </a>
+          is a CSS preprocesser &amp; it has &ldquo;first-class support&ldquo;
+          with Next.js through CSS Modules. Hence, making life much easier by
+          allowing me to write more modular, clean &amp; dry CSS code for my
+          Next.js projects.
         </li>
         <li>
           <a
@@ -301,7 +301,7 @@ const AboutPage = () => {
             target="_blank"
           >
             Scikit-Learn
-          </a>{" "}
+          </a>
           is a comprehensive library providing Python API for some of the most
           widely used ML algorithms. I use this library to build modern ML-based
           software.
@@ -310,12 +310,12 @@ const AboutPage = () => {
       <h2>Miscellaneous Development Tools I Need Daily</h2>
       <p>
         A Software Developer&apos;s toolkit is incomplete without their
-        preferred set of tools. Apart from the few programming languages & their
-        respective framework/libraries mentioned above, there are other equally
-        important tools as well. Some of these tools might not directly affect
-        the development or maintainance of a software product but they help me
-        write better software. Hence, following are the few tools I employ on a
-        regular basis when writing code:
+        preferred set of tools. Apart from the few programming languages &amp;
+        their respective framework/libraries mentioned above, there are other
+        equally important tools as well. Some of these tools might not directly
+        affect the development or maintainance of a software product but they
+        help me write better software. Hence, following are the few tools I
+        employ on a regular basis when writing code:
       </p>
       <ol>
         <li>
@@ -325,17 +325,17 @@ const AboutPage = () => {
             target="_blank"
           >
             Ubuntu
-          </a>{" "}
-          the Linux-based OS & my primary choice of an Operating System when
-          developing & deploying software to production environments. I am
-          reconsidering using a more configurable distro like{" "}
+          </a>
+          the Linux-based OS &amp; my primary choice of an Operating System when
+          developing &amp; deploying software to production environments. I am
+          reconsidering using a more configurable distro like
           <a
             href="https://endeavouros.com"
             target="_blank"
             rel="noreferrer noopener"
           >
             EndeavourOS
-          </a>{" "}
+          </a>
           for my development needs in the future though. So, if you have used it
           before or using it at the moment? Then feel free to share a review or
           two about it with me.
@@ -347,30 +347,30 @@ const AboutPage = () => {
             target="_blank"
           >
             Visual Studio Code (VSCode)
-          </a>{" "}
-          is a configurable Text Editor from Microsoft & I use it with a ton of
-          plugins for writing code. This particular Text Editor has incredible
-          support for plugins (some maintained by Microsoft themselves) which
-          makes other, more resource-intensive IDEs like{" "}
+          </a>
+          is a configurable Text Editor from Microsoft &amp; I use it with a ton
+          of plugins for writing code. This particular Text Editor has
+          incredible support for plugins (some maintained by Microsoft
+          themselves) which makes other, more resource-intensive IDEs like
           <a
             href="https://www.jetbrains.com/pycharm"
             target="_blank"
             rel="noopener noreferrer"
           >
             PyCharm
-          </a>{" "}
+          </a>
           unattractive in my eyes.
         </li>
         <li>
           <a href="https://neovim.io" rel="noopener noreferrer" target="_blank">
             Neovim
-          </a>{" "}
-          is the one & only preferred (more like favourite) Text Editor I use to
-          write code. Its a &ldquo;<i>better</i>&ldquo; fork of{" "}
+          </a>
+          is the one &amp; only preferred (more like favourite) Text Editor I
+          use to write code. Its a &ldquo;<i>better</i>&ldquo; fork of
           <a href="https://vim.org" target="_blank" rel="noopener noreferrer">
             Vim
-          </a>{" "}
-          & I have been using it for the past{" "}
+          </a>
+          &amp; I have been using it for the past
           {new Date().getFullYear() - Number("2019")} years.
         </li>
         <li>
@@ -380,8 +380,8 @@ const AboutPage = () => {
             target="_blank"
           >
             Docker
-          </a>{" "}
-          is the <i>de facto</i> containerisation tool for developing &
+          </a>
+          is the <i>de facto</i> containerisation tool for developing &amp;
           deploying projects to production environments. And I try to use it for
           all of my projects (including some of my hobby projects as well)
           whenever possible!
