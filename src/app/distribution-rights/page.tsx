@@ -5,15 +5,15 @@ const LicensePage = () => {
         className="container prose mx-auto max-w-screen-sm px-5
           lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
-        <h1>Licensing & Distribution Rights</h1>
+        <h1>Licensing &amp; Distribution Rights</h1>
         <p>
           The enitirety of the project you are seeing right now is made
           available for public usage under an open-source license. The contents
-          & the source code of the website as well is made available for public
-          scrutiny. In other words, you are free to view, use, modify everything
-          related to this project as long as you adhere to certain usage terms &
-          conditions (T&Cs). And this page of the website details the usage T&Cs
-          for your reference.
+          &amp; the source code of the website as well is made available for
+          public scrutiny. In other words, you are free to view, use, modify
+          everything related to this project as long as you adhere to certain
+          usage terms &amp; conditions (T&amp;Cs). And this page of the website
+          details the usage T&amp;Cs for your reference.
         </p>
         <h2>Usage Rights of the Source Code</h2>
         <p>
@@ -31,7 +31,7 @@ const LicensePage = () => {
         </p>
         <ol>
           <li>
-            Fork the repository & modify the source code for your specific
+            Fork the repository &amp; modify the source code for your specific
             requirements.
           </li>
           <li>Take inspiration for building your own personal website.</li>
@@ -42,7 +42,8 @@ const LicensePage = () => {
           </li>
         </ol>
         <p>
-          That said, you can read more about the licensing & usage T&Cs in the{" "}
+          That said, you can read more about the licensing &amp; usage T&amp;Cs
+          in the{" "}
           <a
             href="https://github.com/Jarmos-san/personal=website/blob/main/LICENSE"
             target="_blank"
@@ -54,12 +55,13 @@ const LicensePage = () => {
         </p>
         <h2>Usage Rights of the Website Content</h2>
         <p>
-          This website contains a lot of technical & literary content meant for
-          educating the readers on certain topics related to Computer Science &
-          programming. All such contents are released & made available in the
-          public domain as well! In other words, you as a reader/consumer are
-          free to use, modify & distribute the content as long as you adhere to
-          the T&Cs detailed in this section of the page.
+          This website contains a lot of technical &amp; literary content meant
+          for educating the readers on certain topics related to Computer
+          Science &amp; programming. All such contents are released &amp; made
+          available in the public domain as well! In other words, you as a
+          reader/consumer are free to use, modify &amp; distribute the content
+          as long as you adhere to the T&amp;Cs detailed in this section of the
+          page.
         </p>
         <p>
           That said, the open-source license in question is the{" "}
