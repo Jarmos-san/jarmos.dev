@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://jarmos.dev/"),
+  metadataBase: new URL("https://jarmos.dev"),
   alternates: {
     canonical: "/",
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     Engineer and is working independently to provide value services to
     startup founders & business owners.`,
     url: "https://jarmos.dev/",
-    siteName: "Jarmos Saha",
+    siteName: "Somraj Saha",
     images: [
       {
         url: "https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg",
