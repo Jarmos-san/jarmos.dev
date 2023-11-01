@@ -1,4 +1,5 @@
-import { readdirSync } from "fs";
+import type { Metadata } from "next";
+
 import matter from "gray-matter";
 import path from "path";
 import ReactMarkdown from "react-markdown";
@@ -11,6 +12,52 @@ type StaticParamsType = {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params,
+}: StaticParamsType): Promise<Metadata> {
+  const blogDir = path.join(process.cwd(), "_blog");
+  const content = matter.read(`${blogDir}/${params?.slug}.md`).data;
+  console.log(content.title);
+  return {
+    title: content.title,
+    description: content.description,
+    alternates: {
+      canonical: `/${content.slug}`,
+    },
+    openGraph: {
+      title: `${content.title} | Somraj Saha`,
+      description: content.description,
+      url: `https://jarmos.dev/${content.slug}`,
+      siteName: "Somraj Saha",
+      images: [
+        {
+          url: content.coverImage.url,
+          alt: content.coverImage.alt,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${content.title} | Somraj Saha`,
+      description: content.description,
+      creator: "@Jarmosan",
+      images: [content.coverImage.url],
+    },
+    appleWebApp: {
+      title: `${content.title} | Somraj Saha`,
+      statusBarStyle: "black-translucent",
+      startupImage: [
+        "/apple-touch-icon.png",
+        {
+          url: "/apple-touch-icon.png",
+          media: "(device-width: 768px) and (device-height: 1024px)",
+        },
+      ],
+    },
+  };
+}
 
 function BlogPage({ params }: StaticParamsType) {
   const blogDir = path.join(process.cwd(), "_blog");
@@ -26,23 +73,6 @@ function BlogPage({ params }: StaticParamsType) {
       </article>
     </>
   );
-}
-
-export async function generateStaticParams() {
-  // Get the location of the "_blog" directory where the Markdown files are at
-  const blogDir = path.join(process.cwd(), "_blog");
-
-  // Get the list of Markdown files in the specified directory
-  const mdfiles = readdirSync(blogDir, { withFileTypes: true })
-    .filter((file) => file.isFile())
-    .map((file) => file.name);
-
-  // TODO: Parse the Markdown file to fetch the "slug" metadata instead for
-  // more granular control over the design of the URL.
-  // Get the URL of the blog post based on the Markdown filename.
-  return mdfiles.map((file) => ({
-    slug: file.replace(".md", ""),
-  }));
 }
 
 export default BlogPage;
