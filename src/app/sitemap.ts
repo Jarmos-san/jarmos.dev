@@ -1,7 +1,16 @@
-import { MetadataRoute } from "next";
+import getPostsInfo from "lib/getPostsInfo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "http://localhost:3000";
+export default async function sitemap() {
+  const baseUrl = "https://jarmos.dev";
+
+  const posts = await getPostsInfo();
+
+  const postUrls =
+    posts.map((post) => {
+      return {
+        url: `${baseUrl}/blog/${post.slug}`,
+      };
+    }) ?? [];
 
   return [
     {
@@ -13,9 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/portfolio`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
     },
+    ...postUrls,
     {
       url: `${baseUrl}/terms-and-conditions`,
       lastModified: new Date(),
