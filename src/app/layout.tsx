@@ -76,8 +76,8 @@ export const metadata: Metadata = {
     images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
   },
   verification: {
-    // INFO: Google Verification ID stored in .env.local
-    google: process.env.NEXT_PUBLIC_GOOGLE_CONSOLE,
+    // INFO: Google Search Console Verification ID
+    google: "M0ZkOwR8huIlDkph37Gt2Wf9w7JcwmM1g64OTfJRmBQ",
   },
   appleWebApp: {
     title: "Somraj Saha",
