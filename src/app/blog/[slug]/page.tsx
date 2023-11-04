@@ -18,7 +18,7 @@ export async function generateMetadata({
 }: StaticParamsType): Promise<Metadata> {
   const blogDir = path.join(process.cwd(), "_blog");
   const content = matter.read(`${blogDir}/${params?.slug}.md`).data;
-  console.log(content.title);
+
   return {
     title: content.title,
     description: content.description,
