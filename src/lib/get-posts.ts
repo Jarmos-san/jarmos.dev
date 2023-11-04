@@ -14,7 +14,7 @@ type FrontmatterData = {
   summary: string;
 };
 
-export default async function getPostsInfo() {
+const getPosts = async () => {
   // Get the local directory containing the Markdown files of the blog posts
   const blogDir = path.join(process.cwd(), "_blog");
 
@@ -40,4 +40,6 @@ export default async function getPostsInfo() {
   );
 
   return frontmatter as FrontmatterData[];
-}
+};
+
+export default getPosts;
