@@ -2,14 +2,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Licensing & Distribution Rights",
-  description: `Distribution & licensing rights of using Somraj Saha' s personal 
+  description: `Distribution & licensing rights of using Somraj Saha' s personal
     website`,
   alternates: {
     canonical: "/distribution-rights",
   },
   openGraph: {
     title: "Licensing & Distribution Rights | Somraj Saha",
-    description: `Distribution & licensing rights of using Somraj Saha' s personal 
+    description: `Distribution & licensing rights of using Somraj Saha' s personal
       website`,
     url: "https://jarmos.dev/distribution-rights",
     siteName: "Somraj Saha",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Licensing & Distribution Rights | Somraj Saha",
-    description: `Distribution & licensing rights of using Somraj Saha' s personal 
+    description: `Distribution & licensing rights of using Somraj Saha' s personal
       website`,
     creator: "@Jarmosan",
     images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
