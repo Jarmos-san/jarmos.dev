@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 
 import Footer from "@components/layout/footer";
 import Navbar from "@components/layout/navbar";
@@ -102,6 +103,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <main className="my-8 flex-grow space-y-16 md:my-24">{children}</main>
         <Footer />
       </body>
+      <Script
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "392941b3f13c4678bb21cdb0fadafe91"}'
+      />
     </html>
   );
 };
