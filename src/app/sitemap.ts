@@ -1,9 +1,9 @@
-import getPostsInfo from "lib/getPostsInfo";
+import getPosts from "@lib/get-posts";
 
-export default async function sitemap() {
+const sitemap = async () => {
   const baseUrl = "https://jarmos.dev";
 
-  const posts = await getPostsInfo();
+  const posts = await getPosts();
 
   const postUrls =
     posts.map((post) => {
@@ -43,4 +43,6 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
   ];
-}
+};
+
+export default sitemap;
