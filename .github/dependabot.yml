@@ -15,7 +15,7 @@ updates:
       - dependency-name: "next"
         update-types: ["version-update:semver-major"]
     commit-message:
-      prefix: ":arrow_up: "
+      prefix: "chore(deps): "
 
   - directory: /
     open-pull-requests-limit: 5
@@ -26,4 +26,4 @@ updates:
       time: "09:00"
       timezone: "Asia/Kolkata"
     commit-message:
-      prefix: ":arrow_up: "
+      prefix: "chore(deps): "
