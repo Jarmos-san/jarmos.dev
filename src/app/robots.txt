@@ -1,7 +1,0 @@
-User-Agent: Twitterbot
-Disallow:
-
-User-agent: *
-Allow: /
-
-Sitemap: https://jarmos.dev/sitemap.xml

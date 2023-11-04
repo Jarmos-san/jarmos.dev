@@ -3,3 +3,5 @@ Disallow:
 
 User-agent: *
 Allow: /
+
+Sitemap: https://jarmos.dev/sitemap.xml
