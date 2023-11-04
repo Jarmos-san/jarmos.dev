@@ -23,7 +23,7 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Run Code Quality Checks
         run: npm run lint
@@ -37,7 +37,7 @@ jobs:
     needs: code-quality-checks
     environment:
       name: Production
-      url: https://jarmos.vercel.app
+      url: https://jarmos.dev
     env:
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
