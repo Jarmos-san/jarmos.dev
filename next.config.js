@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+const withMDX = require("@next/mdx")();
 const path = require("path");
 
 const securityHeaders = [
@@ -16,10 +16,9 @@ const securityHeaders = [
   },
 ];
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["flowbite.com"],
-  },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -38,4 +37,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withMDX(nextConfig);
