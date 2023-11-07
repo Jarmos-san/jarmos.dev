@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-import getPosts from "@lib/get-posts";
-
 export const metadata: Metadata = {
   title: "Blog Posts",
   description: `Blog posts Somraj Saha has written and publised on topics like
@@ -45,32 +43,56 @@ export const metadata: Metadata = {
   },
 };
 
-const BlogPostsPage = async () => {
-  const blogs = await getPosts();
+const blogs = [
+  {
+    slug: "test-mdx",
+    title: "This is a test MDX blog",
+    summary: "Just a simple summary of the blog",
+    publicationDate: "20-10-2023",
+  },
+  {
+    slug: "test-mdx-simplified",
+    title: "This is a test MDX blog simplified",
+    summary: "Just a simple summary of the blog",
+    publicationDate: "21-10-2023",
+  },
+  {
+    slug: "another-test-mdx",
+    title: "This is another test MDX blog",
+    summary: "Just another simple summary of the blog",
+    publicationDate: "22-10-2023",
+  },
+];
 
+const BlogPostsPage = async () => {
   return (
-    <>
-      <div
-        className="container mx-auto max-w-screen-sm px-5 lg:max-w-screen-md
-          xl:max-w-screen-lg 2xl:max-w-screen-xl"
-      >
-        <h1 className="mb-6 text-3xl font-bold text-white-10">Blog Posts</h1>
-        {blogs.map((data) => (
-          <div key={data.slug} className="my-8 border-b border-gray-500 py-2">
-            <Link href={`blog/${data.slug}`}>
+    <div
+      className="container mx-auto max-w-screen-sm px-5 lg:max-w-screen-md
+      xl:max-w-screen-lg 2xl:max-w-screen-xl"
+    >
+      <h1 className="mb-6 text-3xl font-bold text-green-20">Blog Posts</h1>
+      <section>
+        {blogs.map((blog) => (
+          <div
+            key={blog.slug}
+            className="my-8 space-y-3 border-b border-gray-500 py-2"
+          >
+            <Link href={`blog/${blog.slug}`}>
               <h2
-                className="text-lg font-semibold text-green-30 hover:underline
-                  hover:underline-offset-2"
+                className="text-bold text-2xl text-white-10 underline-offset-4
+                hover:text-green-30 hover:underline"
               >
-                {data.title}
+                {blog.title}
               </h2>
-              <p className="my-2 text-white-20">{data.summary}</p>
-              <em className="text-gray-400">Published on {data.date}</em>
             </Link>
+            <p className="text-white-30">{blog.summary}</p>
+            <div className="text-gray-400">
+              Published on {blog.publicationDate}
+            </div>
           </div>
         ))}
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 
