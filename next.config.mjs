@@ -1,5 +1,4 @@
-const withMDX = require("@next/mdx")();
-const path = require("path");
+import createMDX from "@next/mdx";
 
 const securityHeaders = [
   {
@@ -37,4 +36,11 @@ const nextConfig = {
   },
 };
 
-module.exports = withMDX(nextConfig);
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+export default withMDX(nextConfig);
