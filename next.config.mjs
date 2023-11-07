@@ -17,6 +17,9 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["picsum.photos"],
+  },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   swcMinify: true,
   eslint: {
