@@ -1,12 +1,11 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /**
  * @type {import('tailwindcss').Config}
  */
-
-const { fontFamily } = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [],
   theme: {
     extend: {
       fontFamily: {
@@ -32,41 +31,6 @@ module.exports = {
           30: "#83F9A2",
         },
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            code: {
-              color: theme("colors.gray.400"),
-            },
-            h1: {
-              color: theme("colors.green.30"),
-              fontWeight: theme("fontWeight.bold"),
-              fontSize: theme("fontSize.3xl"),
-            },
-            h2: {
-              color: theme("colors.green.10"),
-              fontWeight: theme("fontWeight.semibold"),
-              fontSize: theme("fontSize.2xl"),
-            },
-            a: {
-              color: theme("colors.white.10"),
-              textDecorationColor: theme("colors.gray.100"),
-            },
-            p: {
-              color: theme("colors.white.20"),
-            },
-            li: {
-              color: theme("colors.white.20"),
-            },
-            strong: {
-              color: theme("colors.white.20"),
-            },
-            address: {
-              color: theme("colors.white.20"),
-            },
-          },
-        },
-      }),
     },
   },
 };
