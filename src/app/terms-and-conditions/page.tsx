@@ -44,7 +44,7 @@ const TermsAndConditionsPage = () => {
   return (
     <>
       <article
-        className="container prose mx-auto max-w-screen-sm px-5
+        className="prose container mx-auto max-w-screen-sm px-5
         lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
       >
         <h1>Terms And Conditions</h1>
