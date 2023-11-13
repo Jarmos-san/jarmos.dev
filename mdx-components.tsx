@@ -1,3 +1,13 @@
+/**
+ * The default MDX support in general is very flaky in the current version of
+ * Next.js. There are a few errors raised by the TypeScript language server and
+ * TailwindCSS transpilation is not full-proof either! It's because of the later
+ * that instead of using TailwindCSS utility classes I'm directly issuing inline
+ * style props to the custom components!
+
+ * The custom style props are based on values directly copied from the
+ * TailwindCSS documentations on respective classes.
+ **/
 import Image from "next/image";
 
 import type { MDXComponents } from "mdx/types";
