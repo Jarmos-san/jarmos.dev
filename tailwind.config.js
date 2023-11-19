@@ -2,16 +2,11 @@
  * @type {import('tailwindcss').Config}
  */
 
-const { fontFamily } = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ["var(--font-poppins)", ...fontFamily.sans],
-      },
       colors: {
         blue: {
           10: "#111A20",
