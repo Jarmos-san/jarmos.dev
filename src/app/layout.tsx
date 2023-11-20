@@ -10,9 +10,8 @@ import "@styles/globals.css";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
-  display: "optional",
+  display: "swap",
   subsets: ["latin"],
-  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -97,7 +96,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
+    <html lang="en" className={poppins.className}>
       <body className="flex min-h-screen flex-col bg-blue-10">
         <Navbar />
         <main className="my-8 flex-grow space-y-16 md:my-24">{children}</main>
