@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const description = `Somraj Saha (aka Jarmos) is a Senior Software Engineer working
+    independently. This website is his "digital garden" where he shares his
+    knowledge, expertise and experience with the rest of the world!`;
+
 export const metadata: Metadata = {
   title: "About",
-  description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
-    working as an Independent Software Developer. He works with startup founders and
-    business owners to bring fresh ideas to production and serve paying customers.`,
+  description: description,
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About | Somraj Saha",
-    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
-      working as an Independent Software Developer. He works with startup founders and
-      business owners to bring fresh ideas to production and serve paying customers.`,
+    description: description,
     url: "https://jarmos.dev/about",
     siteName: "Somraj Saha",
     images: [
@@ -27,9 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About | Somraj Saha",
-    description: `This is about Somraj Saha who is a Full-Stack Software Engineer and
-      working as an Independent Software Developer. He works with startup founders and
-      business owners to bring fresh ideas to production and serve paying customers.`,
+    description: description,
     creator: "@Jarmosan",
     images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
   },
@@ -53,13 +51,16 @@ const AboutPage = () => {
         lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl"
     >
       <h1>About Somraj Saha</h1>
+
       <p>Hi There!</p>
+
       <p>
         I am an Independent Software Engineer &amp; I work with startup founders
         &amp; business owners from different backgrounds to build/design their
         MVPs. If you do decide to work with me, here is what a typical workflow
         will look like:{" "}
       </p>
+
       <ol>
         <li>
           I will sit with you to understand the business problem &amp; the
@@ -90,6 +91,7 @@ const AboutPage = () => {
         </a>
         . You can find also find me on:{" "}
       </p>
+
       <ul>
         <li>
           <a href="https://twitter.com/Jarmosan" target="_blank" rel="noopener">
@@ -121,12 +123,15 @@ const AboutPage = () => {
         Then head over to the <Link href="/portfolio">portfolio</Link> page to
         see the highlights of the projects I worked on.
       </p>
+
       <p>
         That said, here are the list of technologies I work with at the moment.
         Do note, the list shared below is by no means exhaustive &amp; I&apos;m
         open to picking up other technologies as the need arises.
       </p>
+
       <h2>Programming Languages I Work With</h2>
+
       <ol>
         <li>
           <a
@@ -173,7 +178,9 @@ const AboutPage = () => {
           where I can make full use of my Lua programming skills.
         </li>
       </ol>
+
       <h2>Frameworks &amp; Libraries I Use to Develop Software</h2>
+
       <ol>
         <li>
           <a
@@ -307,7 +314,9 @@ const AboutPage = () => {
           software.
         </li>
       </ol>
+
       <h2>Miscellaneous Development Tools I Need Daily</h2>
+
       <p>
         A Software Developer&apos;s toolkit is incomplete without their
         preferred set of tools. Apart from the few programming languages &amp;
@@ -317,6 +326,7 @@ const AboutPage = () => {
         help me write better software. Hence, following are the few tools I
         employ on a regular basis when writing code:
       </p>
+
       <ol>
         <li>
           <a

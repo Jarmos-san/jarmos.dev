@@ -14,14 +14,16 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+const description = `Somraj Saha (aka Jarmos) is a Senior Software Engineer working
+    independently. This website is his "digital garden" where he shares his
+    knowledge, expertise and experience with the rest of the world!`;
+
 export const metadata: Metadata = {
   title: {
     default: "Somraj Saha",
     template: "%s | Somraj Saha",
   },
-  description: `The personal website of Somraj Saha who is a Full-Stack Software
-  Engineer and is working independently to provide value services to
-  startup founders & business owners.`,
+  description: description,
   generator: "Next.js",
   applicationName: "Somraj Saha",
   referrer: "origin-when-cross-origin",
@@ -39,9 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Somraj Saha",
-    description: `The personal website of Somraj Saha who is a Full-Stack Software
-    Engineer and is working independently to provide value services to
-    startup founders & business owners.`,
+    description: description,
     url: "https://jarmos.dev/",
     siteName: "Somraj Saha",
     images: [
@@ -69,9 +69,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Somraj Saha",
-    description: `The personal website of Somraj Saha who is a Full-Stack Software
-    Engineer and is working independently to provide value services to
-    startup founders & business owners.`,
+    description: description,
     creator: "@Jarmosan",
     images: ["https://ik.imagekit.io/jarmos/tr:w-1200,h-627/logo-og.svg"],
   },
