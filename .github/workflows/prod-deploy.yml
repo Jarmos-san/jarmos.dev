@@ -1,8 +1,5 @@
 name: Vercel Production Deployment
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
 on:
   push:
     branches:
@@ -40,15 +37,10 @@ jobs:
       url: https://jarmos.dev
     env:
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          # The following two lines are necessary for the workflow to be able to access the
-          # private blog & portfolio repositories. For more information, refer to this article:
-          # https://samuelsson.dev/access-private-submodules-in-github-actions
-          ssh-key: ${{ secrets.SUBMODULE_ACCESS_KEY }}
-          submodules: "recursive"
 
       - name: Cache Vercel CLI
         uses: actions/cache@v3

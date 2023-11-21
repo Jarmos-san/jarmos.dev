@@ -1,8 +1,5 @@
 name: Vercel Preview Deployment
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
 on:
   push:
     branches-ignore:
@@ -28,7 +25,7 @@ jobs:
           cache: "npm"
 
       - name: Install the Dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Run Code Quality Checks
         run: npm run lint
@@ -41,6 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     outputs:
       preview-url: ${{ steps.deployment_url.outputs.PREVIEW_URL }}
     environment:
