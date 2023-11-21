@@ -4,6 +4,7 @@
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  // TODO: Remove the following plugin after the MDX migration is complete
   plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
