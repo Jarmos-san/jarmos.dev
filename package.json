@@ -38,7 +38,7 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
     "typescript": "~5.3.2",
-    "unlighthouse": "^0.10.3"
+    "unlighthouse": "^0.10.4"
   },
   "prettier": {
     "trailingComma": "es5",
