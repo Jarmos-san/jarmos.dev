@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
-    "astro": "^3.6.0"
+    "astro": "^3.6.4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^6.12.0",
