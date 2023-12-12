@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+---
+
+<style lang="scss">
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .nav-items {
+    display: flex;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: #ecf8ff;
+      font-weight: 600;
+
+      &:hover {
+        color: #83f9a2;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+</style>
+
+<header>
+  <nav>
+    <a href="/">
+      <!-- TODO: Add name beside the logo -->
+      <Image
+        src="/assets/logo.svg"
+        alt="The logo of Somraj Saha's personal website"
+        width={60}
+        height={60}
+      />
+    </a>
+
+    <div class="nav-items">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+    </div>
+  </nav>
+</header>
