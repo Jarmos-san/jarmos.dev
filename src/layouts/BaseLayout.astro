@@ -1,0 +1,32 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/resets.css";
+
+interface Props {
+  description: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<style lang="scss">
+  html {
+    background-color: #111a20;
+  }
+</style>
+
+<html lang="en">
+  <HeadLayout title={title} description={description} />
+  <body>
+    <Header />
+    <article>
+      <h1>{title}</h1>
+      <slot />
+    </article>
+    <Footer />
+  </body>
+</html>
