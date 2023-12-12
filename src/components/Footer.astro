@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+---
+
+<style lang="scss">
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #bbc1c7;
+    gap: 20px;
+
+    a {
+      color: #ecf8ff;
+      text-decoration: none;
+
+      &:hover {
+        color: #b0fbbc;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+      font-weight: 600;
+    }
+  }
+</style>
+
+<footer>
+  <Image
+    src="/assets/logo.svg"
+    alt="The logo of Somraj Saha's personal website!"
+    width={50}
+    height={50}
+  />
+
+  <span class="footer-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+  </span>
+
+  <small>
+    Website designed by{" "}
+    <a href="https://www.warner.codes" target="_blank">Ryan Warner</a> |
+    Developed by <a href="/">Somraj Saha</a> with Open-Source ❤️ &copy;
+    2018-2024
+  </small>
+
+  <small class="footer-links">
+    <a href="/terms-and-conditions">Terms and Conditions</a>
+    <a href="/distribution-rights">Distribution Rights</a>
+    <a href="privacy-policy">Privacy Policy</a>
+  </small>
+
+  <!-- TODO: Add the footer/social icons -->
+</footer>
