@@ -1,0 +1,57 @@
+---
+interface Props {
+  title?: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <!-- Common meta tags across all pages -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content={Astro.generator} />
+  <meta
+    name="keywords"
+    content="software engineer,software developer,web developer"
+  />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <meta name="creator" content="Somraj Saha" />
+  <meta name="publisher" content="Somraj Saha" />
+  <meta name="category" content="software engineering" />
+  <meta
+    name="format-detection"
+    content="telephone=(+91)7731824653,address=no,email=contact@jarmos.dev"
+  />
+  <meta
+    name="google-site-verification"
+    content="M0ZkOwR8huIlDkph37Gt2Wf9w7JcwmM1g64OTfJRmBQ"
+  />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Somraj Saha" />
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@Jarmosan" />
+  <meta name="twitter:title" content="Somraj Saha" />
+  <link rel="shortcut icon" href="/favicon-32x32.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-startup-image"
+    href="/apple-touch-icon.png"
+    media="(device-width: 768px) and (device-height: 1024px)"
+  />
+  <link rel="apple-touch-startup-image" href="/apple-touch-icon.png" />
+  <link rel="canonical" href="https://jarmos.dev" />
+  <link rel="assets" href="https://jarmos.dev/assets" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- SEO related meta tags subject to the page properties -->
+  <!-- TODO: Add all the necessary SEO related meta tags here -->
+  <meta name="content" content={description} />
+  <title>{title ? `${title} | Somraj Saha` : "Somraj Saha"}</title>
+</head>
