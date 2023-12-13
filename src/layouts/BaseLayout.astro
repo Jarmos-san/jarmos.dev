@@ -37,10 +37,9 @@ const { description, title } = Astro.props;
   <HeadLayout title={title} description={description} />
   <body>
     <Header />
-    <article>
-      <h1>{title}</h1>
+    <main>
       <slot />
-    </article>
+    </main>
     <Footer />
   </body>
 </html>
