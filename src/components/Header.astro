@@ -3,6 +3,22 @@ import { Image } from "astro:assets";
 ---
 
 <style lang="scss">
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    nav {
+      padding-left: 4%;
+      padding-right: 4%;
+      padding-top: 5px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    nav {
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-top: 10px;
+    }
+  }
+
   nav {
     display: flex;
     align-items: center;
