@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+---
+
+<style lang="scss">
+  @media screen and (min-width: 768px) {
+    p {
+      padding: 0% 25%;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: #1c2c35;
+    color: #ecf8ff;
+    padding: 8% 10%;
+    text-align: center;
+
+    h2 {
+      color: #b0fbbc;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 142%;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+
+    .chat-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 6px 20px;
+      border-radius: 6px;
+      background: #83f9a2;
+      font-weight: 700;
+      text-decoration: none;
+
+      span {
+        color: #111a20;
+        font-size: 1.125rem;
+      }
+    }
+  }
+</style>
+
+<section>
+  <h2>What are you working on?</h2>
+
+  <p>
+    Let's have a conversation! I'd love to hear about what you're working on and
+    find a way to work together.
+  </p>
+
+  <!-- FIXME: Colors aren't applied to the child elements in small screens -->
+  <a href="mailto:contact@jarmos.dev" target="_blank" class="chat-button">
+    <Image src="/assets/chat-icon.svg" alt="" width={30} height={30} />
+    <span>Chat</span>
+  </a>
+</section>
