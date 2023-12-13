@@ -15,7 +15,6 @@ import { Image } from "astro:assets";
     align-items: center;
     gap: 30px;
     background-color: #1c2c35;
-    color: #ecf8ff;
     padding: 8% 10%;
     text-align: center;
 
@@ -28,6 +27,10 @@ import { Image } from "astro:assets";
 
     p {
       font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 500;
+      color: #ecf8ff;
+      line-height: normal;
     }
 
     .chat-button {
@@ -50,12 +53,10 @@ import { Image } from "astro:assets";
 
 <section>
   <h2>What are you working on?</h2>
-
   <p>
     Let's have a conversation! I'd love to hear about what you're working on and
     find a way to work together.
   </p>
-
   <!-- FIXME: Colors aren't applied to the child elements in small screens -->
   <a href="mailto:contact@jarmos.dev" target="_blank" class="chat-button">
     <Image src="/assets/chat-icon.svg" alt="" width={30} height={30} />
