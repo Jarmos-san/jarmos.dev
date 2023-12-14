@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const description = `
+  The list of blog posts that Somraj Saha has published on
+  his personal website
+`;
+---
+
+<style>
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    article {
+      padding: 0 8% 0 8%;
+      margin: 10% 0 10% 0%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    article {
+      margin: 5% 15% 5% 15%;
+    }
+  }
+
+  article {
+    color: #ecf8ff;
+
+    h1 {
+      font-family: "Poppins";
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 142%;
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+<BaseLayout title="Blog Posts" description={description}>
+  <article>
+    <h1>Articles</h1>
+    <div>
+      <span>September 09, 2019</span>
+      <h2>
+        Code splitting and lazy loading a server side rendered React application
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+        ipsum, congue sit amet dignissim ut, malesuada eu nisi. Donec et nunc
+        vel tortor convallis interdum ac sit amet dolor. Phasellus malesuada
+        aliquam odio, ac semper dui rutrum id. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Donec
+        laoreet augue at est tincidunt tincidunt. Vestibulum ante ipsum primis
+        in faucibus orci luctus et ultrices posuere cubilia curae; Integer eget
+        nibh hendrerit, sollicitudin diam ut, egestas elit. Cras auctor elit
+        massa, ac pulvinar libero elementum id.
+      </p>
+      <a href="/blog/code-splitting-react-app">Read more...</a>
+    </div>
+    <div>
+      <span>September 09, 2019</span>
+      <h2>
+        Code splitting and lazy loading a server side rendered React application
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+        ipsum, congue sit amet dignissim ut, malesuada eu nisi. Donec et nunc
+        vel tortor convallis interdum ac sit amet dolor. Phasellus malesuada
+        aliquam odio, ac semper dui rutrum id. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Donec
+        laoreet augue at est tincidunt tincidunt. Vestibulum ante ipsum primis
+        in faucibus orci luctus et ultrices posuere cubilia curae; Integer eget
+        nibh hendrerit, sollicitudin diam ut, egestas elit. Cras auctor elit
+        massa, ac pulvinar libero elementum id.
+      </p>
+      <a href="/blog/code-splitting-react-app">Read more...</a>
+    </div><div>
+      <span>September 09, 2019</span>
+      <h2>
+        Code splitting and lazy loading a server side rendered React application
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+        ipsum, congue sit amet dignissim ut, malesuada eu nisi. Donec et nunc
+        vel tortor convallis interdum ac sit amet dolor. Phasellus malesuada
+        aliquam odio, ac semper dui rutrum id. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Donec
+        laoreet augue at est tincidunt tincidunt. Vestibulum ante ipsum primis
+        in faucibus orci luctus et ultrices posuere cubilia curae; Integer eget
+        nibh hendrerit, sollicitudin diam ut, egestas elit. Cras auctor elit
+        massa, ac pulvinar libero elementum id.
+      </p>
+      <a href="/blog/code-splitting-react-app">Read more...</a>
+    </div>
+  </article>
+</BaseLayout>
