@@ -2,11 +2,7 @@
   "extends": "astro/tsconfigs/strictest",
   "baseUrl": ".",
   "paths": {
-    "@components/*": [
-      "src/components/*"
-    ],
-    "@layouts/*": [
-      "src/layouts/*"
-    ]
+    "@components/*": ["src/components/*"],
+    "@layouts/*": ["src/layouts/*"]
   }
 }
