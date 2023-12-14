@@ -226,4 +226,7 @@ terraform.rc
 ## Vercel ##
 .vercel
 
+## Task Runner ##
+.task
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vim,node,astro
