@@ -4,5 +4,51 @@ silent: true
 
 tasks:
   default:
+    desc: Run a development version of the project
+    summary: |
+      Run a development version of the project locally
+
+      This task will run the local development version of the website and
+      setup the correct IP address and the ports to make the website accessible
+      on a network.
     cmds:
       - npm run dev -- --host
+
+  setup:
+    desc: Setup the local development environment
+    summary: |
+      Setup the local development environment for the project.
+
+      This task will install the node_modules, Terraform providers and anything
+      else in preparation for starting a development environment for the project.
+    cmds:
+      - npm ci
+
+  build:
+    desc: Build the website statically on the local system.
+    summary: |
+      Build a local static version of the website.
+
+      The task will check for any issues in source code before generating the
+      static assets (the HTML, CSS and JS bundles) for the website. The command
+      can be used in an CI/CD environment or chained to another task.
+    cmds:
+      - npm run build
+    generates:
+      - "./dist"
+    sources:
+      - "./src"
+      - "./public"
+
+  preview:
+    desc: Preview the local statically build version of the website.
+    summary: |
+      Preview the local static version of the website.
+
+      This task will load the statically generated version of the website
+      locally. Its helpful in checking for any errors or unintended behaviours
+      before deploying the website to production.
+    deps:
+      - task: build
+    cmds:
+      - npm run preview
