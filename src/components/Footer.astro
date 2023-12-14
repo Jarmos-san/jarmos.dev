@@ -49,8 +49,9 @@ import { Image } from "astro:assets";
   <small>
     Website designed by{" "}
     <a href="https://www.warner.codes" target="_blank">Ryan Warner</a> |
-    Developed by <a href="/">Somraj Saha</a> with Open-Source ❤️ &copy;
-    2018-2024
+    Developed by <a href="/">Somraj Saha</a> with Open-Source ❤️ &copy; 2018-{
+      new Date().getFullYear()
+    }
   </small>
 
   <small class="footer-links">
