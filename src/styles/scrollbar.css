@@ -1,0 +1,26 @@
+/* Some refined customisation for the scrollbar */
+:root {
+  --primary: #1c2c35;
+  --secondary: #243b4a;
+}
+
+/* Scrollbar customisation on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Scrollbar customisation on Chrome, Edge & Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Set the scrollbar background color for Safari browsers */
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+/* Set the scrollbar thumb color for Safari browser */
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+}
