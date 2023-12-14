@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const description = `The distribution and usage rights of using Somraj Saha's
+    personal website.
+`;
+---
+
+<style lang="scss">
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    article {
+      padding: 0 8% 0 8%;
+      margin: 10% 0 10% 0%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    article {
+      margin: 5% 15% 5% 15%;
+    }
+  }
+
+  article {
+    color: #ecf8ff;
+
+    a {
+      color: #ecf8ff;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2px;
+    }
+
+    h1 {
+      color: #ecf8ff;
+      font-family: Poppins;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 142%;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #ecf8ff;
+      font-family: Poppins;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 1.5rem 0;
+    }
+
+    p {
+      color: #ecf8ff;
+      margin-bottom: 1rem;
+    }
+
+    ol {
+      color: #ecf8ff;
+      list-style-type: decimal;
+      padding: 1.25rem;
+      line-height: 180%;
+    }
+  }
+</style>
+
+<BaseLayout title="Distribution & Usage Rights" description={description}>
+  <article>
+    <h1>Licensing & Distribution Rights</h1>
+    <p>
+      The entirety of the project you're viewing and using is made available for
+      public use under an open-source license. The contents, the source code of
+      the website, the analytics (WIP) are all publicly accessible and available
+      for public scrutiny.
+    </p>
+    <p>
+      In other words, you're free to view, use, modify everything and anything
+      related to this project for your personal benefits as long as you adhere
+      to the terms and conditions of the open-source licenses. Hence this page
+      details the brief terms and conditions you'll have to be aware of
+      before/while consuming the contents of the project.
+    </p>
+    <h2>Usage & Distribution Rights of Source Code</h2>
+    <p>
+      The source code of the website which is accessble on this public <a
+        href="https://github.com/Jarmos-san/jarmos.dev"
+        target="_blank">GitHub repository</a
+      > is licensed under the MIT license. You can read more about the license
+      in its <a
+        href="https://github.com/Jarmos-san/jarmos.dev/blob/main/LICENSE"
+        target="_blank"><code>LICENSE</code></a
+      > document.
+    </p>
+    <p>In brief the licensing terms and conditions states;</p>
+    <ol>
+      <li>
+        You can fork the repository, modify its contents for your personal
+        requirements be it commercial or non-commercial.
+      </li>
+      <li>
+        Take inspiration from the source code to build your own personal website
+        after customising the source code of the website.
+      </li>
+      <li>Contribute, report and/or fix bugs you found in the project.</li>
+      <li>
+        Use the source code for commercial purposes by providing due credits to
+        the stakeholders.
+      </li>
+    </ol>
+    <h2>Usage and Distribution Rights of the Literature</h2>
+    <p>
+      The website contains some write-ups (or "blogs") which I personally
+      publish of my own accord. Hence as is with everything I work on, the blogs
+      in question are made available in the public domain licensed under the
+      <a href="https://creativecommons.org/licenses/by/4.0" target="_blank"
+        >CC-BY-4.0</a
+      > license as well. And as per the terms and conditions of the said
+      license, you're entitled to;
+    </p>
+    <ol>
+      <li>To use and read the contents of the blogs free of cost.</li>
+      <li>
+        Distribute or use the contents as a source of reference for your
+        commercial or non-commercial needs.
+      </li>
+      <li>
+        Modify the contents, rephrase or fix the contents based on correct
+        interpretations and facts if you find any.
+      </li>
+    </ol>
+  </article>
+</BaseLayout>
