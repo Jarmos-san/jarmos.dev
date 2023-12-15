@@ -63,6 +63,7 @@ tasks:
     internal: true
     cmds:
       - pre-commit install --install-hooks
+      - pre-commit install --hook-type commit-msg
 
   terraform:setup:
     desc: Initialise the local development environment for Terraform
