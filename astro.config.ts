@@ -1,4 +1,13 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap"
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  experimental: {
+    contentCollectionCache: true,
+  },
+  site: "https://jarmos.dev",
+  image: {
+    domains: ["https://ik.imagekit.io/jarmos"],
+  },
+  integrations: [sitemap()]
+});
