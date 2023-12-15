@@ -25,6 +25,8 @@ tasks:
     dir: ./web
     cmds:
       - npm ci
+      - task: precommit:setup
+      - task: terraform:setup
 
   build:
     desc: Build the website statically on the local system.
@@ -56,3 +58,21 @@ tasks:
     dir: ./web
     cmds:
       - npm run preview
+
+  precommit:setup:
+    internal: true
+    cmds:
+      - pre-commit install --install-hooks
+
+  terraform:setup:
+    desc: Initialise the local development environment for Terraform
+    summary: |
+      Initialise the local development environment for Terraform.
+
+      This task will automatically setup Terraform locally on the system for
+      further development tasks. It'll correctly identify the directory where
+      the Terraform code are located and invoke the appropriate command
+      accordingly.
+    dir: ./terraform
+    cmds:
+      - terraform init
