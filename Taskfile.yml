@@ -11,6 +11,7 @@ tasks:
       This task will run the local development version of the website and
       setup the correct IP address and the ports to make the website accessible
       on a network.
+    dir: ./web
     cmds:
       - npm run dev -- --host
 
@@ -21,6 +22,7 @@ tasks:
 
       This task will install the node_modules, Terraform providers and anything
       else in preparation for starting a development environment for the project.
+    dir: ./web
     cmds:
       - npm ci
 
@@ -32,6 +34,7 @@ tasks:
       The task will check for any issues in source code before generating the
       static assets (the HTML, CSS and JS bundles) for the website. The command
       can be used in an CI/CD environment or chained to another task.
+    dir: ./web
     cmds:
       - npm run build
     generates:
@@ -50,5 +53,6 @@ tasks:
       before deploying the website to production.
     deps:
       - task: build
+    dir: ./web
     cmds:
       - npm run preview
