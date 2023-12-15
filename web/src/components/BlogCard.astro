@@ -1,0 +1,67 @@
+---
+interface Props {
+  publicationDate: Date;
+  title: string;
+  description: string;
+  slug: string;
+}
+
+const { publicationDate, title, description, slug } = Astro.props;
+---
+
+<style>
+  section {
+    color: #ecf8ff;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    time {
+      color: #7ab6d9;
+      font-size: 1.14rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      font-size: 1.14rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    a {
+      color: #7ab6d9;
+      font-size: 1.14rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+</style>
+
+<section>
+  <time>
+    {
+      publicationDate.toLocaleDateString(undefined, {
+        month: "long",
+        year: "numeric",
+        day: "numeric",
+        weekday: "long",
+      })
+    }
+  </time>
+  <h2>{title}</h2>
+  <p>{description}</p>
+  <a href={`/blog/${slug}`}>Read more...</a>
+</section>
