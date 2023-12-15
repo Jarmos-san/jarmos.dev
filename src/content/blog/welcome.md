@@ -7,10 +7,8 @@ description:
   nisl diam, sodales at urna eu, malesuada tincidunt nisi. Donec ultricies sem
   eget nibh blandit sollicitudin. Aenean porttitor leo et viverra maximus."
 publishedDate: 2022-10-20
-coverImage: {
-  url:  https://picsum.photos/1200/640,
-  alt: "A cover image alternate text"
-}
+coverImage:
+  { url: https://picsum.photos/1200/640, alt: "A cover image alternate text" }
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum
@@ -68,3 +66,5 @@ print('Hello World!')
 
 print(f'The OS is {time.time}')
 ```
+
+![ImageKit image](https://ik.imagekit.io/jarmos/create-custom-keymaps-using-lua.png?updatedAt=1685086095483)
