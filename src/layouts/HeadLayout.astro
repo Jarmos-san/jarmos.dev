@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title?: string;
   description: string;
@@ -54,4 +56,5 @@ const { title, description } = Astro.props;
   <!-- TODO: Add all the necessary SEO related meta tags here -->
   <meta name="content" content={description} />
   <title>{title ? `${title} | Somraj Saha` : "Somraj Saha"}</title>
+  <ViewTransitions />
 </head>
