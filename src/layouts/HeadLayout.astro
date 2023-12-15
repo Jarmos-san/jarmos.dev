@@ -40,8 +40,7 @@ const { title, description } = Astro.props;
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@Jarmosan" />
   <meta name="twitter:title" content="Somraj Saha" />
-  <link rel="shortcut icon" href="/favicon-32x32.png" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link
     rel="apple-touch-startup-image"
@@ -49,8 +48,8 @@ const { title, description } = Astro.props;
     media="(device-width: 768px) and (device-height: 1024px)"
   />
   <link rel="apple-touch-startup-image" href="/apple-touch-icon.png" />
-  <link rel="canonical" href="https://jarmos.dev" />
-  <link rel="assets" href="https://jarmos.dev/assets" />
+  <link rel="canonical" href={Astro.site} />
+  <link rel="assets" href={new URL("/assets", Astro.site)} />
   <link rel="manifest" href="/site.webmanifest" />
   <!-- SEO related meta tags subject to the page properties -->
   <!-- TODO: Add all the necessary SEO related meta tags here -->
