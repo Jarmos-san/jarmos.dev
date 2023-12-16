@@ -1,12 +1,12 @@
 ---
-title: "Welcome to My Blog"
+title: "Welcome my Friend"
 description:
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
   bibendum tempor elit. Vivamus ut risus nec orci ultrices suscipit. Interdum et
   malesuada fames ac ante ipsum primis in faucibus. Integer a aliquet sem. Sed
   nisl diam, sodales at urna eu, malesuada tincidunt nisi. Donec ultricies sem
   eget nibh blandit sollicitudin. Aenean porttitor leo et viverra maximus."
-publishedDate: 2015-10-20
+publishedDate: 2014-10-24
 coverImage:
   { url: https://picsum.photos/1200/640, alt: "A cover image alternate text" }
 ---
