@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+
+const allBlogs = await getCollection("blog");
+
+const latestBlogs = allBlogs
+  .sort((a, b) => Number(b.data.publishedDate) - Number(a.data.publishedDate))
+  .slice(0, 3);
+---
+
+<style lang="scss">
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    section {
+      padding: 4% 4%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 20px 15% 0 15%;
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(1);
+  }
+</style>
+
+<section>
+  <span>
+    <h2>Latest Blogposts</h2>
+    <a href="/blog">All blogposts...</a>
+  </span>
+  {
+    latestBlogs.map((blog) => (
+      <div>
+        <h3>{blog.data.title}</h3>
+        <time>
+          {blog.data.publishedDate.toLocaleDateString(undefined, {
+            weekday: "long",
+            day: "numeric",
+            year: "numeric",
+            month: "long",
+          })}
+        </time>
+      </div>
+    ))
+  }
+</section>
