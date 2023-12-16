@@ -6,6 +6,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const allBlogs = await getCollection("blog");
 
+const sortedBlogs = allBlogs.sort(
+  (a, b) => Number(b.data.publishedDate) - Number(a.data.publishedDate)
+);
+
 const description = `
   The list of blog posts that Somraj Saha has published on
   his personal website
@@ -44,7 +48,7 @@ const description = `
   <article>
     <h1>Articles</h1>
     {
-      allBlogs.map((blog) => (
+      sortedBlogs.map((blog) => (
         <BlogCard
           title={blog.data.title}
           description={blog.data.description}
