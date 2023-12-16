@@ -29,6 +29,11 @@ import { Image } from "astro:assets";
       gap: 15px;
       font-weight: 600;
     }
+
+    .footer-icons {
+      display: flex;
+      gap: 1rem;
+    }
   }
 </style>
 
@@ -60,5 +65,46 @@ import { Image } from "astro:assets";
     <a href="privacy-policy">Privacy Policy</a>
   </small>
 
-  <!-- TODO: Add the footer/social icons -->
+  <span class="footer-icons">
+    <a href="https://twitter.com/Jarmosan" target="_blank">
+      <Image
+        src="/assets/x.svg"
+        alt="Somraj Saha's Twitter profile"
+        width={20}
+        height={20}
+      />
+    </a>
+    <a href="https://github.com/Jarmos-san" target="_blank">
+      <Image
+        src="/assets/github.svg"
+        alt="Somraj Saha's GitHub profile"
+        width={20}
+        height={20}
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/jarmos" target="_blank">
+      <Image
+        src="/assets/linkedin.svg"
+        alt="Somraj Saha's LinkedIn profile"
+        width={20}
+        height={20}
+      />
+    </a>
+    <a href="https://instagram.com/jarmos.san" target="_blank">
+      <Image
+        src="/assets/instagram.svg"
+        alt="Somraj Saha's Instagram profile"
+        width={20}
+        height={20}
+      />
+    </a>
+    <a href="/rss.xml" target="_blank">
+      <Image
+        src="/assets/rss.svg"
+        alt="Somraj Saha's blog RSS feed"
+        width={20}
+        height={20}
+      />
+    </a>
+  </span>
 </footer>
