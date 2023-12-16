@@ -22,8 +22,53 @@ const latestBlogs = allBlogs
   }
 
   section {
-    display: grid;
-    grid-template-columns: repeat(1);
+    color: #ecf8ff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      a {
+        color: #ecf8ff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+
+    .blog-cards {
+      h3 {
+        color: #ecf8ff;
+        font-family: Poppins;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0.5rem 0;
+      }
+
+      time {
+        color: #5e8ca7;
+        font-size: 0.95rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
   }
 </style>
 
@@ -34,7 +79,7 @@ const latestBlogs = allBlogs
   </span>
   {
     latestBlogs.map((blog) => (
-      <div>
+      <div class="blog-cards">
         <h3>{blog.data.title}</h3>
         <time>
           {blog.data.publishedDate.toLocaleDateString(undefined, {
