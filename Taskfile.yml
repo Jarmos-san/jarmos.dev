@@ -77,3 +77,27 @@ tasks:
     dir: ./terraform
     cmds:
       - terraform init
+
+  format:
+    desc: Run various formatters on the entire source code
+    summary: |
+      Run various formatters on the entire source code.
+
+      This task will run "prettier", "terraform fmt" and such on the entire
+      code to ensure each and every line follows some standard practice of
+      authoring code.
+    cmds:
+      - task: prettier
+      - task: terraform
+
+  prettier:
+    internal: true
+    dir: ./web
+    cmds:
+      - npm run format:fix
+
+  terraform:
+    internal: true
+    dir: ./terraform
+    cmds:
+      - terraform fmt
