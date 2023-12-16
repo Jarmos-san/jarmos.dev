@@ -229,4 +229,10 @@ terraform.rc
 ## Task Runner ##
 .task
 
+## Playwright ##
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vim,node,astro
