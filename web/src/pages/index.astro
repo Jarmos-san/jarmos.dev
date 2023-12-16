@@ -3,10 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import CallToAction from "../components/CallToAction.astro";
 import FeaturedProjects from "../components/FeaturedProjects.astro";
+// import LatestBlogposts from "../components/LatestBlogs.astro";
 ---
 
 <BaseLayout title="Home" description="Some lipsum content should be here">
   <HeroSection />
+  <!-- FIXME: Figure the best approach to render it (perhaps a grid?) -->
+  <!-- <LatestBlogposts /> -->
   <FeaturedProjects />
   <CallToAction />
 </BaseLayout>
