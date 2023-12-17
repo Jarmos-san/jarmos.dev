@@ -6,7 +6,10 @@ the code is as follows:
 
 ```console
 .
-├── public
+├── public/
+│   ├── Poppins.woff
+│   ├── favicon.svg
+│   └── # ... more such static assets
 ├── src/
 │   ├── components/
 │   │   ├── ExampleComponent.astro
