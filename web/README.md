@@ -178,7 +178,7 @@ prior HTML, CSS and JS skills are transferable to the project. The other major
 plus of using Astro was its inbuilt support for Markdown (and MDX through an
 official dependency)!
 
-All-in-all, Astro felt like a legitimate "\_Static Site Generator (SSG)"
+All-in-all, Astro felt like a legitimate "_Static Site Generator (SSG)_"
 purposefully built for technical documentation on the web! If you're still
 unsure whether Astro is a good choice for building blogging websites, go check
 out their [official documentations](https://docs.astro.build) & complete the
