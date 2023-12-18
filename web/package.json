@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint 'src/**/*.{js,ts,astro}'",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "tests": "playwright test",
+    "tests:report": "playwright show-report"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.3",
