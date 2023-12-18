@@ -12,10 +12,10 @@ This repository hosts the source code for my personal website (and "digital
 garden") on [jarmos.dev](https://jarmos.dev). The website is built on the
 following tech stack;
 
-- `Astro` for building the website.
-- `Vercel` for hosting the static site.
-- `Terraform` for managing the deployment to Vercel and other cloud resources
-  required for proper functioning of the website.
+- [`Astro`](https://astro.build) for building the website.
+- [`Vercel`](https://vercel.com) for hosting the static site.
+- [`Terraform`](https://terraform.io) for managing the deployment to Vercel and
+  other cloud resources required for proper functioning of the website.
 
 ## About the Project
 
