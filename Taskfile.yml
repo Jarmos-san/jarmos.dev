@@ -118,3 +118,26 @@ tasks:
     cmds:
       - task: format:prettier
       - task: format:terraform
+
+  qa-checks:npm:
+    internal: true
+    dir: ./web
+    cmd: npm run tests
+
+  qa-checks:terraform:
+    internal: true
+    dir: ./terraform
+    cmd: terraform test
+
+  qa-checks:
+    desc: Run QA checks on the entire source code
+    summary: |
+      Run QA checks on the entire source code.
+
+      This task will run all sorts of QA checks on the source code before its
+      prepared to be pushed to the remote repository for further production
+      deployment.
+    cmds:
+      - pre-commit run --all-files
+      - task: qa-checks:npm
+      - task: qa-checks:terraform
