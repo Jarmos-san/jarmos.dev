@@ -12,8 +12,48 @@ tasks:
       setup the correct IP address and the ports to make the website accessible
       on a network.
     dir: ./web
+    cmd: npm run dev -- --host
+
+  setup:precommit:
+    internal: true
+    sources:
+      - .pre-commit-config.yaml
+    generates:
+      - ./git/hooks/pre-commit
+      - ./git/hooks/commit-msg
     cmds:
-      - npm run dev -- --host
+      - pre-commit install --install-hooks
+      - pre-commit install --hook-type commit-msg
+
+  setup:terraform:
+    desc: Initialise the local development environment for Terraform
+    summary: |
+      Initialise the local development environment for Terraform.
+
+      This task will automatically setup Terraform locally on the system for
+      further development tasks. It'll correctly identify the directory where
+      the Terraform code are located and invoke the appropriate command
+      accordingly.
+    dir: ./terraform
+    generates:
+      - ".terraform/**"
+    sources:
+      - "**.tf"
+    cmd: terraform init
+
+  setup:npm:
+    desc: Install the "npm" dependencies
+    summary: |
+      Install the "npm" dependencies.
+
+      This task will install the "npm" dependencies for the Astro project and
+      generate the "package-lock.json" file as well if it deems necessary.
+    dir: ./web
+    sources:
+      - package.json
+    generates:
+      - package-lock.json
+    cmd: npm ci
 
   setup:
     desc: Setup the local development environment
@@ -24,9 +64,9 @@ tasks:
       else in preparation for starting a development environment for the project.
     dir: ./web
     cmds:
-      - npm ci
-      - task: precommit:setup
-      - task: terraform:setup
+      - task: setup:npm
+      - task: setup:precommit
+      - task: setup:terraform
 
   build:
     desc: Build the website statically on the local system.
@@ -37,8 +77,7 @@ tasks:
       static assets (the HTML, CSS and JS bundles) for the website. The command
       can be used in an CI/CD environment or chained to another task.
     dir: ./web
-    cmds:
-      - npm run build
+    cmd: npm run build
     generates:
       - "./dist"
     sources:
@@ -56,27 +95,17 @@ tasks:
     deps:
       - task: build
     dir: ./web
-    cmds:
-      - npm run preview
+    cmd: npm run preview
 
-  precommit:setup:
+  format:prettier:
     internal: true
-    cmds:
-      - pre-commit install --install-hooks
-      - pre-commit install --hook-type commit-msg
+    dir: ./web
+    cmd: npm run format:fix
 
-  terraform:setup:
-    desc: Initialise the local development environment for Terraform
-    summary: |
-      Initialise the local development environment for Terraform.
-
-      This task will automatically setup Terraform locally on the system for
-      further development tasks. It'll correctly identify the directory where
-      the Terraform code are located and invoke the appropriate command
-      accordingly.
+  format:terraform:
+    internal: true
     dir: ./terraform
-    cmds:
-      - terraform init
+    cmd: terraform fmt
 
   format:
     desc: Run various formatters on the entire source code
@@ -87,17 +116,5 @@ tasks:
       code to ensure each and every line follows some standard practice of
       authoring code.
     cmds:
-      - task: prettier
-      - task: terraform
-
-  prettier:
-    internal: true
-    dir: ./web
-    cmds:
-      - npm run format:fix
-
-  terraform:
-    internal: true
-    dir: ./terraform
-    cmds:
-      - terraform fmt
+      - task: format:prettier
+      - task: format:terraform
