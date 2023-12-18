@@ -2,7 +2,16 @@ version: 2
 
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/web"
+    schedule:
+      interval: "weekly"
+      time: "06:00"
+      timezone: "Asia/Kolkata"
+    commit-message:
+      prefix: "chore(deps): "
+
+  - package-ecosystem: "terraform"
+    directory: "/terraform"
     schedule:
       interval: "weekly"
       time: "06:00"
