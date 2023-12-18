@@ -4,5 +4,6 @@
   "paths": {
     "@components/*": ["src/components/*"],
     "@layouts/*": ["src/layouts/*"]
-  }
+  },
+  "exclude": ["tests", "tests-examples", "playwright.config.ts"]
 }
