@@ -10,9 +10,12 @@ import "../styles/scrollbar.css";
 interface Props {
   title: string;
   description: string;
+  slug: string;
+  imageUrl: URL;
+  imageAlt: string;
 }
 
-const { description, title } = Astro.props;
+const { description, slug, title, imageUrl, imageAlt } = Astro.props;
 ---
 
 <style lang="scss">
@@ -35,7 +38,13 @@ const { description, title } = Astro.props;
 </style>
 
 <html lang="en">
-  <HeadLayout title={title} description={description} />
+  <HeadLayout
+    title={title}
+    description={description}
+    slug={slug}
+    imageUrl={imageUrl}
+    imageAlt={imageAlt}
+  />
   <body>
     <Header />
     <main>

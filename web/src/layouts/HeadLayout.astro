@@ -4,9 +4,12 @@ import { ViewTransitions } from "astro:transitions";
 interface Props {
   title?: string;
   description: string;
+  slug: string;
+  imageUrl: URL;
+  imageAlt: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, slug, imageUrl, imageAlt } = Astro.props;
 ---
 
 <head>
@@ -48,12 +51,19 @@ const { title, description } = Astro.props;
     media="(device-width: 768px) and (device-height: 1024px)"
   />
   <link rel="apple-touch-startup-image" href="/apple-touch-icon.png" />
-  <link rel="canonical" href={Astro.site} />
   <link rel="assets" href={new URL("/assets", Astro.site)} />
   <link rel="manifest" href="/site.webmanifest" />
   <!-- SEO related meta tags subject to the page properties -->
-  <!-- TODO: Add all the necessary SEO related meta tags here -->
+  <link rel="canonical" href=`${Astro.site}${slug}` />
   <meta name="content" content={description} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="og:title" content={title} />
+  <meta name="og:description" content={description} />
+  <meta name="twitter:image" content={imageUrl} />
+  <meta name="og:image" content={imageUrl} />
+  <meta name="twitter:image:alt" content={imageAlt} />
+  <meta name="og:image:alt" content={imageAlt} />
   <title>{title ? `${title} | Somraj Saha` : "Somraj Saha"}</title>
   <ViewTransitions />
 </head>
