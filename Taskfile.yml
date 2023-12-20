@@ -152,6 +152,8 @@ tasks:
       project.
     cmds:
       - rm --recursive --force "./web/node_modules"
+      - rm --recursive --force "./web/.astro"
+      - rm --recursive --force "./web/dist"
       - rm --recursive --force "./terraform/.terraform"
       - rm --recursive --force "./.task"
       - pre-commit clean 2&> /dev/null
