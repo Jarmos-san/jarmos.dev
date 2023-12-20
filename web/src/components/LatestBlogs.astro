@@ -47,6 +47,13 @@ const latestBlogs = allBlogs
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+
+        &:hover {
+          color: #b0fbbc;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          text-decoration-thickness: 2px;
+        }
       }
     }
 
@@ -68,6 +75,17 @@ const latestBlogs = allBlogs
         font-weight: 500;
         line-height: normal;
       }
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: #5e8ca7;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          text-decoration-thickness: 2px;
+        }
+      }
     }
   }
 </style>
@@ -80,7 +98,9 @@ const latestBlogs = allBlogs
   {
     latestBlogs.map((blog) => (
       <div class="blog-cards">
-        <h3>{blog.data.title}</h3>
+        <a href={blog.slug}>
+          <h3>{blog.data.title}</h3>
+        </a>
         <time>
           {blog.data.publishedDate.toLocaleDateString(undefined, {
             weekday: "long",
