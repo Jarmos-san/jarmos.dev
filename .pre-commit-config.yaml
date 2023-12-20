@@ -27,6 +27,14 @@ repos:
           - "prettier-plugin-astro"
         stages:
           - pre-commit
+        types:
+          - ts
+          - javascript
+          - markdown
+          # FIXME: Not suppported for now!
+          # - astro
+          - css
+          - javascript
 
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v8.56.0
@@ -38,3 +46,8 @@ repos:
           - "@typescript-eslint/parser"
           - "eslint-plugin-astro"
           - "eslint-plugin-jsx-a11y"
+        types:
+          - ts
+          # FIXME: Not suppported for now!
+          # - astro
+          - javascript
