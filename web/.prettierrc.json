@@ -3,9 +3,5 @@
   "tabWidth": 2,
   "semi": true,
   "bracketSameLine": false,
-  "proseWrap": "always",
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^@\\w", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "proseWrap": "always"
 }
