@@ -1,12 +1,19 @@
 {
-  "extends": ["plugin:astro/recommended", "plugin:astro/jsx-a11y-strict"],
+  "extends": [
+    "plugin:astro/recommended"
+  ],
   "overrides": [
     {
-      "files": ["*.astro"],
+      "files": [
+        "*.astro"
+      ],
+      "processor": "astro/client-side-ts",
       "parser": "astro-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
-        "extraFileExtensions": [".astro"]
+        "extraFileExtensions": [
+          ".astro"
+        ]
       },
       "rules": {}
     }
