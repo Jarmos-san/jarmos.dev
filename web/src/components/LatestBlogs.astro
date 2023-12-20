@@ -98,7 +98,7 @@ const latestBlogs = allBlogs
   {
     latestBlogs.map((blog) => (
       <div class="blog-cards">
-        <a href={blog.slug}>
+        <a href=`/blog/${blog.slug}`>
           <h3>{blog.data.title}</h3>
         </a>
         <time>
