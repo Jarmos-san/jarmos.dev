@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    working-directory: ./web
+
 jobs:
   code-quality-checks:
     name: Code QA Checks
