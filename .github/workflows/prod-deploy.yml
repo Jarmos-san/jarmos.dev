@@ -16,26 +16,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - run: |
-          echo $PWD
-          ls -la
+      - name: Install the Dependencies
+        run: npm ci
 
-      - name: Setup Node.js in the Runtime
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: "npm"
-          cache-dependency-path: "./package-lock.json"
+      - name: Run Code Quality Checks
+        run: npm run lint
 
-  #     - name: Install the Dependencies
-  #       run: npm ci
-  #
-  #     - name: Run Code Quality Checks
-  #       run: npm run lint
-  #
-  #     - name: Run Prettier to Check for Formatting Issues
-  #       run: npm run format:check
-  #
+      - name: Run Prettier to Check for Formatting Issues
+        run: npm run format:check
+
   # deploy-production:
   #   name: Production Deployment
   #   runs-on: ubuntu-latest
