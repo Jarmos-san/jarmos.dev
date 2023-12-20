@@ -141,3 +141,17 @@ tasks:
       - pre-commit run --all-files
       - task: qa-checks:npm
       - task: qa-checks:terraform
+
+  cleanup:
+    desc: Perform a quick cleanup of the local development environment
+    summary: |
+      Perform a quick cleanup of the dev environment.
+
+      This task will remove the "node_modules", ".terraform" folder,
+      "git-hooks" and more from the local repository for a fresh start of the
+      project.
+    cmds:
+      - rm --recursive --force "./web/node_modules"
+      - rm --recursive --force "./terraform/.terraform"
+      - rm --recursive --force "./.task"
+      - pre-commit clean 2&> /dev/null
