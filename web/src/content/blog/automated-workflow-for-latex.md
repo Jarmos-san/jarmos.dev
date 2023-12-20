@@ -4,8 +4,8 @@ description:
   Revitalize your LaTeX workflow with modern tools! Sidestep TeX Live's bloat
   and Overleaf's online constraints. Embrace `tectonic`—a Rust-based, efficient
   LaTeX engine. Harness `task` for streamlined automation. Craft modular
-  documents with `subfiles` for seamless collaboration. Dive into a
-  rejuvenated, efficient LaTeX experience! 🚀📄🔧
+  documents with `subfiles` for seamless collaboration. Dive into a rejuvenated,
+  efficient LaTeX experience! 🚀📄🔧
 publishedDate: 2021-09-04
 coverImage:
   url: https://ik.imagekit.io/jarmos/automated-workflow-for-latex.png?updatedAt=1702974989273

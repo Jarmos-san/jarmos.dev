@@ -2,11 +2,10 @@
 title: "Medium vs Static Site Generators: Which Should I Choose?"
 description:
   Explore the challenges of building an online presence using Static Site
-  Generators (SSGs) like Pelican, Hugo, and Gatsby. Delve into the principles
-  of visual hierarchy for effective design. Discover the advantages of Medium
-  over personal blogs in terms of accessibility, SEO, and audience reach.
-  Understand the rationale behind choosing Medium and explore relevant
-  references.
+  Generators (SSGs) like Pelican, Hugo, and Gatsby. Delve into the principles of
+  visual hierarchy for effective design. Discover the advantages of Medium over
+  personal blogs in terms of accessibility, SEO, and audience reach. Understand
+  the rationale behind choosing Medium and explore relevant references.
 publishedDate: 2020-05-13
 coverImage:
   url: https://ik.imagekit.io/jarmos/medium-vs-static-site-generator.png?updatedAt=1702974989261
