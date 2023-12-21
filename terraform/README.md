@@ -105,3 +105,5 @@ Third, being able to manage the deployment and the infrastructure from my
 favoured development environment i.e the CLI is a huge plus for me! It improves
 my productivity exponentially and I wouldn't mind the extra complexity Terraform
 brings to the table as a compromise!
+
+<!-- TODO: Update the documentations -->
