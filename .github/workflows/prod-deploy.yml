@@ -49,5 +49,5 @@ jobs:
 
       - run: ls -la
 
-      # - name: Deploy to Production
-      #   run: terraform apply -var vercel_api_token="${VERCEL_API_TOKEN}"
+      - name: Deploy to Production
+        run: terraform plan -var vercel_api_token="${VERCEL_API_TOKEN}"
