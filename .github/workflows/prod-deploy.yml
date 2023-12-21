@@ -49,6 +49,4 @@ jobs:
         run: terraform init
 
       - name: Deploy to Production
-        run: |
-          terraform plan -var vercel_api_token="${VERCEL_API_TOKEN}" -out="vercel.tfplan"
-          terraform apply -var vercel.tfplan
+        run: terraform apply -var "vercel_api_token=${VERCEL_API_TOKEN}"
