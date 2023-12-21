@@ -47,5 +47,7 @@ jobs:
       - name: Initialise the Environment for Terraform
         run: terraform init
 
-      - name: Deploy to Production
-        run: terraform apply -var vercel_api_token="${VERCEL_API_TOKEN}"
+      - run: ls -la
+
+      # - name: Deploy to Production
+      #   run: terraform apply -var vercel_api_token="${VERCEL_API_TOKEN}"
