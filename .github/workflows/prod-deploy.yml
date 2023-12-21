@@ -34,6 +34,7 @@ jobs:
     needs: code-quality-checks
     environment:
       name: Production
+      # FIXME: Update the URL to be dynamically fetched by Terraform
       url: https://jarmos.dev
     env:
       VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
@@ -47,7 +48,7 @@ jobs:
       - name: Initialise the Environment for Terraform
         run: terraform init
 
-      - run: ls -la
-
       - name: Deploy to Production
-        run: terraform plan -var vercel_api_token="${VERCEL_API_TOKEN}"
+        run: |
+          terraform plan -var vercel_api_token="${VERCEL_API_TOKEN}" -out="vercel.tfplan"
+          terraform apply -var vercel_api_token="${VERCEL_API_TOKEN}" vercel.tfplan
