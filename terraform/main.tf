@@ -11,16 +11,23 @@ provider "vercel" {
   api_token = var.vercel_api_token
 }
 
-resource "vercel_project" "astro_blog" {
-  name             = "astro-blog"
-  framework        = "astro"
-  build_command    = "npm run build"
-  dev_command      = "npm run dev"
-  install_command  = "npm ci"
-  output_directory = "dist"
+data "vercel_project_directory" "personal_website" {
+  path = var.project_source
 }
 
-resource "vercel_project_domain" "astro_blog_domain" {
-  project_id = vercel_project.astro_blog.id
-  domain     = "astro-jarmos.vercel.app"
+resource "vercel_project" "personal_website" {
+  name      = var.vercel_project_name
+  framework = var.framework_name
+}
+
+resource "vercel_deployment" "personal_website" {
+  project_id  = vercel_project.personal_website.id
+  files       = data.vercel_project_directory.personal_website.files
+  path_prefix = data.vercel_project_directory.personal_website.path
+  production  = true
+}
+
+resource "vercel_project_domain" "personal_website" {
+  project_id = vercel_project.personal_website.id
+  domain     = var.domain_name
 }
