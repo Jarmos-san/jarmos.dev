@@ -49,4 +49,4 @@ jobs:
         run: terraform init
 
       - name: Deploy to Production
-        run: terraform apply -var "vercel_api_token=${VERCEL_API_TOKEN}"
+        run: terraform apply -var "vercel_api_token=${VERCEL_API_TOKEN}" -auto-approve
