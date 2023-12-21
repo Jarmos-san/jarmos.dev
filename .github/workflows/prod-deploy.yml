@@ -46,7 +46,9 @@ jobs:
         uses: hashicorp/setup-terraform@v3.0.0
 
       - name: Initialise the Environment for Terraform
-        run: terraform init
+        run: terraform init -input=false
 
       - name: Deploy to Production
-        run: terraform apply -var "vercel_api_token=${VERCEL_API_TOKEN}" -auto-approve
+        run: |
+          terraform plan -var "vercel_api_token=${VERCEL_API_TOKEN}" -out=tfplan -input=false
+          terraform apply -input=false tfplan
