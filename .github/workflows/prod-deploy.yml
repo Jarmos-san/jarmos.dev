@@ -37,6 +37,7 @@ jobs:
       # FIXME: Update the URL to be dynamically fetched by Terraform
       url: https://jarmos.dev
     env:
+      PG_CONN_STR: ${{ secrets.PG_CONN_STR }}
       VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
     steps:
       - name: Checkout Repository
