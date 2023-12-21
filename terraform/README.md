@@ -1,7 +1,5 @@
 # Terraform, Deployment and Infrastructure Documentations
 
-**NOTE**: The Terraform setup is still **WORK-IN-PROGRESS**!
-
 The contents of this README contain the source code to work with Terraform which
 in turn is responsible for a clean management of the deployment and
 infrastructure provisioning of the project. The directory has the following
@@ -45,6 +43,19 @@ instructions would work. The
 [official instructions guidelines](https://developer.hashicorp.com/terraform/install)
 will help you have Terraform installed on your local system correctly.
 
+Once you have ensured Terraform is installed locally and is accessible on your system, run the commands below. These commands will setup the environment variables which Terraform requires for proper operations;
+
+```console
+export PG_CONN_STR=postgres://db_username:db_password.postgresql_url/terraform_backend
+export VERCEL_API_TOKEN=some-super-secret-string
+```
+
+The commands above will setup the URL for the [PostgreSQL](https://www.postgresql.org) instance and the [Vercel API token](https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token). These environment variables will be used to securely store the [Terraform state](https://developer.hashicorp.com/terraform/language/state) and authenticate to the Vercel services. And the same environment variables should be added to [GitHub Secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) as well to ensure they are available to Terraform in the CI/CD pipelines.
+
+It is possible to configure other backends to handle and store the Terraform state as well and I recommend to check out the [official documentations](https://developer.hashicorp.com/terraform/language/settings/backends/configuration) on this topic for more information. But for this project we will be sticking with a PostgreSQL backend for now.
+
+Once Terraform is installed, setup and initialised, the following list of commands will help you to deploy a website to production.
+
 1. To initialise and setup the environment for Terraform, run this command;
 
 ```
@@ -52,28 +63,26 @@ terraform init
 ```
 
 2. After making the necessary changes to the Terraform source code, run the
-   following command which should perform a "dry-run" to show what
-   infrastructural changes Terraform would make before deploying the project;
+   following command to show what sort of provisioning will Terraform perform and will output it to binary file named `tfplan`;
 
 ```console
-terraform plan
+terraform plan -out=tfplan
 ```
 
-3. If you're satisfied with the changes Terraform will make, apply the changes
-   by running this command;
+3. If the changes are satisfactory Terraform will provision the resources on Vercel by running this command;
 
 ```console
-terraform apply
+terraform apply "tfplan"
 ```
 
-4. For deleting the infrastructural resources and removing the deployment, run
+4. (_Optionally_) For deleting the infrastructural resources and removing the deployment, run
    the following command (be **CAUTIOUS** of this command btw!);
 
 ```console
 terraform destroy
 ```
 
-If you need more help learning to use the CLI command, feel free to start a
+For more help with learning resources to use the CLI command, feel free to start a
 discussion thread or even better, refer to the
 [official documentations](https://developer.hashicorp.com/terraform/cli).
 
@@ -105,5 +114,3 @@ Third, being able to manage the deployment and the infrastructure from my
 favoured development environment i.e the CLI is a huge plus for me! It improves
 my productivity exponentially and I wouldn't mind the extra complexity Terraform
 brings to the table as a compromise!
-
-<!-- TODO: Update the documentations -->
