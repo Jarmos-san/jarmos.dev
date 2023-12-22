@@ -33,8 +33,8 @@ resource "vercel_project_domain" "personal_website" {
   domain     = var.domain_name
 }
 
-resource "vercel_project_domain" "example_redirect" {
-  project_id = vercel_project.example.id
+resource "vercel_project_domain" "redirect_rules" {
+  project_id = vercel_project.personal_website.id
   domain     = "jarmos.vercel.app"
 
   redirect             = vercel_project_domain.personal_website.domain
