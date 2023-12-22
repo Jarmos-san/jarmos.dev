@@ -1,0 +1,11 @@
+{
+  "public": true,
+  "cleanUrls": true,
+  "git": {
+    "deploymentEnabled": false
+  },
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  }
+}
