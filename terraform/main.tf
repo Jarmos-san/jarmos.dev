@@ -32,3 +32,11 @@ resource "vercel_project_domain" "personal_website" {
   project_id = vercel_project.personal_website.id
   domain     = var.domain_name
 }
+
+resource "vercel_project_domain" "example_redirect" {
+  project_id = vercel_project.example.id
+  domain     = "jarmos.vercel.app"
+
+  redirect             = vercel_project_domain.personal_website.domain
+  redirect_status_code = 307
+}
