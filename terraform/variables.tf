@@ -16,7 +16,7 @@ variable "domain_name" {
   type        = string
   description = "The domain name to assign to the project when it is deployed to production"
   nullable    = false
-  default     = "astro-jarmos.vercel.app"
+  default     = "jarmos.dev"
 }
 
 variable "framework_name" {
