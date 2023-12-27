@@ -63,7 +63,7 @@ const { title, description, slug, imageUrl, imageAlt } = Astro.props;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={new URL(`/blog${slug}`, Astro.site)} />
+  <meta property="og:url" content={new URL(slug, Astro.site)} />
   <meta property="og:image" content={imageUrl} />
   <meta property="og:image:alt" content={imageAlt} />
   <!-- Twitter Meta Tags -->
@@ -72,7 +72,7 @@ const { title, description, slug, imageUrl, imageAlt } = Astro.props;
   <meta property="twitter:creator" content="@Jarmosan" />
   <meta property="twitter:title" content="Somraj Saha" />
   <meta property="twitter:description" content={description} />
-  <meta property="twitter:url" content={new URL(`/blog${slug}`, Astro.site)} />
+  <meta property="twitter:url" content={new URL(slug, Astro.site)} />
   <meta property="twitter:image" content={imageUrl} />
   <meta property="twitter:image:alt" content={imageAlt} />
   <title>{title ? `${title} | Somraj Saha` : "Somraj Saha"}</title>

@@ -10,7 +10,7 @@ import "../styles/scrollbar.css";
 interface Props {
   title: string;
   description: string;
-  slug: string;
+  slug?: string;
   imageUrl: URL;
   imageAlt: string;
 }
@@ -41,7 +41,7 @@ const { description, slug, title, imageUrl, imageAlt } = Astro.props;
   <HeadLayout
     title={title}
     description={description}
-    slug={slug}
+    slug={slug ? slug : ""}
     imageUrl={imageUrl}
     imageAlt={imageAlt}
   />

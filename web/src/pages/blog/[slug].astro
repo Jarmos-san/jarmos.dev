@@ -101,7 +101,7 @@ const { Content } = await blog.render();
 <BaseLayout
   title={blog.data.title}
   description={blog.data.description}
-  slug={blog.slug}
+  slug={`/blog/${blog.slug}`}
   imageUrl={new URL(blog.data.coverImage.url)}
   imageAlt={blog.data.coverImage.alt}
 >
