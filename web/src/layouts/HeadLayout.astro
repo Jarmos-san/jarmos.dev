@@ -5,7 +5,7 @@ interface Props {
   title?: string;
   description: string;
   slug: string;
-  imageUrl: string;
+  imageUrl: URL;
   imageAlt: string;
 }
 
@@ -42,18 +42,24 @@ const { title, description, slug, imageUrl, imageAlt } = Astro.props;
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@Jarmosan" />
   <meta name="twitter:title" content="Somraj Saha" />
-  <link rel="icon" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" href={new URL("assets/logo.svg", Astro.site)} />
+  <link
+    rel="apple-touch-icon"
+    href={new URL("/apple-touch-icon.png", Astro.site)}
+  />
   <link
     rel="apple-touch-startup-image"
-    href="/apple-touch-icon.png"
+    href={new URL("/apple-touch-icon.png", Astro.site)}
     media="(device-width: 768px) and (device-height: 1024px)"
   />
-  <link rel="apple-touch-startup-image" href="/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-startup-image"
+    href={new URL("/apple-touch-icon.png", Astro.site)}
+  />
   <link rel="assets" href={new URL("/assets", Astro.site)} />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href={new URL("/site.webmanifest", Astro.site)} />
   <!-- SEO related meta tags subject to the page properties -->
-  <link rel="canonical" href=`${Astro.site}${slug}` />
+  <link rel="canonical" href={new URL(slug, Astro.site)} />
   <meta name="content" content={description} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />

@@ -49,7 +49,7 @@ const description = `
   description={description}
   slug="/blog"
   imageAlt="The logo for Somraj Saha's personal blog"
-  imageUrl="/assets/logo.svg"
+  imageUrl={new URL("/assets/logo.svg", Astro.site)}
 >
   <article>
     <h1>Articles</h1>

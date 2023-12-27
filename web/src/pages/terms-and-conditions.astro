@@ -68,7 +68,7 @@ const description = `
   description={description}
   slug="/terms-and-conditions"
   imageAlt="The logo of Somraj Saha's personal website"
-  imageUrl="/assets/logo.svg"
+  imageUrl={new URL("/assets/logo.svg", Astro.site)}
 >
   <article>
     <h1>Terms and Conditions</h1>

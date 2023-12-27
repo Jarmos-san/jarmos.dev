@@ -77,7 +77,7 @@ const description = `
   description={description}
   slug="/privacy-policy"
   imageAlt="The logo for Somraj Saha's personal website"
-  imageUrl="/assets/logo.svg"
+  imageUrl={new URL("/assets/logo.svg", Astro.site)}
 >
   <article>
     <h1>Privacy Policy</h1>

@@ -9,7 +9,7 @@ import LatestBlogposts from "../components/LatestBlogs.astro";
 <BaseLayout
   title="Home"
   description="Somra Saha is a Senior Software Engineer building Weburz, a company involved in providing small-scale business owners custom software solutions for their business needs!"
-  imageUrl={"/assets/logo.svg"}
+  imageUrl={new URL("/assets/logo.svg", Astro.site)}
   imageAlt="The logo for Somraj Saha's personal blog"
   slug=""
 >

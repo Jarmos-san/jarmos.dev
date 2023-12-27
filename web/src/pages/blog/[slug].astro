@@ -102,7 +102,7 @@ const { Content } = await blog.render();
   title={blog.data.title}
   description={blog.data.description}
   slug={blog.slug}
-  imageUrl={blog.data.coverImage.url}
+  imageUrl={new URL(blog.data.coverImage.url)}
   imageAlt={blog.data.coverImage.alt}
 >
   <article>
