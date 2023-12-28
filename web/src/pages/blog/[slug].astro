@@ -26,12 +26,20 @@ const { Content } = await blog.render();
     article {
       padding: 0 8% 0 8%;
       margin: 10% 0 10% 0%;
+
+      h1 {
+        font-size: 2.25rem;
+      }
     }
   }
 
   @media screen and (min-width: 768px) {
     article {
       margin: 5% 15% 5% 15%;
+
+      h1 {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -48,7 +56,6 @@ const { Content } = await blog.render();
 
     h1 {
       font-family: Poppins;
-      font-size: 3rem;
       font-style: normal;
       font-weight: 700;
       line-height: 142%;
@@ -56,14 +63,18 @@ const { Content } = await blog.render();
 
     .summary {
       color: rgba(154, 159, 166, 0.95);
-      font-size: 1.15em;
+      font-size: 1.15rem;
       line-height: 160%;
     }
 
     time {
       color: rgba(154, 159, 166, 0.9);
-      font-style: italic;
-      font-size: 0.95rem;
+      font-style: normal;
+      font-size: 1.15rem;
+    }
+
+    img {
+      margin: 5% 0;
     }
   }
 
@@ -74,7 +85,7 @@ const { Content } = await blog.render();
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%;
+    line-height: 180%;
   }
 
   article :global(a) {
@@ -86,7 +97,7 @@ const { Content } = await blog.render();
   article :global(ol) {
     list-style: decimal;
     padding-left: 2%;
-    line-height: 280%;
+    line-height: normal;
   }
 
   article :global(pre) {
