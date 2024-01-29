@@ -15,7 +15,7 @@
     "tests:report": "playwright show-report"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.4",
+    "@astrojs/check": "^0.4.1",
     "@astrojs/rss": "^4.0.2",
     "@astrojs/sitemap": "^3.0.4",
     "astro": "^4.1.2"
