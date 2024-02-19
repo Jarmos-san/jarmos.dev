@@ -15,21 +15,21 @@
     "tests:report": "playwright show-report"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.2",
+    "@astrojs/check": "^0.5.4",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.0.5",
-    "astro": "^4.3.5"
+    "astro": "^4.4.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",
-    "@types/node": "^20.11.17",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "sass": "^1.70.0",
+    "sass": "^1.71.0",
     "typescript": "^5.3.3"
   }
 }
