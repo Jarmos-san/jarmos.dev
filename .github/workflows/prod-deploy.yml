@@ -2,7 +2,7 @@ name: Production Deployment
 
 on:
   release:
-    types: [published, released]
+    types: [published]
 
 jobs:
   code-quality-checks:
