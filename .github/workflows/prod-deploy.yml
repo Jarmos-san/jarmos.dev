@@ -1,9 +1,8 @@
 name: Production Deployment
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published, released]
 
 jobs:
   code-quality-checks:
