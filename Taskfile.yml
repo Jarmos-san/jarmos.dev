@@ -160,3 +160,27 @@ tasks:
       - rm --recursive --force "./terraform/.terraform"
       - rm --recursive --force "./.task"
       - pre-commit clean 2&> /dev/null
+
+  terraform-apply:
+    internal: true
+    dir: ./terraform
+    generates:
+      - tfplan
+    sources:
+      - "*.tf"
+    cmds:
+      - terraform plan --out=tfplan
+      - terraform apply tfplan
+
+  deploy:
+    desc: Deploy the website to production
+    summary: |
+      Deploy the website to production.
+
+      This task will invoke all the quality-assurance checks on the code
+      quality and then invoke Terraform to deploy it to production on Vercel.
+      Do note, invoking this command will bypass the automated CI/CD pipeline
+      setup though.
+    cmds:
+      - task: qa-checks
+      - task: terraform-apply
