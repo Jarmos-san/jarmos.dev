@@ -39,6 +39,8 @@ tasks:
       - ".terraform/**"
     sources:
       - "**.tf"
+    dotenv:
+      - .env
     cmd: terraform init
 
   setup:npm:
