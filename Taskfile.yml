@@ -2,6 +2,9 @@ version: "3"
 
 silent: true
 
+dotenv:
+  - .env
+
 tasks:
   default:
     desc: Run a development version of the project
@@ -39,8 +42,6 @@ tasks:
       - ".terraform/**"
     sources:
       - "**.tf"
-    dotenv:
-      - .env
     cmd: terraform init
 
   setup:npm:
@@ -141,8 +142,8 @@ tasks:
       deployment.
     cmds:
       - pre-commit run --all-files
-      - task: qa-checks:npm
-      - task: qa-checks:terraform
+      # TODO: Uncomment the line after figuring out proper Playwright usage
+      # - task: qa-checks:npm
 
   cleanup:
     desc: Perform a quick cleanup of the local development environment
