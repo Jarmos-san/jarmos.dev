@@ -169,7 +169,7 @@ tasks:
     sources:
       - "*.tf"
     cmds:
-      - terraform plan --out=tfplan
+      - terraform plan --var "vercel_api_token=${VERCEL_API_TOKEN}" --out=tfplan
       - terraform apply tfplan
 
   deploy:
