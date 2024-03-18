@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.42.1",
-    "@types/node": "^20.11.25",
+    "@types/node": "^20.11.28",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
