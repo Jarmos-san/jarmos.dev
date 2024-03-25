@@ -15,7 +15,7 @@
     "tests:report": "playwright show-report"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
     "@fontsource/poppins": "^5.0.12",
@@ -31,6 +31,6 @@
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "sass": "^1.72.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   }
 }
