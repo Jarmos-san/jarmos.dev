@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/check": "^0.6.0",
     "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/sitemap": "^3.1.5",
     "@fontsource/poppins": "^5.0.14",
     "astro": "^4.8.2"
   },
