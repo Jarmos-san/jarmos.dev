@@ -18,8 +18,8 @@ dependencies:
     specifier: ^5.0.14
     version: 5.0.14
   astro:
-    specifier: ^4.8.2
-    version: 4.8.2(@types/node@20.14.0)(sass@1.77.4)(typescript@5.4.5)
+    specifier: ^4.9.2
+    version: 4.9.2(@types/node@20.14.0)(sass@1.77.4)(typescript@5.4.5)
 
 devDependencies:
   '@playwright/test':
@@ -1784,8 +1784,8 @@ packages:
       - typescript
     dev: true
 
-  /astro@4.8.2(@types/node@20.14.0)(sass@1.77.4)(typescript@5.4.5):
-    resolution: {integrity: sha512-WBrnNePQ03cF5c+9sjD3TeyJodWMuPCwygDOUo7r+7LbKDN9TJK+KxIxo01AOX4HcexhxcLiTVVCBLSsi+OX9A==}
+  /astro@4.9.2(@types/node@20.14.0)(sass@1.77.4)(typescript@5.4.5):
+    resolution: {integrity: sha512-apzpRoISk6L8g99m3zKIW5SYxw2GhOju/1Gq0Ccf3SH+X2UcFXF+MTdxPOFl5yJUQg7X0qsVQDOIVf8zHRRKFg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
