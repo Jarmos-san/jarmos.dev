@@ -27,10 +27,10 @@
     "@typescript-eslint/parser": "^7.13.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^1.2.2",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "sass": "^1.77.5",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   }
 }
