@@ -22,7 +22,7 @@
     "astro": "^4.11.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.45.0",
+    "@playwright/test": "^1.45.1",
     "@types/node": "^20.14.9",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
