@@ -15,7 +15,7 @@
     "tests:report": "playwright show-report"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
+    "@astrojs/check": "^0.8.1",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@fontsource/poppins": "^5.0.14",
@@ -26,7 +26,7 @@
     "@types/node": "^20.14.9",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-astro": "^1.2.2",
+    "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
