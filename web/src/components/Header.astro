@@ -3,24 +3,24 @@ import { Image } from "astro:assets";
 ---
 
 <style lang="scss">
+  // Breakpoints for mobile screens
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     nav {
       padding: 4% 4%;
 
-      .nav-items {
+      // Don't display the desktop menu items on mobile (and big screens)
+      .desktop-menu {
         display: none;
-      }
-
-      .mobile-menu {
-        color: white;
       }
     }
   }
 
+  // Breakpoints for tablets and desktop screens
   @media screen and (min-width: 768px) {
     nav {
       padding: 20px 15% 0 15%;
 
+      // Don't display the hamburger menu on mobile (and small screens)
       .mobile-menu {
         display: none;
       }
@@ -34,7 +34,7 @@ import { Image } from "astro:assets";
     font-family: Poppins;
   }
 
-  .nav-items {
+  .desktop-menu {
     display: flex;
     gap: 1.8em;
 
@@ -65,11 +65,13 @@ import { Image } from "astro:assets";
       />
     </a>
 
-    <div class="mobile-menu">
+    <!-- The mobile menu will only be rendered on mobile screens -->
+    <button class="mobile-menu">
       <img src="/assets/ham-menu.svg" alt="" />
-    </div>
+    </button>
 
-    <div class="nav-items">
+    <!-- The desktop menu will only be rendered on mobile screens -->
+    <div class="desktop-menu">
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/blog">Blog</a>
