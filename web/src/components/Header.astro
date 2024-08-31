@@ -6,12 +6,24 @@ import { Image } from "astro:assets";
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     nav {
       padding: 4% 4%;
+
+      .nav-items {
+        display: none;
+      }
+
+      .mobile-menu {
+        color: white;
+      }
     }
   }
 
   @media screen and (min-width: 768px) {
     nav {
       padding: 20px 15% 0 15%;
+
+      .mobile-menu {
+        display: none;
+      }
     }
   }
 
@@ -52,6 +64,10 @@ import { Image } from "astro:assets";
         height={60}
       />
     </a>
+
+    <div class="mobile-menu">
+      <img src="/assets/ham-menu.svg" alt="" />
+    </div>
 
     <div class="nav-items">
       <a href="/">Home</a>
