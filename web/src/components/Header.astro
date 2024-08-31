@@ -78,3 +78,11 @@ import { Image } from "astro:assets";
     </div>
   </nav>
 </header>
+
+<script>
+  const mobileMenu = document.querySelector("button.mobile-menu");
+
+  mobileMenu?.addEventListener("click", () => {
+    console.log("Mobile Menu clicked!");
+  });
+</script>
