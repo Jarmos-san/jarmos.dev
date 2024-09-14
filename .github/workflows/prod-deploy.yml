@@ -3,7 +3,7 @@ name: Production Deployment
 on:
   push:
     tags:
-      - v1.**
+      - v*
 
 jobs:
   code-quality-checks:
@@ -15,6 +15,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.PAT }}
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -67,6 +70,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.PAT }}
 
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3.0.0

@@ -1,0 +1,3 @@
+[submodule "web/src/content/blog"]
+	path = web/src/content/blog
+	url = git@github.com:Jarmos-san/blogposts
