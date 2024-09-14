@@ -18,13 +18,13 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
-    "@fontsource/poppins": "^5.0.15",
+    "@fontsource/poppins": "^5.1.0",
     "astro": "^4.15.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.47.0",
     "@types/node": "^22.5.4",
-    "@typescript-eslint/parser": "^8.4.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^1.2.4",
     "eslint-plugin-jsx-a11y": "^6.10.0",
