@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+
+import MenuButton from "./MenuButton.vue";
 ---
 
 <style lang="scss">
@@ -52,11 +54,6 @@ import { Image } from "astro:assets";
         height={60}
       />
     </a>
-
-    <div class="nav-items">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-    </div>
+    <MenuButton client:only="vue" />
   </nav>
 </header>
