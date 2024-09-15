@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import HamburgerMenu from "./HamburgerMenu.vue";
+import MenuButton from "./MenuButton.vue";
 ---
 
 <style lang="scss">
@@ -54,6 +54,6 @@ import HamburgerMenu from "./HamburgerMenu.vue";
         height={60}
       />
     </a>
-    <HamburgerMenu client:only="vue" />
+    <MenuButton client:only="vue" />
   </nav>
 </header>
