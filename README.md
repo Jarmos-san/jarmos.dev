@@ -97,7 +97,7 @@ need;
 Once you've completed the tutorials ensure you've the following tools installed
 on your local development environment;
 
-1. [Node.js](https://nodejs.org)
+1. [Node.js](https://nodejs.org) and [`pnpm`](https://pnpm.io)
 2. [Terraform](https://terraform.io)
 3. [Task](https://taskfile.dev)
 4. [Pre-Commit](https://pre-commit.com)
@@ -111,38 +111,45 @@ to get started with developing the website;
 
 2. Clone the contents of the forked repository by running;
 
-```console
-git clone git@github.com:<YOUR-USERNAME>/jarmos.dev
-```
+   ```console
+   git clone git@github.com:<YOUR-USERNAME>/jarmos.dev
+   ```
+
+   **NOTE**: The blog posts are versioned under a private submodule. To fetch it
+   (with the appropriate permissions of course!), run the following command:
+
+   ```console
+   git clone --recurse-submodules git@github.com:Jarmos-san/jarmos.dev
+   ```
 
 3. Change directory to the cloned repository and then run the following command
    to install the necessary dependencies and the `git-hooks` for quality
    assurance checks.
 
-```console
-task setup
-```
+   ```console
+   task setup
+   ```
 
 4. Once all the dependencies are installed and setup, run the development
    webserver using;
 
-```console
-task
-```
+   ```console
+   task
+   ```
 
 5. After making proper changes to the source code, run the production build of
    the website for a sanity check;
 
-```console
-task preview
-```
+   ```console
+   task preview
+   ```
 
 6. If the production build of the website looks sane and satisfactory, run the
    quality assurance checks by invoking;
 
-```console
-task qa
-```
+   ```console
+   task qa
+   ```
 
 7. If all the QA checks passes, commit your changes and push them to your forked
    repository. From there you will be able to create a Pull Request which will
