@@ -3,20 +3,19 @@
     <img src="/assets/menu.svg" alt="" height="50" />
   </button>
   <Teleport to="body">
-    <CommandPalette :show="isMenuOpen" @close="toggleMenu" />
+    <NavMenu :show="isMenuOpen" @close="toggleMenu" />
   </Teleport>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 
-import CommandPalette from "./CommandPalette.vue";
+import NavMenu from "./NavMenu.vue";
 
 const isMenuOpen = ref<boolean>(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
-  console.log(isMenuOpen.value);
 };
 </script>
 
