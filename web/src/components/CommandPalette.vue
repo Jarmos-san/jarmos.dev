@@ -7,22 +7,32 @@
           <img src="/assets/close-menu.svg" alt="" height="25" />
         </button>
       </div>
-
       <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
+        <a v-for="link in navLinks" :href="link.url" :key="link.name">
+          {{ link.name }}
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+interface NavLink {
+  name: string;
+  url: string;
+}
+
 const props = defineProps<{
   show: Boolean;
 }>();
 
 const emit = defineEmits(["close"]);
+
+const navLinks: NavLink[] = [
+  { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
+  { name: "Blog", url: "/blog" },
+];
 </script>
 
 <style scoped lang="scss">
