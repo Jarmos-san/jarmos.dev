@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+
+import HamburgerMenu from "./HamburgerMenu.vue";
 ---
 
 <style lang="scss">
@@ -52,11 +54,6 @@ import { Image } from "astro:assets";
         height={60}
       />
     </a>
-
-    <div class="nav-items">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/blog">Blog</a>
-    </div>
+    <HamburgerMenu client:only="vue" />
   </nav>
 </header>
