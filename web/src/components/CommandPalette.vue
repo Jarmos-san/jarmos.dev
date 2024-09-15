@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" class="modal-mask">
     <div class="modal-container">
-      <h2>Command Palette</h2>
+      <h2>Navigation Menu</h2>
       <div>Close Button</div>
       <div>Home</div>
       <div>About</div>
