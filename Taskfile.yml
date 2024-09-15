@@ -15,7 +15,7 @@ tasks:
       setup the correct IP address and the ports to make the website accessible
       on a network.
     dir: ./web
-    cmd: npm run dev -- --host
+    cmd: pnpm dev --host
 
   setup:precommit:
     internal: true
@@ -44,19 +44,19 @@ tasks:
       - "**.tf"
     cmd: terraform init
 
-  setup:npm:
-    desc: Install the "npm" dependencies
+  setup:pnpm:
+    desc: Install the "pnpm" dependencies
     summary: |
-      Install the "npm" dependencies.
+      Install the "pnpm" dependencies.
 
-      This task will install the "npm" dependencies for the Astro project and
+      This task will install the "pnpm" dependencies for the Astro project and
       generate the "package-lock.json" file as well if it deems necessary.
     dir: ./web
     sources:
       - package.json
     generates:
       - package-lock.json
-    cmd: npm ci
+    cmd: pnpm install --frozen-lockfile
 
   setup:
     desc: Setup the local development environment
@@ -67,7 +67,7 @@ tasks:
       else in preparation for starting a development environment for the project.
     dir: ./web
     cmds:
-      - task: setup:npm
+      - task: setup:pnpm
       - task: setup:precommit
       - task: setup:terraform
 
@@ -80,7 +80,7 @@ tasks:
       static assets (the HTML, CSS and JS bundles) for the website. The command
       can be used in an CI/CD environment or chained to another task.
     dir: ./web
-    cmd: npm run build
+    cmd: pnpm build
     generates:
       - "./dist"
     sources:
@@ -98,12 +98,12 @@ tasks:
     deps:
       - task: build
     dir: ./web
-    cmd: npm run preview
+    cmd: pnpm preview --host
 
   format:prettier:
     internal: true
     dir: ./web
-    cmd: npm run format:fix
+    cmd: pnpm format:fix
 
   format:terraform:
     internal: true
@@ -122,10 +122,10 @@ tasks:
       - task: format:prettier
       - task: format:terraform
 
-  qa-checks:npm:
+  qa-checks:pnpm:
     internal: true
     dir: ./web
-    cmd: npm run tests
+    cmd: pnpm tests
 
   qa-checks:terraform:
     internal: true
@@ -143,7 +143,7 @@ tasks:
     cmds:
       - pre-commit run --all-files
       # TODO: Uncomment the line after figuring out proper Playwright usage
-      # - task: qa-checks:npm
+      # - task: qa-checks:pnpm
 
   cleanup:
     desc: Perform a quick cleanup of the local development environment
