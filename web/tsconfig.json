@@ -2,18 +2,10 @@
   "extends": "astro/tsconfigs/strictest",
   "baseUrl": ".",
   "paths": {
-    "@components/*": [
-      "src/components/*"
-    ],
-    "@layouts/*": [
-      "src/layouts/*"
-    ]
+    "@components/*": ["src/components/*"],
+    "@layouts/*": ["src/layouts/*"]
   },
-  "exclude": [
-    "tests",
-    "tests-examples",
-    "playwright.config.ts"
-  ],
+  "exclude": ["tests", "tests-examples", "playwright.config.ts"],
   "compilerOptions": {
     "jsx": "preserve"
   }
