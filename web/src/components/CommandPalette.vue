@@ -1,9 +1,9 @@
 <template>
-  <div v-if="show" class="modal-mask">
+  <div v-if="props.show" class="modal-mask">
     <div class="modal-container">
       <div class="container-header">
         <h2>Navigation Menu</h2>
-        <button type="button">
+        <button type="button" @click="emit('close')">
           <img src="/assets/close-menu.svg" alt="" height="25" />
         </button>
       </div>
@@ -18,9 +18,11 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   show: Boolean;
 }>();
+
+const emit = defineEmits(["close"]);
 </script>
 
 <style scoped lang="scss">
@@ -52,6 +54,10 @@ defineProps<{
 
       h2 {
         color: #82f9a1;
+      }
+
+      button {
+        cursor: pointer;
       }
     }
 
