@@ -18,8 +18,8 @@ importers:
         specifier: ^3.1.6
         version: 3.1.6
       '@astrojs/vue':
-        specifier: ^4.5.0
-        version: 4.5.0(astro@4.15.6(@types/node@22.5.5)(rollup@4.21.2)(sass@1.79.3)(typescript@5.6.2))(rollup@4.21.2)(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))
+        specifier: ^4.5.1
+        version: 4.5.1(astro@4.15.6(@types/node@22.5.5)(rollup@4.21.2)(sass@1.79.3)(typescript@5.6.2))(rollup@4.21.2)(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))
       '@fontsource/poppins':
         specifier: ^5.1.0
         version: 5.1.0
@@ -114,8 +114,8 @@ packages:
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/vue@4.5.0':
-    resolution: {integrity: sha512-yVrTwuGBpX/BPLlU29eje3/bUkHe9ftFeoiAJcskbaWeori86ojNCheMGKCS3NZwuXHj+bXcatoKdPEQiFfX5A==}
+  '@astrojs/vue@4.5.1':
+    resolution: {integrity: sha512-u9gqaljzsp9jBB9ByUbunCQVJH1Bqx5/r2UQhKTS94l50HvPp7HsXCMiP8kd4juMVIqFduaJfGMrM+KS8jDukA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       astro: ^4.0.0
@@ -3217,7 +3217,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vue@4.5.0(astro@4.15.6(@types/node@22.5.5)(rollup@4.21.2)(sass@1.79.3)(typescript@5.6.2))(rollup@4.21.2)(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))':
+  '@astrojs/vue@4.5.1(astro@4.15.6(@types/node@22.5.5)(rollup@4.21.2)(sass@1.79.3)(typescript@5.6.2))(rollup@4.21.2)(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))':
     dependencies:
       '@vitejs/plugin-vue': 5.1.3(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))
       '@vitejs/plugin-vue-jsx': 4.0.1(vite@5.4.5(@types/node@22.5.5)(sass@1.79.3))(vue@3.5.5(typescript@5.6.2))
@@ -3342,14 +3342,14 @@ snapshots:
 
   '@babel/helper-simple-access@7.24.7':
     dependencies:
-      '@babel/traverse': 7.25.3
+      '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-skip-transparent-expression-wrappers@7.24.7':
     dependencies:
-      '@babel/traverse': 7.25.3
+      '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
     transitivePeerDependencies:
       - supports-color
