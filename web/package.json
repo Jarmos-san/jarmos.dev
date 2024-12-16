@@ -24,7 +24,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.1",
+    "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.2",
     "@typescript-eslint/parser": "^8.11.0",
     "eslint": "^9.12.0",
