@@ -18,7 +18,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/vue": "^4.5.1",
+    "@astrojs/vue": "^4.5.3",
     "@fontsource/poppins": "^5.1.0",
     "astro": "^4.16.17",
     "vue": "^3.5.13"
