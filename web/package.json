@@ -33,6 +33,6 @@
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "sass": "^1.83.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   }
 }
