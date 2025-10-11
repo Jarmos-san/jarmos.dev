@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "^3.4.1",
     "@astrojs/vue": "^4.5.3",
     "@fontsource/poppins": "^5.2.6",
-    "astro": "^4.16.18",
+    "astro": "^5.14.3",
     "vue": "^3.5.14"
   },
   "devDependencies": {
