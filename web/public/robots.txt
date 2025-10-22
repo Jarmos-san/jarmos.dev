@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jarmos.dev/sitemap-index.xml
