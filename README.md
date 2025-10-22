@@ -1,6 +1,5 @@
 # jarmos.dev
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Jarmos-san/personal-website/prod-deploy.yml?branch=main&label=CI%2FCD&logo=github&style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Jarmos-san/personal-website?label=Repo%20Size&logo=github&style=flat-square)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/Jarmos-san?color=%23EA4AAA&label=Support%20the%20Project&logo=github%20sponsors&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Jarmos-san/personal-website?label=License&logo=github&style=flat-square)
