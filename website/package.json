@@ -1,0 +1,54 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "nuxt typecheck && eslint .",
+    "format": "prettier . --write",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "postinstall": "nuxt prepare"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@nuxt/devtools": "^2.6.3",
+    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/eslint-config": "^1.9.0",
+    "@nuxt/eslint-plugin": "^1.9.0",
+    "@nuxt/test-utils": "^3.19.2",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/typescript": "^1.8.20",
+    "@vue/typescript-plugin": "^3.0.6",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "happy-dom": "^20.0.5",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.2.0",
+    "sass": "^1.91.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.6"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
+    "@nuxt/content": "^3.7.1",
+    "better-sqlite3": "^12.4.1",
+    "nuxt": "^4.0.3",
+    "vue": "^3.5.20",
+    "vue-router": "^4.5.1"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": false,
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  }
+}

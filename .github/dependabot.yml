@@ -1,0 +1,37 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    commit-message:
+      prefix: chore
+      include: scope
+    labels: [dependencies]
+    groups:
+      github-actions:
+        patterns: ["*"]
+    open-pull-requests-limit: 3
+    assignees: [Jarmos-san]
+
+  - package-ecosystem: npm
+    directory: /website
+    schedule:
+      interval: monthly
+      day: monday
+      time: "06:00"
+      timezone: Asia/Kolkata
+    commit-message:
+      prefix: chore
+      include: scope
+    labels: [dependencies]
+    groups:
+      deps:
+        patterns: ["*"]
+        dependency-type: development
+    open-pull-requests-limit: 3
+    assignees: [Jarmos-san]

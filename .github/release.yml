@@ -1,0 +1,9 @@
+changelog:
+  categories:
+    - title: Added Functionalities
+      labels: ["*"]
+      exclude:
+        labels: [dependencies]
+
+    - title: Added/Updated Dependencies
+      labels: [dependencies]

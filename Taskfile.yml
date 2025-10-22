@@ -1,0 +1,96 @@
+version: "3"
+
+dotenv:
+  - .env
+
+tasks:
+  default:
+    cmds:
+      - task --list
+    silent: true
+
+  pre-commit:install:
+    internal: true
+    desc: Install the Pre-Commit hooks.
+    sources: [.pre-commit-config.yaml]
+    generates: [.git/hooks/**]
+    cmd: pre-commit install --install-hooks
+
+  setup:
+    desc: Setup the development environment.
+    summary: |
+      Setup the development environment.
+
+      This command will setup the development environment by installing all the
+      dependencies and other related tasks before you can write your first line of code.
+    cmds:
+      - task: pre-commit:install
+      - task: install
+
+  install:
+    internal: true
+    dir: ./website
+    sources:
+      - package.json
+    generates:
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+    cmd: pnpm install --frozen-lockfile
+
+  dev:
+    desc: Run the development server.
+    summary: |
+      Run the development server.
+
+      This command will run the development environment.
+    dir: ./website
+    cmd: pnpm dev
+    requires:
+      vars:
+        - GITHUB_TOKEN
+    env:
+      GITHUB_TOKEN: "{{ .GITHUB_TOKEN }}"
+
+  qa:
+    desc: Run various code quality checks.
+    summary: |
+      Run code quality checks.
+
+      This command will invoke various tools like ESLint and Prettier to enforce an
+      uniform coding standards.
+    dir: ./website
+    cmds:
+      - pnpm lint --fix
+      - pnpm format
+
+  test:
+    desc: Run the test suite.
+    summary: |
+      Run the test suite (including unit and component tests).
+
+      This command will invoke Vitest to run the unit and component tests. Do note, the
+      command will not run the E2E tests (let's say using Playwright). That requires a
+      seperate set of commands.
+    dir: ./website
+    cmd: pnpm test
+
+  build:
+    desc: Build a production-ready version of the site.
+    dir: ./website
+    requires:
+      vars:
+        - GITHUB_TOKEN
+    env:
+      GITHUB_TOKEN: "{{ .GITHUB_TOKEN }}"
+    sources:
+      - "*"
+    generates:
+      - ".output/**/*"
+    cmd: pnpm build
+
+  preview:
+    desc: Preview the production-ready version of the site.
+    dir: ./website
+    cmds:
+      - task: build
+      - pnpm preview
