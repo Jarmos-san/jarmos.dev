@@ -56,14 +56,12 @@ const projects: Project[] = [
     it's always evolving as I tinker with new ideas.`,
     href: "https://github.com/Jarmos-san/jarmos.dev",
   },
-
   {
     name: "Crisp",
     desc: `A Go-powered commit message police which makes sure you speak the
     language of Conventional Commits--clear, structured & changelog-friendly.`,
     href: "https://github.com/Weburz/crisp",
   },
-
   {
     name: "BurzPage",
     desc: `A lightweight blogging CMS we use at Weburz to keep content
@@ -71,7 +69,6 @@ const projects: Project[] = [
     href: "https://github.com/Weburz/burzpage",
     isExperimental: true,
   },
-
   {
     name: "Terox",
     desc: `A Go-based project template generator that saves us from copy-pasting
