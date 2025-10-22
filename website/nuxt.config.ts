@@ -10,7 +10,12 @@ export default defineNuxtConfig({
       baseURL: "https://jarmos.dev",
     },
   },
-  modules: ["@nuxt/eslint", "@nuxt/content", "@nuxt/test-utils/module"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/content",
+    "@nuxtjs/robots",
+    "@nuxt/test-utils/module",
+  ],
   content: {
     build: {
       markdown: {
@@ -20,5 +25,8 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  robots: {
+    blockNonSeoBots: true,
   },
 });
