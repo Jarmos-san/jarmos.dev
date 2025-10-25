@@ -5,6 +5,7 @@ import {
   type CollectionSource,
   type CollectionType,
 } from "@nuxt/content";
+import { asSitemapCollection } from "@nuxtjs/sitemap/content";
 
 // The URL of the repository, the directory and the GitHub access token to fetch
 // the blogposts from
@@ -89,7 +90,13 @@ const source: CollectionSource | undefined =
 const type: CollectionType = "page";
 
 // The "content" (basically the blogposts) collection and its configurations
-const content = defineCollection({ type, source, schema });
+const content = defineCollection(
+  asSitemapCollection({
+    type,
+    source,
+    schema,
+  }),
+);
 
 // Define the collection of the blog post content
 const collections = { content };
