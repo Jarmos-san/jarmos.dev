@@ -35,6 +35,9 @@ importers:
       nuxt-site-config:
         specifier: ^3.2.11
         version: 3.2.11(h3@1.15.4)(magicast@0.3.5)(vue@3.5.22(typescript@5.9.3))
+      rss:
+        specifier: ^1.2.2
+        version: 1.2.2
       vue:
         specifier: ^3.5.22
         version: 3.5.22(typescript@5.9.3)
@@ -57,6 +60,9 @@ importers:
       '@nuxt/test-utils':
         specifier: ^3.19.2
         version: 3.19.2(@vue/test-utils@2.4.6)(happy-dom@20.0.8)(magicast@0.3.5)(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.3.0)(happy-dom@20.0.8)(jiti@2.6.1)(sass@1.93.2)(terser@5.44.0)(yaml@2.8.1))
+      '@types/rss':
+        specifier: ^0.0.32
+        version: 0.0.32
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.3.0)(happy-dom@20.0.8)(jiti@2.6.1)(sass@1.93.2)(terser@5.44.0)(yaml@2.8.1))
@@ -1444,6 +1450,9 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+
+  '@types/rss@0.0.32':
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -3587,8 +3596,16 @@ packages:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
+  mime-db@1.25.0:
+    resolution: {integrity: sha512-5k547tI4Cy+Lddr/hdjNbBEWBwSl8EBc5aSdKvedav8DReADgWJzcYiktaRIw3GtGC1jjwldXtTzvqJZmtvC7w==}
+    engines: {node: '>= 0.6'}
+
   mime-db@1.54.0:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@2.1.13:
+    resolution: {integrity: sha512-ryBDp1Z/6X90UvjUK3RksH0IBPM137T7cmg4OgD5wQBojlAiUwuok0QeELkim/72EtcYuNlmbkrcGuxj3Kl0YQ==}
     engines: {node: '>= 0.6'}
 
   mime-types@3.0.1:
@@ -4413,6 +4430,9 @@ packages:
     resolution: {integrity: sha512-3GuObel8h7Kqdjt0gxkEzaifHTqLVW56Y/bjN7PSQtkKr0w3V/QYSdt6QWYtd7A1xUtYQigtdUfgj1RvWVtorw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  rss@1.2.2:
+    resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
 
   run-applescript@7.1.0:
     resolution: {integrity: sha512-DPe5pVFaAsinSaV6QjQ6gdiedWDcRCbUuiQfQa2wmWV7+xC9bGulGI8+TdRmoFkAPaBXk8CrAbnlY2ISniJ47Q==}
@@ -5295,6 +5315,9 @@ packages:
   xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
+
+  xml@1.0.1:
+    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
 
   xmlhttprequest-ssl@2.1.2:
     resolution: {integrity: sha512-TEU+nJVUUnA4CYJFLvK5X9AOeH4KvDvhIfm0vV1GaQRtchnG0hgK5p8hw/xjv8cunWYCsiPCSDzObPyhEwq3KQ==}
@@ -6903,6 +6926,8 @@ snapshots:
       parse-path: 7.1.0
 
   '@types/resolve@1.20.2': {}
+
+  '@types/rss@0.0.32': {}
 
   '@types/unist@2.0.11': {}
 
@@ -9465,7 +9490,13 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
+  mime-db@1.25.0: {}
+
   mime-db@1.54.0: {}
+
+  mime-types@2.1.13:
+    dependencies:
+      mime-db: 1.25.0
 
   mime-types@3.0.1:
     dependencies:
@@ -10629,6 +10660,11 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.52.5
       fsevents: 2.3.3
 
+  rss@1.2.2:
+    dependencies:
+      mime-types: 2.1.13
+      xml: 1.0.1
+
   run-applescript@7.1.0: {}
 
   run-parallel@1.2.0:
@@ -11573,6 +11609,8 @@ snapshots:
       is-wsl: 3.1.0
 
   xml-name-validator@4.0.0: {}
+
+  xml@1.0.1: {}
 
   xmlhttprequest-ssl@2.1.2: {}
 
