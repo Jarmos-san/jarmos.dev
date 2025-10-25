@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@nuxt/test-utils/module",
+    "@nuxt/scripts",
   ],
   content: {
     build: {
