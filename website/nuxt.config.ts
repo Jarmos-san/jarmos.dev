@@ -71,4 +71,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    routeRules: {
+      "/rss.xml": {
+        cache: {
+          maxAge: 86400,
+        },
+      },
+    },
+  },
 });
