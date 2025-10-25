@@ -7,6 +7,7 @@
  * feed.
  */
 
+import { queryCollection } from "@nuxt/content/server";
 import RSS from "rss";
 
 export default defineEventHandler(async (event) => {
@@ -53,7 +54,8 @@ export default defineEventHandler(async (event) => {
       url: `${baseURL}${post.path}`,
       guid: post.id,
       date: post.publishedOn,
-      categories: post.categories,
+      // TODO: Add the "categories" metadata for the blogs
+      // categories: post.categories,
     });
   }
 
