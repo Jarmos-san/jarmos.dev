@@ -91,6 +91,12 @@ article {
   padding: 0 2rem;
   margin: 2rem auto;
 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
   // Tablet
   @media screen and (min-width: 768px) {
     padding: 0 4rem;
@@ -99,17 +105,17 @@ article {
   // Laptops
   @media screen and (min-width: 1024px) {
     padding: 0 7rem;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
   // 2K Desktops
   @media screen and (min-width: 1440px) {
     padding: 0 14rem;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
   }
 }
 </style>

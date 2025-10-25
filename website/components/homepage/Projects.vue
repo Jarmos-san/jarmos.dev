@@ -11,6 +11,14 @@
 section {
   padding: 0 2rem;
 
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    // Laptops and above
+  }
+
   // Tablet
   @media screen and (min-width: 768px) {
     padding: 0 4rem;
@@ -19,6 +27,12 @@ section {
   // Laptops
   @media screen and (min-width: 1024px) {
     padding: 0 7rem;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
   // 2K Desktops
@@ -29,17 +43,6 @@ section {
   h2 {
     margin-top: 3rem;
     margin-bottom: 1rem;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-
-    // Laptops and above
-    @media screen and (min-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 }
 </style>
