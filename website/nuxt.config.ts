@@ -62,4 +62,13 @@ export default defineNuxtConfig({
       },
     ],
   },
+  $production: {
+    scripts: {
+      registry: {
+        cloudflareWebAnalytics: {
+          token: process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN ?? "",
+        },
+      },
+    },
+  },
 });
