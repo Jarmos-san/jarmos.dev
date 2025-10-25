@@ -1,14 +1,27 @@
 <template>
   <div class="overlay" @click.self="closeMenu">
+    <div class="header">
+      <img src="/icons/logo.svg" alt="" />
+      <img src="/icons/cross.svg" alt="" />
+    </div>
+
     <div class="menu">
       <NuxtLink
         v-for="(link, index) in props.navLinks"
         :key="index"
         :to="link.href"
-        @click="closeMenu"
       >
         {{ link.label }}
       </NuxtLink>
+    </div>
+
+    <div class="socials">
+      <a
+        v-for="(item, index) in socials"
+        :key="index"
+        href="https://example.com"
+        >{{ item }}</a
+      >
     </div>
   </div>
 </template>
@@ -22,36 +35,51 @@ const props = defineProps<MobileMenuProps>();
 // Emit close event to parent
 const emit = defineEmits<{ (e: "closeMenu"): void }>();
 const closeMenu = () => emit("closeMenu");
+
+// Array of social links
+const socials = ["Twitter", "Instagram", "GitHub"];
 </script>
 
 <style lang="scss">
-// The full-screen dark overlay
+.overlay,
+.header,
+.menu,
+.socials {
+  display: flex;
+}
+
+.overlay,
+.menu {
+  flex-direction: column;
+}
+
+.overlay,
+.header,
+.socials {
+  justify-content: space-between;
+}
+
 .overlay {
   position: fixed;
-  inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: flex-end;
   z-index: 9999;
   transition: background 0.4s ease;
+  padding: 2rem;
+  background-color: #111a21;
 
-  // The actual menu content
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .header {
+    width: 100%;
+  }
+
   .menu {
-    background-color: #1c2c35;
-    width: 65%;
-    height: 100vh;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-
-    a {
-      color: #b0fbbc;
-      text-decoration: none;
-      padding: 0.75rem auto;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    text-align: center;
+    gap: 2rem;
   }
 }
 </style>
