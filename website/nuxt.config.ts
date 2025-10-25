@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@nuxt/test-utils/module",
+    "@nuxt/scripts",
   ],
   content: {
     build: {
@@ -60,5 +61,14 @@ export default defineNuxtConfig({
         width: "12.5%",
       },
     ],
+  },
+  $production: {
+    scripts: {
+      registry: {
+        cloudflareWebAnalytics: {
+          token: process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN ?? "",
+        },
+      },
+    },
   },
 });
