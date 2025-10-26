@@ -2,13 +2,13 @@
   <nav>
     <!-- Website logo -->
     <div class="logo">
-      <img src="/icons/logo.svg" alt="logo" width="50" height="50" >
+      <img src="/icons/logo.svg" alt="logo" width="50" height="50" />
       <span v-if="!isMobile">jarmos.dev</span>
     </div>
 
     <!-- Hamburger menu icon (displayed ONLY on mobile viewports) -->
     <div v-if="isMobile" @click="toggle()">
-      <img src="/icons/menu.svg" alt="menu" width="40" height="40" >
+      <img src="/icons/menu.svg" alt="menu" width="40" height="40" />
     </div>
 
     <!-- Navigation links (displayed ONLY on large screens) -->
@@ -27,6 +27,7 @@
     <CommonMobileMenu
       v-if="isOpen"
       :nav-links="props.navLinks"
+      :social-links="props.socialLinks"
       @close-menu="toggle()"
     />
   </Teleport>

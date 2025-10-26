@@ -1,7 +1,7 @@
 <template>
   <div class="overlay" @click.self="closeMenu">
     <div class="header">
-      <img src="/icons/logo.svg" alt="" />
+      <img src="/icons/logo.svg" alt="" width="50" height="50" />
       <img src="/icons/cross.svg" alt="" @click="closeMenu" />
     </div>
 
@@ -15,13 +15,15 @@
       </NuxtLink>
     </div>
 
-    <div class="socials">
+    <div v-if="props.socialLinks" class="socials">
       <a
-        v-for="(item, index) in socials"
+        v-for="(item, index) in props.socialLinks"
         :key="index"
-        href="https://example.com"
-        >{{ item }}</a
+        :href="item.href"
+        target="_blank"
       >
+        <img :src="item.icon" :alt="item.name" />
+      </a>
     </div>
   </div>
 </template>
@@ -35,9 +37,6 @@ const props = defineProps<MobileMenuProps>();
 // Emit close event to parent
 const emit = defineEmits<{ (e: "closeMenu"): void }>();
 const closeMenu = () => emit("closeMenu");
-
-// Array of social links
-const socials = ["Twitter", "Instagram", "GitHub"];
 </script>
 
 <style lang="scss">
@@ -67,11 +66,6 @@ const socials = ["Twitter", "Instagram", "GitHub"];
   transition: background 0.4s ease;
   padding: 2rem;
   background-color: #111a21;
-
-  img {
-    width: 3rem;
-    height: 3rem;
-  }
 
   .header {
     width: 100%;
