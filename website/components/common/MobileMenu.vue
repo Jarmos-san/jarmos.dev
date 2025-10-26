@@ -58,6 +58,10 @@ const closeMenu = () => emit("closeMenu");
   justify-content: space-between;
 }
 
+a {
+  text-decoration: none;
+}
+
 .overlay {
   position: fixed;
   width: 100vw;
