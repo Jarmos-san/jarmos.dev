@@ -2,7 +2,7 @@
   <div class="overlay" @click.self="closeMenu">
     <div class="header">
       <img src="/icons/logo.svg" alt="" />
-      <img src="/icons/cross.svg" alt="" />
+      <img src="/icons/cross.svg" alt="" @click="closeMenu" />
     </div>
 
     <div class="menu">
