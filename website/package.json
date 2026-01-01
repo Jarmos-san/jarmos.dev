@@ -14,7 +14,7 @@
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@nuxt/devtools": "^3.0.1",
-    "@nuxt/eslint": "^1.11.0",
+    "@nuxt/eslint": "^1.12.1",
     "@nuxt/eslint-config": "^1.9.0",
     "@nuxt/eslint-plugin": "^1.9.0",
     "@nuxt/test-utils": "^3.19.2",
