@@ -61,6 +61,7 @@ export default defineNuxtConfig({
         width: "12.5%",
       },
     ],
+    zeroRuntime: true,
   },
   $production: {
     scripts: {
