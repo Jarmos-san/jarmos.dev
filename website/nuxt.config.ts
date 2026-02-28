@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: "everforest-dark",
-          langs: ["python", "javascript", "typescript", "shell", "lua"],
+          langs: ["python", "javascript", "typescript", "shell", "lua", "go"],
         },
       },
     },
