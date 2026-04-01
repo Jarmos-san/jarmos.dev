@@ -44,7 +44,7 @@
     "@unhead/vue": "^2.1.9",
     "better-sqlite3": "^12.8.0",
     "nuxt": "^4.3.1",
-    "nuxt-site-config": "^3.2.21",
+    "nuxt-site-config": "^4.0.7",
     "rss": "^1.2.2",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3"
