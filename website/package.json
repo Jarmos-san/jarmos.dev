@@ -42,7 +42,7 @@
     "@nuxtjs/robots": "^5.7.0",
     "@nuxtjs/sitemap": "^7.6.0",
     "@unhead/vue": "^2.1.9",
-    "better-sqlite3": "^12.6.2",
+    "better-sqlite3": "^12.8.0",
     "nuxt": "^4.3.1",
     "nuxt-site-config": "^3.2.21",
     "rss": "^1.2.2",
