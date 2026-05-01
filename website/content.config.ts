@@ -5,7 +5,7 @@ import {
   type CollectionSource,
   type CollectionType,
 } from "@nuxt/content";
-import { asSitemapCollection } from "@nuxtjs/sitemap/content";
+import { defineSitemapSchema } from "@nuxtjs/sitemap/content";
 
 // The URL of the repository, the directory and the GitHub access token to fetch
 // the blogposts from
@@ -64,6 +64,10 @@ const coverImage = z.object({
   alt: z.string().optional(),
 });
 
+// The sitemap configuration and shape to pass on to Nuxt for server-side
+// generation.
+const sitemap = defineSitemapSchema();
+
 // The fields and schema defined for each individual blog post
 const schema = z.object({
   title,
@@ -74,6 +78,7 @@ const schema = z.object({
   navigation,
   seo,
   coverImage,
+  sitemap,
 });
 
 // The configuration of the source to fetch the articles from
@@ -90,13 +95,7 @@ const source: CollectionSource | undefined =
 const type: CollectionType = "page";
 
 // The "content" (basically the blogposts) collection and its configurations
-const content = defineCollection(
-  asSitemapCollection({
-    type,
-    source,
-    schema,
-  }),
-);
+const content = defineCollection({ type, source, schema });
 
 // Define the collection of the blog post content
 const collections = { content };
