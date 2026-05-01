@@ -39,6 +39,7 @@ export default defineNuxtConfig({
   sitemap: {
     defaults: {
       changefreq: "monthly",
+      priority: 0.7,
     },
     xslColumns: [
       {
@@ -62,6 +63,56 @@ export default defineNuxtConfig({
       },
     ],
     zeroRuntime: true,
+    urls: [
+      {
+        loc: "/",
+        lastmod: "2026-05-01",
+        priority: 0.3,
+        changefreq: "yearly",
+      },
+      {
+        loc: "/about-me",
+        lastmod: "2026-05-01",
+        priority: 0.5,
+        changefreq: "yearly",
+      },
+      {
+        loc: "/blogs",
+        lastmod: "2026-05-01",
+        priority: 1,
+        changefreq: "yearly",
+      },
+      {
+        loc: "/contact-me",
+        lastmod: "2026-05-01",
+        priority: 0,
+        changefreq: "never",
+      },
+      {
+        loc: "/distribution-rights",
+        lastmod: "2026-05-01",
+        priority: 0,
+        changefreq: "never",
+      },
+      {
+        loc: "/privacy-policy",
+        lastmod: "2026-05-01",
+        priority: 0,
+        changefreq: "never",
+      },
+      {
+        loc: "/projects",
+        lastmod: "2026-05-01",
+        priority: 1,
+        changefreq: "yearly",
+      },
+      {
+        loc: "/terms-and-conditions",
+        lastmod: "2026-05-01",
+        priority: 0,
+        changefreq: "never",
+      },
+    ],
   },
   $production: {
     scripts: {
