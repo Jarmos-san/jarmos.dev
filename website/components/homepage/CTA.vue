@@ -11,8 +11,8 @@
         alt="Chat with Jarmos"
         width="24"
         height="24"
-      >
-      <span>Chat</span>
+      />
+      <span>Contact Me!</span>
     </NuxtLink>
   </section>
 </template>
