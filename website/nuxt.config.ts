@@ -1,5 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
+const BASE_URL = "https://jarmos.dev";
+
 export default defineNuxtConfig({
   devtools: {
     enabled: true,
@@ -7,7 +9,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-09-29",
   runtimeConfig: {
     public: {
-      baseURL: "https://jarmos.dev",
+      baseURL: BASE_URL,
     },
   },
   modules: [
@@ -18,7 +20,13 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/test-utils/module",
     "@nuxt/scripts",
+    "nuxt-llms",
   ],
+  llms: {
+    domain: BASE_URL,
+    title: "jarmos.dev",
+    description: "Somraj Saha's digital garden and personal website.",
+  },
   content: {
     build: {
       markdown: {

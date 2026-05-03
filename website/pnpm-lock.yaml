@@ -32,6 +32,9 @@ importers:
       nuxt:
         specifier: ^4.4.2
         version: 4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.6)(@types/node@25.6.0)(@vue/compiler-sfc@3.5.33)(better-sqlite3@12.9.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.9.0))(eslint@10.2.1(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.2))(rollup@4.60.2)(sass@1.99.0)(srvx@0.11.15)(terser@5.46.2)(typescript@6.0.3)(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.2)(yaml@2.8.3))(vue-tsc@3.2.7(typescript@6.0.3))(yaml@2.8.3)
+      nuxt-llms:
+        specifier: ^0.2.0
+        version: 0.2.0(magicast@0.5.2)
       nuxt-site-config:
         specifier: 3.2.21
         version: 3.2.21(magicast@0.5.2)(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(sass@1.99.0)(terser@5.46.2)(yaml@2.8.3))(vue@3.5.33(typescript@6.0.3))
@@ -4066,6 +4069,9 @@ packages:
   nuxt-component-meta@0.17.2:
     resolution: {integrity: sha512-2/mSSqutOX8t+r8cAX1yUYwAPBqicPO5Rfum3XaHVszxKCF4tXEXBiPGfJY9Zn69x/CIeOdw+aM9wmHzQ5Q+lA==}
     hasBin: true
+
+  nuxt-llms@0.2.0:
+    resolution: {integrity: sha512-GoEW00x8zaZ1wS0R0aOYptt3b54JEaRwlyVtuAiQoH51BwYdjN5/3+00/+4wi39M5cT4j5XcnGwOxJ7v4WVb9A==}
 
   nuxt-site-config-kit@3.2.21:
     resolution: {integrity: sha512-fvvAyv/mBUqnzsqro4iuXHypFtEUVIPYVW7e5j1/oP9JANfHFrGqosUhY8FAkI21HZgJ8H/8GdcQtnnN2xk+QA==}
@@ -10260,6 +10266,12 @@ snapshots:
       typescript: 5.9.3
       ufo: 1.6.4
       vue-component-meta: 3.2.7(typescript@5.9.3)
+    transitivePeerDependencies:
+      - magicast
+
+  nuxt-llms@0.2.0(magicast@0.5.2):
+    dependencies:
+      '@nuxt/kit': 4.4.4(magicast@0.5.2)
     transitivePeerDependencies:
       - magicast
 
